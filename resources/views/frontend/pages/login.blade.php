@@ -3,39 +3,43 @@
 @section('title','E-Shop || Login Page')
 
 @section('main-content')
-    <!-- Breadcrumbs -->
-    <div class="breadcrumbs">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="bread-inner">
-                        <ul class="bread-list">
-                            <li><a href="{{route('home')}}">Home<i class="ti-arrow-right"></i></a></li>
-                            <li class="active"><a href="javascript:void(0);">Login</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Breadcrumbs -->
-            
+
+
     <!-- Shop Login -->
     <section class="shop login section">
-        <div class="container">
-            <div class="row"> 
-                <div class="col-lg-6 offset-lg-3 col-12">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-2"></div>
+
+                <div class="col-lg-2">
+                    <h2 class="pb-5">Find
+                    Comfortable
+                    Real Estate
+                    Here</h2>
+
+                    <p class="pt-5 mt-5 ">Having troubles? Get Help</p>
+                </div>
+            <div class="col-lg-2"></div>
+
+                <div class="col-lg-4">
                     <div class="login-form">
-                        <h2>Login</h2>
-                        <p>Please register in order to checkout more quickly</p>
+                        <p>Login to Dhiiraya Homes</p>
+                        <div class="d-flex">
+                        <a href="{{route('login.redirect','facebook')}}" class=""><img src="/frontend/img/Group 1.png" alt=""></a>&nbsp;&nbsp;&nbsp;
+                        <a href="{{route('login.redirect','google')}}" class=""><img src="/frontend/img/Group 2.png" alt=""></a>
+
+                                        </div>
+                        <img src="/frontend/img/Separator.png" alt="">
                         <!-- Form -->
-                        <form class="form" method="post" action="{{route('login.submit')}}">
+                        <form class="form mt-4" method="post" action="{{route('login.submit')}}">
                             @csrf
                             <div class="row">
+                                
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <label>Your Email<span>*</span></label>
-                                        <input type="email" name="email" placeholder="" required="required" value="{{old('email')}}">
+                                        <!-- <label>Your Email<span>*</span></label> -->
+                                        <input type="email" name="email" placeholder="Email address" required="required" value="{{old('email')}}">
+                                        
                                         @error('email')
                                             <span class="text-danger">{{$message}}</span>
                                         @enderror
@@ -43,41 +47,54 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <label>Your Password<span>*</span></label>
-                                        <input type="password" name="password" placeholder="" required="required" value="{{old('password')}}">
+                                        <!-- <label>Your Password<span>*</span></label> -->
+                                        <input type="password" name="password" placeholder="Password" required="required" value="{{old('password')}}">
                                         @error('password')
                                             <span class="text-danger">{{$message}}</span>
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-group login-btn">
-                                        <button class="btn" type="submit">Login</button>
-                                        <a href="{{route('register.form')}}" class="btn">Register</a>
-                                        OR
-                                        <a href="{{route('login.redirect','facebook')}}" class="btn btn-facebook"><i class="ti-facebook"></i></a>
-                                        <a href="{{route('login.redirect','github')}}" class="btn btn-github"><i class="ti-github"></i></a>
-                                        <a href="{{route('login.redirect','google')}}" class="btn btn-google"><i class="ti-google"></i></a>
-
-                                    </div>
-                                    <div class="checkbox">
-                                        <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Remember me</label>
-                                    </div>
-                                    @if (Route::has('password.request'))
+                                <div class="col-12 mb-4">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                     @if (Route::has('password.request'))
                                         <a class="lost-pass" href="{{ route('password.reset') }}">
-                                            Lost your password?
+                                        Forgot password?
                                         </a>
                                     @endif
+                                    </div>
+                                    <div>
+                                    <a href="{{route('register.form')}}" >New user? Signup</a>
+                                    
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group login-btn">
+                                        <button class="btn-lgn" type="submit">Login</button>
+                                        <!-- <a href="{{route('register.form')}}" class="btn">Register</a> -->
+                                   
+                                    </div>
+                                
                                 </div>
                             </div>
                         </form>
                         <!--/ End Form -->
                     </div>
                 </div>
+            <div class="col-lg-2"></div>
+
+
             </div>
         </div>
     </section>
+
+    
     <!--/ End Login -->
+
+    @include('frontend.layouts.newsletter')
+
+
 @endsection
 @push('styles')
 <style>
@@ -104,5 +121,61 @@
     .btn-google:hover{
         background:rgb(243, 26, 26) !important;
     }
+/* 
+    .label-float{
+  position: relative;
+  padding-top: 13px;
+}
+
+.label-float input{
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  outline: none;
+  min-width: 250px;
+  padding: 15px 20px;
+  font-size: 16px;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -webkit-appearance:none;
+}
+
+.label-float input:focus{
+  border: 2px solid #3951b2;
+}
+
+.label-float input::placeholder{
+  color:transparent;
+}
+
+.label-float label{
+  pointer-events: none;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: 15px;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  background-color: white;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.label-float input:required:invalid + label{
+  color: red;
+}
+.label-float input:focus:required:invalid{
+  border: 2px solid red;
+}
+.label-float input:required:invalid + label:before{
+  content: '*';
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label{
+  font-size: 13px;
+  top: 0;
+  color: #3951b2;
+} */
+
 </style>
 @endpush
