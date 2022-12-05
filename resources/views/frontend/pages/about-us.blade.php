@@ -4,72 +4,70 @@
 
 @section('main-content')
 
-	<!-- Breadcrumbs -->
-	<div class="breadcrumbs">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="bread-inner">
-						<ul class="bread-list">
-							<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-							<li class="active"><a href="blog-single.html">About Us</a></li>
-						</ul>
-					</div>
+	
+
+	<div class="container-fluid  mt-5">
+		<div class="row text-center about-first-row">
+			<div class="col-lg-2 col-md-0"></div>
+			<div class="col-lg-3 col-md-6"><img src="/frontend/img/about-img1.png" alt="" width="100%" style="height:250px"></div>
+			<div class="col-lg-3 col-md-6"><img src="/frontend/img/about-img2.png" alt="" width="100%" style="height:250px"></div>
+			<div class="col-lg-4 col-md-12 about-third-image"><img src="/frontend/img/about-img3.png" alt="" width="100%" style="height:250px"></div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5 mb-5 pb-4">
+		<div class="row align-items-center">
+			<div class="col-lg-5"><img src="/frontend/img/about-img5.png" alt="" width="100%"></div>
+			<div class="col-lg-2"><h1>About US</h1></div>
+			<div class="col-lg-5 about-second-col" style="background-color:#F1F1F1;"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est </p></div>
+		</div>
+	</div>
+
+	<div class="container pt-5 pb-5">
+		<div class="about-third-section">
+		<p >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum  sadipscing elitr</p>
+		</div>
+	</div>
+
+	<div class="container mt-5">
+		<div class="row align-items-center">
+			<div class="col-lg-4">
+				<div >
+				<h1 class="text-center mb-3">Trust</h1>
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum </p>
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<div class="row">
+					<div class="col-md-6 p-2"><img src="/frontend/img/about-img6.png" alt="" width="100%" style="height:200px" ></div>
+					<div class="col-md-6 p-2"><img src="/frontend/img/about-img4.png" alt="" width="100%" style="height:200px" ></div>
+					<div class="col-md-6 p-2"><img src="/frontend/img/about-img7.png" alt="" width="100%" style="height:200px" ></div>
+					<div class="col-md-6 p-2"><img src="/frontend/img/about-img8.png" alt="" width="100%" style="height:200px" ></div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- End Breadcrumbs -->
 
-	
-	
-
-
-
-	<!-- Start Shop Services Area -->
-	<section class="shop-services section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-rocket"></i>
-						<h4>Free shiping</h4>
-						<p>Orders over $100</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-reload"></i>
-						<h4>Free Return</h4>
-						<p>Within 30 days returns</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-lock"></i>
-						<h4>Sucure Payment</h4>
-						<p>100% secure payment</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-tag"></i>
-						<h4>Best Peice</h4>
-						<p>Guaranteed price</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-			</div>
+<div class="container-fluid mt-5 mb-5">
+	<div class="row align-items-center">
+		<div class="col-md-4 text-center about-fifth-section">
+			<h1>Exprience</h1>
 		</div>
-	</section>
-	<!-- End Shop Services Area -->
+		<div class="col-md-8">
+			
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+				</p>
+		</div>
+	</div>
+</div>
+
+<div class="container pt-5 pb-5">
+	<div class="row">
+		<div class="col-md-5"><img src="/frontend/img/Rectangle 50.png" alt="" width="100%" style="height:200px" ></div>
+		<div class="col-md-3"><img src="/frontend/img/Rectangle 52.png" alt="" width="100%" style="height:200px" ></div>
+		<div class="col-md-4"><img src="/frontend/img/Rectangle 51.png" alt="" width="100%" style="height:200px" ></div>
+	</div>
+</div>
 
 	@include('frontend.layouts.newsletter')
 @endsection

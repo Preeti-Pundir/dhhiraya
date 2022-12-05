@@ -579,8 +579,6 @@ pre code {
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
   width: 100%;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -9786,8 +9784,7 @@ a:focus {
 }
 
 .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+ 
 }
 
 .scroll-to-top {

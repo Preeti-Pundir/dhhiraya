@@ -2,8 +2,8 @@
 	<!-- Start Footer Area -->
 	<footer class="footer">
 		<!-- Footer Top -->
-		<div class="footer-top section">
-			<div class="container">
+		<!-- <div class="footer-top section"> -->
+			<div class="container pt-5 pb-5">
 				<div class="row">
 					<div class="col-lg-5 col-md-6 col-12">
 						<!-- Single Widget -->
@@ -15,8 +15,11 @@
 							@php
 								$settings=DB::table('settings')->get();
 							@endphp
-							<p class="text">@foreach($settings as $data) {{$data->short_des}} @endforeach</p>
-							<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">@foreach($settings as $data) {{$data->phone}} @endforeach</a></span></p>
+							<p class="text ">Funding freemium long tail hypotheses first mover advantage assets ownership niche market startup</p>
+							
+							<!-- <p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">@foreach($settings as $data) {{$data->phone}} @endforeach</a></span></p> -->
+							<p class="info mt-4"><a href="mailto:dewahosting@mail.com">dewahosting@mail.com</a></p>
+							<p class="info "><a href="callto:+91 9856327415">9856327415</a></p>
 						</div>
 						<!-- End Single Widget -->
 					</div>
@@ -59,37 +62,34 @@
 							<div class="contact">
 								<ul>
 								<li>123 Lorem Ipsum Street</li>
-<li>Jakarta, Indonesia</li>
+								<li>Jakarta, Indonesia</li>
 									<!-- <li>@foreach($settings as $data) {{$data->address}} @endforeach</li>
 									<li>@foreach($settings as $data) {{$data->email}} @endforeach</li>
 									<li>@foreach($settings as $data) {{$data->phone}} @endforeach</li> -->
 								</ul>
 							</div>
 							<!-- End Single Widget -->
-							<div class="sharethis-inline-follow-buttons"></div>
+							<!-- <div class="sharethis-inline-follow-buttons"></div> -->
 						</div>
 						<!-- End Single Widget -->
 					</div>
 				</div>
 			</div>
-		</div>
+		<!-- </div> -->
 		<!-- End Footer Top -->
-		<div class="copyright">
-			<div class="container">
-				<div class="inner">
-					<div class="row">
-						<div class="col-lg-6 col-12">
-							<div class="left">
-								<p>Copyright © {{date('Y')}} <a href="https://github.com/Prajwal100" target="_blank">Prajwal Rai</a>  -  All Rights Reserved.</p>
-							</div>
+		<div class="copyright ">
+			<div class="container pt-3 pb-3">
+					<div class="row text-center">
+						<div class="col-lg-4 col-md-12">
+								<p>Dhiirayahomes.com</p>
 						</div>
-						<div class="col-lg-6 col-12">
-							<div class="right">
-								<img src="{{asset('backend/img/payments.png')}}" alt="#">
-							</div>
+						<div class="col-lg-4 col-md-12">
+							<p>Powered by Avidus Interactive</p>
+						</div>
+						<div class="col-lg-4 col-md-12">
+							<p>Copyright © 2021</p>
 						</div>
 					</div>
-				</div>
 			</div>
 		</div>
 	</footer>

@@ -35,6 +35,7 @@ Version:1.0
 20. 404 Error CSS
 21. Footer CSS
 ========================================*/
+
 .color-plate {
 	position: fixed;
 	display: block;
@@ -745,7 +746,7 @@ Version:1.0
 	border:none;
 }
 .header.shop .header-inner {
-	background: #333;
+	/* background: #333; */
 }
 .header.shop.v3 .header-inner {
 	background: transparent;
@@ -944,7 +945,7 @@ Version:1.0
 	color:#333;
 }
 .header.shop .nav li a {
-	color: #fff;
+	color: #000;
 	text-transform: capitalize;
 	font-size: 15px;
 	padding: 20px 15px;
@@ -956,16 +957,17 @@ Version:1.0
 	transition: all 0.4s ease;
 }
 .header.shop .nav li:hover a{
-	color:#fff;
-	background:#F7941D;
+	color:#B3B356;
+	/* border-bottom: 5px solid #B3B356; */
+	/* background:#F7941D; */
 }
 .header.shop.v2 .nav li:hover a{
 	color:#F7941D;
 	background:transparent;
 }
 .header.shop .nav li.active a{
-	color:#fff;
-	background:#F7941D;
+	color:#000;
+	border-bottom: 5px solid #B3B356;
 }
 .header.shop.v2 .nav li.active a{
 	color:#333 !important;
@@ -978,13 +980,14 @@ Version:1.0
 	margin:0;
 }
 .header.shop .nav li .dropdown li:hover a{
-	background:#F7941D;
+	/* background:#F7941D; */
+	color:#000;
 }
 .header.shop.v2 .nav li.active .dropdown li a{
 	color:#333 !important;
 }
 .header.shop.v2 .nav li.active .dropdown li a:hover{
-	color:#fff !important;
+	color:#000 !important;
 	background:#F7941D !important;
 }
 .header.shop.v2 .nav li.active .dropdown li a:hover{
@@ -1158,7 +1161,7 @@ Version:1.0
 	visibility:visible;
 }
 .header.sticky .header-inner .nav li a {
-	color: #333;
+	color: #000;
 }
 .header.sticky.v3 .header-inner .nav li a {
 	color: #fff;
@@ -3745,7 +3748,7 @@ Version:1.0
    Start Shop Newsletter CSS
 ========================================*/
 .shop-newsletter{
-	background:#fff;
+	background:#B3B35606;
 }
 .shop-newsletter .inner{
 	text-align:center;
@@ -3754,21 +3757,22 @@ Version:1.0
 	color: #333;
 	font-size: 17px;
 	font-weight: 600;
-	margin-bottom: 5px;
+	margin-bottom: 30px;
 	text-transform: uppercase;
 }
 .shop-newsletter .inner p{
-	color:#777;
+	color:#000;
 	font-size:14px;
 	font-weight:400;
-	margin-bottom:30px;
+	margin-bottom:60px;
 }
-.shop-newsletter .inner p span{
-	color:#F7941D;
-}
+
 .shop-newsletter .newsletter-inner{
 	position:relative;
 	display: inline-block;
+	border-radius: 30px 30px 30px 30px;
+
+
 }
 .shop-newsletter .newsletter-inner input {
 	width: 480px;
@@ -3781,8 +3785,10 @@ Version:1.0
 	box-shadow: none;
 	border-radius: 0;
 	border: none;
-	border: 1px solid #ececec;
+	/* border: 1px solid #ececec; */
 	border-radius: 30px 0 0 30px;
+	box-shadow: 12px 6px 20px rgba(0, 72, 102, 0.101961);
+
 }
 .shop-newsletter .newsletter-inner button{
 	border:none;
@@ -3796,13 +3802,15 @@ Version:1.0
 	padding: 10px 30px;
 	position: relative;
 	top: 0;
-	background: #F7941D;
+	background: #B3B356;
 	color: #fff;
 	left: -4px;
 	border-radius: 0 30px 30px 0;
 	font-size: 14px;
 	font-weight: 500;
 	text-transform: uppercase;
+	box-shadow: 12px 6px 20px rgba(0, 72, 102, 0.101961);
+
 }
 .shop-newsletter .newsletter-inner .btn:hover{
 	background:#333;
@@ -4830,8 +4838,12 @@ Version:1.0
 	color:#000000;
 	font-weight: 400;
 }
+.footer .about .info{
+	color:#B3B356;
+	font-weight: 400;
+}
 .footer .about .call {
-	color: #fff;
+	color: #000;
 	margin-top: 15px;
 	font-weight: 400;
 }
@@ -4839,7 +4851,7 @@ Version:1.0
 	display: block;
 }
 .footer .about .call a {
-	color: #f7941d;
+	color: #000;
 	font-size: 20px;
 	font-weight: 600;
 }
@@ -4891,7 +4903,7 @@ Version:1.0
 }
 /* Copyright */
 .footer .copyright{
-	
+	background-color: #B3B35629;
 }
 .footer .copyright .inner{
 	border-top:1px solid #eeeeee3d;
@@ -4902,12 +4914,44 @@ Version:1.0
 	float:right;
 }
 .footer .copyright p{
-	color:#fff;
+	color:#000;
 }
 .footer .copyright p a{
-	color:#fff;
+	color:#000;
 	text-decoration:underline;
 }
 /*=============================
 	End Footer CSS
 ===============================*/
+
+
+
+
+/* About us page css */
+
+.about-second-col{
+	padding: 90px 30px;
+	background-color: #F1F1F1;
+}
+
+.about-third-section p{
+
+	padding: 0 30px;
+
+}
+
+.about-fifth-section h1{
+	padding: 90px 0px;
+	background-color: #F1F1F1;
+}
+
+@media screen and (max-width:991px) {
+.about-first-row{
+	margin: 0 20px !important;
+}
+
+.about-third-image{
+	margin: 30px 0 0 0 ;
+}
+	
+}
