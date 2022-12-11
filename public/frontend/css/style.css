@@ -1173,16 +1173,16 @@ Version:1.0
 	color:#F7941D;
 }
 .header.sticky .header-inner .nav li .dropdown li a{
-	color:#333;
+	color:#000;
 }
 .header.sticky.v2 .header-inner .nav li .dropdown li a{
-	color:#333;
+	color:#000;
 }
 .header.sticky .header-inner .nav li .dropdown li a:hover{
-	color:#fff;
+	color:#000;
 }
 .header.sticky .header-inner .nav li.active a {
-	color: #fff;
+	color: #000;
 }
 .header.sticky .header-inner{
 	position:fixed;
@@ -1842,7 +1842,7 @@ Version:1.0
 .single-product .product-img .product-action {
 	display: inline-block;
 	position: absolute;
-	right: 0;
+	right: 10px;
 	bottom: 0;
 	z-index: 99;
 	border-radius: 3px;
@@ -1853,14 +1853,14 @@ Version:1.0
 	display: block;
 	font-size: 16px;
 	display: inline-block;
-	margin-right: 15px;
-	text-align: right;
+	/* margin-right: 15px; */
+	/* text-align: right; */
 	height: 52px;
 	position: relative;
 	top: 2px;
 }
 .single-product .product-img .product-action a:last-child{
-	margin-right:0;
+	/* margin-right:0; */
 	border:none;
 }
 .single-product .product-img .product-action a i {
@@ -1921,9 +1921,9 @@ Version:1.0
 }
 .single-product .product-img .product-action-2 {
 	position: absolute;
-	left: 0;
+	left: 11px;
 	bottom: 0;
-	text-align: left;
+	/* text-align: left; */
 	z-index: 99;
 	-webkit-transition: all 250ms ease-out;
 	-o-transition: all 250ms ease-out;
@@ -1932,24 +1932,26 @@ Version:1.0
 .single-product .product-img .product-action-2 a {
 	display: block;
 	background-color: transparent;
-	color: #333;
-	text-align: left;
+	color: #fff;
+	/* text-align: center; */
 	font-size: 12px;
-	font-weight: 600;
+	font-weight: 400;
 	text-transform: uppercase;
 	line-height: 1;
 	display: inline-block;
 }
 .single-product .product-img .product-action-2 a:hover {
-  color:#F7941D;
+  /* color:#F7941D; */
 }
 .single-product .button-head {
-	background: #fff;
+	
+	background: #B3B356;
+	opacity: 0.72;
 	display: inline-block;
 	height: 40px;
 	width: 100%;
 	position: absolute;
-	left: 0;
+	left: 10;
 	bottom: -50px;
 	z-index: 9;
 	height: 50px;
@@ -1959,7 +1961,7 @@ Version:1.0
 	transition:all 0.4s ease;
 }
 .single-product:hover .button-head{
-	bottom:0;
+	bottom:4px;
 }
 .single-product .product-img .shop-list-quickview {
   position: absolute;
