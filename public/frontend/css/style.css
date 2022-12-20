@@ -4628,13 +4628,16 @@ Version:1.0
 	font-weight: 600;
 }
 .contact-us .single-head {
-	padding: 50px;
-	box-shadow: 0px 0px 15px #0000001a;
+	/* padding: 50px; */
 	height: 100%;
+
+	margin-top: 30px;
+
 }
 .contact-us .single-info {
 	text-align: left;
 	margin-bottom:30px;
+	display: flex;
 }
 .contact-us .single-info i {
 	color: #fff;
@@ -4669,8 +4672,9 @@ Version:1.0
 	font-size: 18px;
 }
 .contact-us .form-main {
-	box-shadow: 0px 0px 15px #0000001a;
-	padding: 50px;
+	padding: 10px 50px;
+	background: #B3B35612;
+border-radius: 10px;
 }
 .contact-us .form .form-group input {
 	height: 48px;
@@ -4907,7 +4911,7 @@ Version:1.0
 	border-top:1px solid #eeeeee3d;
 	padding:20px 0;
 }
-.footer .copyright .left{}
+
 .footer .copyright .right{
 	float:right;
 }
@@ -4963,4 +4967,63 @@ Version:1.0
 	border-radius: 12px;
 	background-color: #B3B356;
 	color: #FFFFFF;
+}
+
+/* Myaccount page */
+
+.myaccount-tabs{
+	border-right: 1px solid #D1D1D1 ;
+}
+
+.properties{
+	background-color: #FFFFE3 !important;
+	padding: 20px;
+}
+
+.btn-ma {
+	width: 120px;
+	padding: 12px ;
+	margin: 5px;
+	border-radius: 0 !important;
+
+}
+
+.btn-ma#b{
+	background-color:  #B8B87B !important ;
+}
+
+.btn-ma#g{
+	background-color: transparent !important;
+	border: 1px solid #B3B356 !important;
+
+}
+
+/* Product detail page  */
+
+.pro-detail img{
+	display: block !important;
+	margin: 0 auto !important;
+	
+}
+
+.border-size-box{
+	border:2px solid #B3B356 ;
+	padding: 20px;
+}
+
+.pro-sec-detail{
+background: #F1F1F1;
+box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.160784);
+border-radius: 10px;
+padding: 50px 30px;
+}
+
+.pro-nav .nav-link.active {
+	background: #FFFFFF;
+	border: 1px solid #B3B356;
+	border-radius: 50px;
+}
+
+.pro-nav .nav-link{
+	border: 0 ;
 }

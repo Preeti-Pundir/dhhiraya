@@ -68,8 +68,9 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-group login-btn">
+                                    <div class="form-group login-btn d-flex align-items-center justify-content-between">
                                         <button class="btn-lgn" type="submit">Register</button>
+                                        <a href="{{route('login.form')}}" >Oldies? Login here</a>
                                         <!-- <a href="{{route('login.form')}}" class="btn">Login</a> -->
                                         <!-- <a href="{{route('login.redirect','facebook')}}" class="btn btn-facebook"><i class="ti-facebook"></i></a>
                                         <a href="{{route('login.redirect','github')}}" class="btn btn-github"><i class="ti-github"></i></a>

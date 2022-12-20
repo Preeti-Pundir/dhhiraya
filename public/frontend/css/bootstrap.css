@@ -708,8 +708,7 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px
+   
 }
 
 .no-gutters {
@@ -3732,13 +3731,14 @@ tbody.collapse.show {
 }
 
 .nav-pills .nav-link {
-    border-radius: .25rem
+  border-bottom: 1px solid #D1D1D1 ;
+
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #007bff
+    color: #B3B356;
+    background-color: transparent ;
 }
 
 .nav-fill .nav-item {
@@ -6334,6 +6334,7 @@ a.bg-dark:hover {
 .flex-column {
     -ms-flex-direction: column!important;
     flex-direction: column!important
+    
 }
 
 .flex-row-reverse {

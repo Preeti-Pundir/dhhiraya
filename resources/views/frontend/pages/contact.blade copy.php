@@ -7,70 +7,43 @@
 	<section id="contact-us" class="contact-us section">
 		<div class="container">
 				<div class="contact-head">
-					<div class="row ">
-						<div class="col-lg-5 col-12">
-
-							<h2>Lets talk about your <br> dream house</h2>
-
-						<div class="single-head">
-								<div class="single-info mt-5 pt-3">
-									<img src="/frontend/img/Vector-c3.svg" alt="">
-								<div class="ml-4">
-									<h4 class="title">Call </h4>
-									<ul>
-										<li>084524145547</li>
-									</ul>
-									</div>
-								</div>
-								<div class="single-info mt-5 pt-3">
-									<img src="/frontend/img/Vector-c.svg" alt="">
-									<div class="ml-4">
-
-									<h4 class="title">Email</h4>
-									<ul>
-										<li><a href="mailto:info@yourwebsite.com">loremipsum@gmail.com</a></li>
-									</ul>
-</div>
-
-								</div>
-								<div class="single-info mt-5 pt-3">
-									<img src="/frontend/img/Vector-c2.svg" alt="">
-									<div class="ml-4">	
-									<h4 class="title">Chat</h4>
-									<ul>
-										<li>084524145547</li>
-									</ul>
-</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-7 col-12">
-							
-
+					<div class="row">
+						<div class="col-lg-8 col-12">
 							<div class="form-main">
 								<div class="title">
 									@php
 										$settings=DB::table('settings')->get();
 									@endphp
+									<h4>Get in touch</h4>
+									<h3>Write us a message @auth @else<span style="font-size:12px;" class="text-danger">[You need to login first]</span>@endauth</h3>
 								</div>
 								<form class="form-contact form contact_form" method="post" action="{{route('contact.store')}}" id="contactForm" novalidate="novalidate">
 									@csrf
 									<div class="row">
-										<div class="col-lg-12 col-12">
+										<div class="col-lg-6 col-12">
 											<div class="form-group">
 												<label>Your Name<span>*</span></label>
 												<input name="name" id="name" type="text" placeholder="Enter your name">
 											</div>
 										</div>
-										
-										<div class="col-lg-12 col-12">
+										<div class="col-lg-6 col-12">
+											<div class="form-group">
+												<label>Your Subjects<span>*</span></label>
+												<input name="subject" type="text" id="subject" placeholder="Enter Subject">
+											</div>
+										</div>
+										<div class="col-lg-6 col-12">
 											<div class="form-group">
 												<label>Your Email<span>*</span></label>
 												<input name="email" type="email" id="email" placeholder="Enter email address">
 											</div>	
 										</div>
-										
+										<div class="col-lg-6 col-12">
+											<div class="form-group">
+												<label>Your Phone<span>*</span></label>
+												<input id="phone" name="phone" type="number" placeholder="Enter your phone">
+											</div>	
+										</div>
 										<div class="col-12">
 											<div class="form-group message">
 												<label>your message<span>*</span></label>
@@ -79,12 +52,36 @@
 										</div>
 										<div class="col-12">
 											<div class="form-group button">
-												<button class="btn-lgn" type="submit">Send Message</button>
-
+												<button type="submit" class="btn ">Send Message</button>
 											</div>
 										</div>
 									</div>
 								</form>
+							</div>
+						</div>
+						<div class="col-lg-4 col-12">
+							<div class="single-head">
+								<div class="single-info">
+									<i class="fa fa-phone"></i>
+									<h4 class="title">Call us Now:</h4>
+									<ul>
+										<li>@foreach($settings as $data) {{$data->phone}} @endforeach</li>
+									</ul>
+								</div>
+								<div class="single-info">
+									<i class="fa fa-envelope-open"></i>
+									<h4 class="title">Email:</h4>
+									<ul>
+										<li><a href="mailto:info@yourwebsite.com">@foreach($settings as $data) {{$data->email}} @endforeach</a></li>
+									</ul>
+								</div>
+								<div class="single-info">
+									<i class="fa fa-location-arrow"></i>
+									<h4 class="title">Our Address:</h4>
+									<ul>
+										<li>@foreach($settings as $data) {{$data->address}} @endforeach</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -94,11 +91,11 @@
 	<!--/ End Contact -->
 	
 	<!-- Map Section -->
-	<!-- <div class="map-section">
+	<div class="map-section">
 		<div id="myMap">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14130.857353934944!2d85.36529494999999!3d27.6952226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sne!2snp!4v1595323330171!5m2!1sne!2snp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		</div>
-	</div> -->
+	</div>
 	<!--/ End Map Section -->
 	
 	<!-- Start Shop Newsletter  -->

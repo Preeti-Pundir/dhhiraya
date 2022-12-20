@@ -4083,6 +4083,7 @@ input[type="button"].btn-block {
 
 .nav-pills .nav-link {
   border-radius: 0.35rem;
+  border-bottom: 1px solid #000 !important;
 }
 
 .nav-pills .nav-link.active,

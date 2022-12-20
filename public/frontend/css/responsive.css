@@ -312,7 +312,7 @@ Version:1.0
 	width: 100%;
 }
 .contact-us .single-head {
-	padding: 30px;
+	/* padding: 30px; */
 	margin-top: 30px;
 }
 .about-us .about-content {
@@ -975,7 +975,7 @@ Version:1.0
 	width: 100%;
 }
 .contact-us .single-head {
-	padding: 30px;
+	/* padding: 30px; */
 	margin-top: 30px;
 }
 .contact-us .form .form-group input {
@@ -1567,7 +1567,7 @@ Version:1.0
 	box-shadow:none;
 }
 .contact-us .single-head {
-	padding:0px;
+	/* padding:0px; */
 	border:none;
 	box-shadow:none;
 	margin-top: 40px;

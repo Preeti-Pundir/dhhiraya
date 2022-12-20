@@ -48,6 +48,11 @@ class FrontendController extends Controller
         return view('frontend.pages.contact');
     }
 
+    public function accountdetails(){
+        return view('frontend.pages.myaccount');
+
+    }
+
     public function productDetail($slug){
         $product_detail= Product::getProductBySlug($slug);
         // dd($product_detail);

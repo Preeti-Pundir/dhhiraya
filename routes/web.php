@@ -37,6 +37,7 @@ Route::get('/home', 'FrontendController@index');
 Route::get('/about-us','FrontendController@aboutUs')->name('about-us');
 Route::get('/contact','FrontendController@contact')->name('contact');
 Route::post('/contact/message','MessageController@store')->name('contact.store');
+Route::get('/myaccount', 'FrontendController@accountdetails');
 Route::get('product-detail/{slug}','FrontendController@productDetail')->name('product-detail');
 Route::post('/product/search','FrontendController@productSearch')->name('product.search');
 Route::get('/product-cat/{slug}','FrontendController@productCat')->name('product-cat');
