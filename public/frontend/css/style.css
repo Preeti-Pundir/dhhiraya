@@ -5027,3 +5027,43 @@ padding: 50px 30px;
 .pro-nav .nav-link{
 	border: 0 ;
 }
+
+
+
+/* Indexpage Brands */
+
+
+.my-container {
+	position: relative;
+	background: #000;
+	overflow: hidden;
+  }
+  
+  .my-container h6 {
+	padding: 50% 20px 50% 20px;
+	font-size: 10px;
+	text-align: center;
+	z-index: 2;
+	position: relative;
+	color: #fff;
+  }
+  
+  .my-container .newimage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+	opacity: 0.57;
+  }
+
+  .my-container .imageone {
+	position: absolute;
+	left: 15%;
+	top: 8%;
+	width: 70%;
+	height: auto;
+	z-index: 2;
+	
+  }

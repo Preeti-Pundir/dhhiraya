@@ -22,6 +22,25 @@
 
     </section>
 @endif
+
+
+@if(count($brands)>0)
+<div class="container mt-5">
+    <div class="row">
+    @foreach($brands as $city)
+        <div class="col-md-3 col-sm-6 my-3">
+        <div class="my-container">
+        <h6>{{$city->title}}<br><br>Comming soon..</h6>
+        <img class="newimage" src="{{$city->images}}" alt=""> 
+        <img class="imageone" src="{{asset('/frontend/img/brand.png')}}" alt="">    
+        </div>
+     </div>
+       @endforeach
+    </div>
+</div>
+@endif
+
+
 <section class="pt-5 pb-5">
 <div class="container pt-5 pb-5">
     <div class="text-center">

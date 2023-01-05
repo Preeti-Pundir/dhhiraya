@@ -43,17 +43,10 @@ class BrandController extends Controller
             'images'=>'string|nullable',
            //'images'=>'string!image|mimes:jpeg,png,jpg|max:2048',
         ]);
-        //dd($request->all());
-    //    $image = $request->file('images');
-    //     dd($image);
-    //     $input['images'] = time().'.'.$image->getClientOriginalExtension();
-        
-    //     $destinationPath = public_path('/images');
-    //     $image->move($destinationPath, $input['imagename']);
-        
+      
       
        $data=$request->all();
-      // dd($data);
+    
         $slug=Str::slug($request->title);
         $count=Brand::where('slug',$slug)->count();
         if($count>0){
