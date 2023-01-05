@@ -21,6 +21,7 @@
               <th>S.N.</th>
               <th>Title</th>
               <th>Slug</th>
+              <th>images</th>
               <th>Status</th>
               <th>Action</th>
             </tr>
@@ -30,6 +31,7 @@
               <th>S.N.</th>
               <th>Title</th>
               <th>Slug</th>
+              <th>images</th>
               <th>Status</th>
               <th>Action</th>
               </tr>
@@ -40,6 +42,14 @@
                     <td>{{$brand->id}}</td>
                     <td>{{$brand->title}}</td>
                     <td>{{$brand->slug}}</td>
+                    <td>
+                      @if($brand->images)
+                          <img src="{{$brand->images}}" class="img-fluid" style="max-width:80px" alt="{{$brand->images}}">
+                      @else
+                          <img src="{{asset('backend/img/thumbnail-default.jpg')}}" class="img-fluid" style="max-width:80px" alt="avatar.png">
+                      @endif
+                  </td>
+                    {{-- <td>{{$brand->images}}</td> --}}
                     <td>
                         @if($brand->status=='active')
                             <span class="badge badge-success">{{$brand->status}}</span>

@@ -1,6 +1,7 @@
 
 <?php
 
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
@@ -109,6 +110,8 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::resource('banner','BannerController');
     // Brand
     Route::resource('brand','BrandController');
+    // Route::get('image', [BrandController::class, 'images']);
+    // Route::post('image/upload', [BrandController::class, 'uploadImage']);
     // Profile
     Route::get('/profile','AdminController@profile')->name('admin-profile');
     Route::post('/profile/{id}','AdminController@profileUpdate')->name('profile-update');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Brand;
 use Illuminate\Support\Str;
+use validate;
 class BrandController extends Controller
 {
     /**
@@ -34,12 +35,25 @@ class BrandController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     public function store(Request $request)
     {
         $this->validate($request,[
             'title'=>'string|required',
+            'images'=>'string|nullable',
+           //'images'=>'string!image|mimes:jpeg,png,jpg|max:2048',
         ]);
-        $data=$request->all();
+        //dd($request->all());
+    //    $image = $request->file('images');
+    //     dd($image);
+    //     $input['images'] = time().'.'.$image->getClientOriginalExtension();
+        
+    //     $destinationPath = public_path('/images');
+    //     $image->move($destinationPath, $input['imagename']);
+        
+      
+       $data=$request->all();
+      // dd($data);
         $slug=Str::slug($request->title);
         $count=Brand::where('slug',$slug)->count();
         if($count>0){
@@ -67,6 +81,9 @@ class BrandController extends Controller
     {
         //
     }
+    // public function image() {
+    //     return view('image-upload');
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -96,6 +113,7 @@ class BrandController extends Controller
         $brand=Brand::find($id);
         $this->validate($request,[
             'title'=>'string|required',
+            'image'=>'string!image|mimes:jpeg,png,jpg|max:2048',
         ]);
         $data=$request->all();
        

@@ -48,6 +48,7 @@ class CategoryController extends Controller
             'is_parent'=>'sometimes|in:1',
             'parent_id'=>'nullable|exists:categories,id',
         ]);
+        
         $data= $request->all();
         $slug=Str::slug($request->title);
         $count=Category::where('slug',$slug)->count();
