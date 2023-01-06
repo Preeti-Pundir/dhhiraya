@@ -52,7 +52,16 @@
 <div class="container-fluid" style="background-color:#FFFFEE">
     <div class="row align-items-center">
         <div class="col-md-6">
-            <img src="/frontend/img/Rectangle 23.png" alt="">
+        <div class="owl-carousel owl-theme">
+  <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
+  <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
+  <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
+  <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
+  <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
+  <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
+  <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
+</div>
+            <!-- <img src="/frontend/img/Rectangle 23.png" alt=""> -->
         </div>
         <div class="col-md-6" >
             <h4>Suntec City</h4>
@@ -296,6 +305,28 @@
             }
             return false
         }
+    </script>
+
+    <script>
+
+const nextIcon = '<img class="iconprev" src="{{asset('frontend/img/left.png')}}">';
+        const prevIcon = '<img class="iconnext" src="{{asset('frontend/img/right.png')}}">';
+
+
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    dots:false,
+    margin:10,
+    responsiveClass:true,
+    navText: [nextIcon, prevIcon],
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        }
+    }
+})
+
     </script>
 
 @endpush

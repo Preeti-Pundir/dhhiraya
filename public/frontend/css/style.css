@@ -5067,3 +5067,27 @@ padding: 50px 30px;
 	z-index: 2;
 	
   }
+
+  /* carousel css for inddexpage */
+
+.owl-prev,
+.owl-next {
+	  position: absolute;
+	  top: 45%;
+	  background-color: transparent !important;
+	  
+  }
+ 
+.owl-prev {
+	  left: 0;
+  }
+ 
+.owl-next {
+	  right: 0;
+  }
+ 
+/* .owl-prev:hover,
+.owl-next:hover {
+	  background-color: transparent !important;
+  } */
+ 

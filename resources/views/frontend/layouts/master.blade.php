@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
+<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 	@include('frontend.layouts.head')	
 </head>
 <body class="js">
@@ -23,6 +25,9 @@
 	@yield('main-content')
 	
 	@include('frontend.layouts.footer')
+
+	<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 
 </body>
 </html>
