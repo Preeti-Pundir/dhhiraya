@@ -94,14 +94,14 @@
         <h2 class="mb-3">Find your way home</h2>
         <p>Discover a place you’ll live and love</p>
     </div>
-        <div class="row mt-5 mb-5">
+        <div class="row mt-5 mb-5 align-items-center justify-content-center">
             @php
             $category_lists=DB::table('categories')->where('status','active')->limit(3)->get();
             @endphp
             @if($category_lists)
                 @foreach($category_lists as $cat)
                     @if($cat->is_parent==1)
-                        <div class="col-lg-4 col-md-6 col-12 cat-card pt-5 pb-4">
+                        <div class="col-lg-4 col-md-6 col-sm-12 cat-card py-4 px-3">
                             <div class="single-banner">
                                 @if($cat->photo)
                                     <img src="{{$cat->photo}}" alt="{{$cat->photo}}" width="25%">
@@ -127,8 +127,8 @@
 <section class="container-fluid-new">
 <div class="container-fluid">
 <div class="row align-items-center">
-    <div class="col-md-6"><img src="/frontend/img/Group 103.png" alt="" class="group103img"></div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-12"><img src="/frontend/img/Group 103.png" alt="" class="group103img"></div>
+    <div class="col-md-6 col-sm-12">
         <h4>Hassle free buying your own property</h4>
         <p class="mt-5"> Strategy startup research & development equity burn rate<br> validation customer vesting period infrastructure seed round <br>bandwidth ecosystem infographic market.</p>
         <ul class="mt-5">
@@ -316,6 +316,7 @@ const nextIcon = '<img class="iconprev" src="{{asset('frontend/img/left.png')}}"
         $('.owl-carousel').owlCarousel({
     loop:true,
     dots:false,
+
     margin:10,
     responsiveClass:true,
     navText: [nextIcon, prevIcon],
