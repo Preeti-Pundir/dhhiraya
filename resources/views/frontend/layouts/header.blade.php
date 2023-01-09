@@ -1,89 +1,109 @@
 <header class="header shop">
 
-    <!-- Header Inner -->
-    <div class="header-inner">
-        <div class="container mt-4 mb-4">
-            <div class="cat-nav-head">
-                <div class="row">
-                    <div class="col-lg-12 col-12">
-                        <div class="menu-area">
-                            <!-- Main Menu -->
-                            <nav class="navbar navbar-expand-lg ">
-                                <a class="navbar-brand" href="{{url('/')}}"><img src="/frontend/img/dhhirayalogo.png"
-                                        alt=""></a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <div class="nav-inner">
-                                        <ul class="navbar-nav mr-auto">
-                                            <ul class="nav main-menu menu navbar-nav">
-                                                <li class="{{Request::path()=='home' ? 'active' : ''}}"><a
+
+    <nav>
+        <div class=" container py-5">
+
+            <div class="d-flex align-items-center justify-content-between">
+                
+                
+                <div class="nav-left d-flex align-items-center justify-content-between">
+                    <div class="main-logo mr-5"><a class="navbar-brand" href="{{url('/')}}"><img src="/frontend/img/dhhirayalogo.png"
+                                                    alt=""></a>
+                                                </div>
+                    <div class="nav-menu">
+                        <ul class="menu-items d-flex">
+
+                            <li class="{{Request::path()=='home' ? 'active' : ''}}"><a
                                                         href="{{route('home')}}">Home</a></li>
-                                                <li class="{{Request::path()=='about-us' ? 'active' : ''}}"><a
+                                                <li class="{{Request::path()=='about-us' ? 'active' : ''}} mx-4"><a
                                                         href="{{route('about-us')}}">The Realtors</a></li>
                                                 <li
                                                     class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif">
                                                     <a href="{{route('product-grids')}}">Hot Shot Listings</a></li>
-                                                <!-- {{Helper::getHeaderCategory()}} -->
-                                                <!-- <li class="{{Request::path()=='blog' ? 'active' : ''}}"><a href="{{route('blog')}}">Blog</a></li>									 -->
+                                                <!-- {{Helper::getHeaderCategory()}}
+                                                <li class="{{Request::path()=='blog' ? 'active' : ''}} mx-4"><a href="{{route('blog')}}">Blog</a></li>									 -->
 
-                                                <li class="{{Request::path()=='contact' ? 'active' : ''}}"><a
+                                                <li class="{{Request::path()=='contact' ? 'active' : ''}} mx-4"><a
                                                         href="{{route('contact')}}">Contact Us</a></li>
-                                            </ul>
-                                    </div>
 
 
-                                </div>
-                                <ul class="nav navbar-nav navbar-right">
-                                    @guest
+
+
+                        </ul>
+                    </div>
+                    </div>
+
+                <div class="nav-right d-flex align-items-center justify-content-between">
+                @guest
                                  
                                     
-                                    <li class="curser-pointer">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/frontend/img/Group 8.svg" alt="" width="25px">&nbsp;
-                                            <a href="{{route('login.form')}}">SIGN IN</a>
-                                        </div>
-                                    </li>
+                                 <div class="curser-pointer">
+                                     <div class="d-flex align-items-center">
+                                         <img src="/frontend/img/Group 8.svg" alt="" width="25px">&nbsp;
+                                         <a href="{{route('login.form')}}">SIGN IN</a>
+                                     </div>
+                                 </div>
 
-                                    @else
-                                    <li class="curser-pointer">
+                                 @else
+                                 <div class="curser-pointer">
+                                         <div class="dropdown-toggle " type="button"
+                                             id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                             aria-expanded="false">
+                                             <!-- <img src="/frontend/img/Group 8.svg" class="user-icon" alt="" width="25px">&nbsp; -->
+                                             <span>{{Auth::user()->name}}</span>
+                                             
+                                         </div>
+                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                             <a class="dropdown-item" href="{{route('user.myaccount')}}">My Account</a> 
+                                             @if(Auth::user()->role == "admin")                                           
+                                             <a class="dropdown-item" href="{{route('admin')}}">Dashboard</a> 
+                                             @else
+                                             <a class="dropdown-item" href="{{route('user')}}">Dashboard</a> 
+                                             @endif
+                                             <a class="dropdown-item" href="{{route('user.logout')}}">Logout</a>                                            
+                                         </div>
 
-
-                                        <!-- <div class="dropdown"> -->
-                                            <div class="dropdown-toggle " type="button"
-                                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false">
-                                            {{Auth::user()->name}}
-                                            </div>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="{{route('user.myaccount')}}">My Account</a> 
-                                                @if(Auth::user()->role == "admin")                                           
-                                                <a class="dropdown-item" href="{{route('admin')}}">Dashboard</a> 
-                                                @else
-                                                <a class="dropdown-item" href="{{route('user')}}">Dashboard</a> 
-                                                @endif
-                                                <a class="dropdown-item" href="{{route('user.logout')}}">Logout</a>                                            
-                                            </div>
-                                        <!-- </div> -->
-
-
-                                    </li>
+                                 </div>
 
 
-                                        @endguest                                
-                                    </ul>
-                            </nav>
-                            <!--/ End Main Menu -->
-                        </div>
-                    </div>
+                                     @endguest  
+
+                                     <div class="hamburger">
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                     </div>
+
                 </div>
+            
             </div>
         </div>
-    </div>
-    <!--/ End Header Inner -->
+    </nav>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".nav-menu");
+       
+
+        hamburger.addEventListener("click" , ()=> {
+                menu.classList.toggle('show')
+        });
+    </script>
+
+    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
+
+    <script>
+        $(window).scroll(function(){
+      if ($(this).scrollTop() > 120) {
+          $('.header').addClass('fixed');
+      } else {
+          $('.header').removeClass('fixed');
+      }
+});
+    </script>
 
 
 </header>
+
+
