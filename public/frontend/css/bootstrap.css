@@ -3046,9 +3046,9 @@ tbody.collapse.show {
     z-index: 1000;
     display: none;
     float: left;
-    min-width: 10rem;
-    padding: .5rem 0;
-    margin: .125rem 0 0;
+    min-width: 3rem;
+    padding: 10px 0;
+    margin: 20px 0 0;
     font-size: 1rem;
     color: #212529;
     text-align: left;
