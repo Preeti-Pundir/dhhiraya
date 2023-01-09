@@ -80,7 +80,15 @@
 					</div>
 				</div>
 				<div class="col-md-8">
-					<img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px ">
+				<div class="owl-carousel owl-theme">
+  <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
+  <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
+  <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
+  <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
+  <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
+  <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
+  <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
+</div>
 				</div>
 			</div>
 		</div>
@@ -92,13 +100,13 @@
             <div class="col-md-12 " >
                 <!-- Tabs nav -->
                 <div class="nav flex-row  nav-pills nav-pills-custom pro-nav" id="v-pills-tab" role="tablist" aria-orientation="vertical" >
-                    <a class="nav-link mb-5 p-3 shadow active" id="v-pills-developer-tab" data-toggle="pill" href="#v-pills-developer" role="tab" aria-controls="v-pills-developer" aria-selected="true">
+                    <a class="nav-link shadow active" id="v-pills-developer-tab" data-toggle="pill" href="#v-pills-developer" role="tab" aria-controls="v-pills-developer" aria-selected="true">
                         <span  class="font-weight-bold small text-uppercase">Developer</span></a>
 
-                    <a class="nav-link mb-5 p-3 shadow" id="v-pills-other-detail-tab" data-toggle="pill" href="#v-pills-other-detail" role="tab" aria-controls="v-pills-other-detail" aria-selected="false">
+                    <a class="nav-link shadow" id="v-pills-other-detail-tab" data-toggle="pill" href="#v-pills-other-detail" role="tab" aria-controls="v-pills-other-detail" aria-selected="false">
                         <span  class="font-weight-bold small text-uppercase">Other details</span></a>
 
-                    <a class="nav-link mb-5 p-3 shadow" id="v-pills-acquisition-tab" data-toggle="pill" href="#v-pills-acquisition" role="tab" aria-controls="v-pills-acquisition" aria-selected="false">
+                    <a class="nav-link shadow" id="v-pills-acquisition-tab" data-toggle="pill" href="#v-pills-acquisition" role="tab" aria-controls="v-pills-acquisition" aria-selected="false">
                         <span  class="font-weight-bold small text-uppercase">Acquisition</span></a>
 
                   
@@ -108,6 +116,7 @@
 
             <div class="col-md-12">
                 <!-- Tabs content -->
+				<hr>
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade shadow rounded bg-white show active" id="v-pills-developer" role="tabpanel" aria-labelledby="v-pills-developer-tab">
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
@@ -225,5 +234,30 @@
             })
         });
     </script> --}}
+
+
+<script>
+
+const nextIcon = '<img class="iconprev" src="{{asset('frontend/img/blackleft.png')}}">';
+        const prevIcon = '<img class="iconnext" src="{{asset('frontend/img/blackright.png')}}">';
+
+
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    dots:false,
+
+    margin:10,
+    responsiveClass:true,
+    navText: [nextIcon, prevIcon],
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        }
+    }
+})
+
+    </script>
+
 
 @endpush

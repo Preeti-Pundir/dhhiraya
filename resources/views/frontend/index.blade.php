@@ -28,7 +28,7 @@
 <div class="container mt-5">
     <div class="row">
     @foreach($brands as $city)
-        <div class="col-md-3 col-sm-6 my-3">
+        <div class="col-lg-3 col-md-6 col-12  my-3">
         <div class="my-container">
         <h6>{{$city->title}}<br><br>Comming soon..</h6>
         <img class="newimage" src="{{$city->images}}" alt=""> 
@@ -101,7 +101,7 @@
             @if($category_lists)
                 @foreach($category_lists as $cat)
                     @if($cat->is_parent==1)
-                        <div class="col-lg-4 col-md-6 col-sm-12 cat-card py-4 px-3">
+                        <div class="col-lg-4 col-md-6 col-12 cat-card py-4 px-3">
                             <div class="single-banner">
                                 @if($cat->photo)
                                     <img src="{{$cat->photo}}" alt="{{$cat->photo}}" width="25%">
@@ -127,8 +127,8 @@
 <section class="container-fluid-new">
 <div class="container-fluid">
 <div class="row align-items-center">
-    <div class="col-md-6 col-sm-12"><img src="/frontend/img/Group 103.png" alt="" class="group103img"></div>
-    <div class="col-md-6 col-sm-12">
+    <div class="col-lg-6 col-12  home-fifth"><img src="/frontend/img/Group 103.png" alt="" class="group103img"></div>
+    <div class="col-lg-6 col-12  home-fifth">
         <h4>Hassle free buying your own property</h4>
         <p class="mt-5"> Strategy startup research & development equity burn rate<br> validation customer vesting period infrastructure seed round <br>bandwidth ecosystem infographic market.</p>
         <ul class="mt-5">

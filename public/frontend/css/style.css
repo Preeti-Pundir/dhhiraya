@@ -5028,6 +5028,16 @@ padding: 50px 30px;
 	border: 0 ;
 }
 
+/* Homepage  */
+
+@media screen and (max-width:991px) {
+
+	.home-fifth{
+		text-align: center !important;
+	}
+
+}
+
 
 
 /* Indexpage Brands */
@@ -5091,3 +5101,4 @@ padding: 50px 30px;
 	  background-color: transparent !important;
   } */
  
+

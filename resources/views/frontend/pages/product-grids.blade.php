@@ -51,7 +51,7 @@
                             {{-- {{$products}} --}}
                             @if(count($products)>0)
                                 @foreach($products as $product)
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                    <div class="col-lg-3 col-md-4 col-12">
                                         <div class="single-product">
                                             <div class="product-img">
                                                 <a href="{{route('product-detail',$product->slug)}}">
@@ -256,8 +256,8 @@
     <section class="container-fluid-new">
 <div class="container-fluid">
 <div class="row align-items-center">
-    <div class="col-md-6"><img src="/frontend/img/Group 103.png" alt="" class="group103img"></div>
-    <div class="col-md-6">
+    <div class="col-lg-6 col-12  home-fifth my-2"><img src="/frontend/img/Group 103.png" alt="" class="group103img"></div>
+    <div class="col-lg-6 col-12  home-fifth my-2">
         <h4>Hassle free buying your own property</h4>
         <p class="mt-5"> Strategy startup research & development equity burn rate<br> validation customer vesting period infrastructure seed round <br>bandwidth ecosystem infographic market.</p>
         <ul class="mt-5">
