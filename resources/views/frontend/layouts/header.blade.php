@@ -40,18 +40,18 @@
                                     
                                  <div class="curser-pointer">
                                      <div class="d-flex align-items-center">
-                                         <img src="/frontend/img/Group 8.svg" alt="" width="25px">&nbsp;
+                                         <img src="/frontend/img/Group 8.svg" alt="" width="30px">&nbsp;
                                          <a href="{{route('login.form')}}">SIGN IN</a>
                                      </div>
                                  </div>
 
                                  @else
                                  <div class="curser-pointer">
-                                         <div class="dropdown-toggle " type="button"
+                                         <div class="" type="button"
                                              id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                              aria-expanded="false">
-                                             <!-- <img src="/frontend/img/Group 8.svg" class="user-icon" alt="" width="25px">&nbsp; -->
-                                             <span>{{Auth::user()->name}}</span>
+                                             <img src="/frontend/img/Group 8.svg" class="user-icon" alt="" width="30px">&nbsp;
+                                             <span class="uname">{{Auth::user()->name}}</span>
                                              
                                          </div>
                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -84,23 +84,16 @@
     <script>
         const hamburger = document.querySelector(".hamburger");
         const menu = document.querySelector(".nav-menu");
-       
-
         hamburger.addEventListener("click" , ()=> {
                 menu.classList.toggle('show')
         });
     </script>
 
-    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
-
     <script>
-        $(window).scroll(function(){
-      if ($(this).scrollTop() > 120) {
-          $('.header').addClass('fixed');
-      } else {
-          $('.header').removeClass('fixed');
-      }
-});
+        const header = document.querySelector("header");
+        window.addEventListener("scroll", () => {
+                header.classList.toggle("fixed",window.scrollY > 0 );    
+        })
     </script>
 
 
