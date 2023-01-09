@@ -1,7 +1,5 @@
 <header class="header shop">
 
-
-
     <!-- Header Inner -->
     <div class="header-inner">
         <div class="container mt-4 mb-4">
@@ -41,13 +39,9 @@
                                 </div>
                                 <ul class="nav navbar-nav navbar-right">
                                     @guest
-                                    <!-- @if(Auth::user()->role=='admin')
-                                    <li> <a href="{{route('admin')}}"  target="_blank">Dashboard</a></li>
-                                @else 
-                                    <li> <a href="{{route('user')}}"  target="_blank">Dashboard</a></li>
-                                @endif -->
+                                 
                                     
-                                    <li>
+                                    <li class="curser-pointer">
                                         <div class="d-flex align-items-center">
                                             <img src="/frontend/img/Group 8.svg" alt="" width="25px">&nbsp;
                                             <a href="{{route('login.form')}}">SIGN IN</a>
@@ -55,16 +49,22 @@
                                     </li>
 
                                     @else
-                                    <li>
+                                    <li class="curser-pointer">
 
 
                                         <!-- <div class="dropdown"> -->
-                                            <div class=" dropdown-toggle" type="button"
+                                            <div class="dropdown-toggle " type="button"
                                                 id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false">
                                             {{Auth::user()->name}}
                                             </div>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="{{route('user.myaccount')}}">My Account</a> 
+                                                @if(Auth::user()->role == "admin")                                           
+                                                <a class="dropdown-item" href="{{route('admin')}}">Dashboard</a> 
+                                                @else
+                                                <a class="dropdown-item" href="{{route('user')}}">Dashboard</a> 
+                                                @endif
                                                 <a class="dropdown-item" href="{{route('user.logout')}}">Logout</a>                                            
                                             </div>
                                         <!-- </div> -->

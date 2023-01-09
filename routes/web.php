@@ -38,7 +38,6 @@ Route::get('/home', 'FrontendController@index');
 Route::get('/about-us','FrontendController@aboutUs')->name('about-us');
 Route::get('/contact','FrontendController@contact')->name('contact');
 Route::post('/contact/message','MessageController@store')->name('contact.store');
-Route::get('/myaccount', 'FrontendController@accountdetails');
 Route::get('product-detail/{slug}','FrontendController@productDetail')->name('product-detail');
 Route::post('/product/search','FrontendController@productSearch')->name('product.search');
 Route::get('/product-cat/{slug}','FrontendController@productCat')->name('product-cat');
@@ -165,6 +164,8 @@ Route::group(['prefix'=>'/user','middleware'=>['user']],function(){
      // Profile
      Route::get('/profile','HomeController@profile')->name('user-profile');
      Route::post('/profile/{id}','HomeController@profileUpdate')->name('user-profile-update');
+Route::get('/myaccount', 'FrontendController@accountdetails')->name('user.myaccount');   
+
     //  Order
     Route::get('/order',"HomeController@orderIndex")->name('user.order.index');
     Route::get('/order/show/{id}',"HomeController@orderShow")->name('user.order.show');
