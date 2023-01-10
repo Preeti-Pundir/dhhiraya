@@ -4931,6 +4931,7 @@ border-radius: 10px;
 
 /* About us page css */
 
+
 .about-second-col{
 	padding: 90px 30px;
 	background-color: #F1F1F1;
@@ -4955,6 +4956,11 @@ border-radius: 10px;
 .about-third-image{
 	margin: 30px 0 0 0 ;
 }
+
+.aboutus-text{
+	font-size: 25px;	
+}
+
 	
 }
 
@@ -5103,17 +5109,36 @@ padding: 50px 30px;
  
   /* Header navbar css */
 
+.main-nav{
+	padding: 30px 0;
+}
+
+.nav-right{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.menu-items{
+	display: flex;	
+}
+
+.menu-items li {
+	margin: 0 10px;
+}
+
 .header nav .nav-menu ul li.active a {
     color: #000;
     border-bottom: 5px solid #B3B356;
-	padding-bottom: 15px;
+	padding-bottom: 12px;
 }
 
 
 .header.fixed{
 	position: fixed;
+	top: 0 !important;
 	width: 100%;
-	height: 120px;
+	height: 90px;
 	background: #fff;
 	z-index: 9999;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -5137,16 +5162,15 @@ padding: 50px 30px;
 	margin: 4px;
 }
 
-.show{
-	display: block !important;
+.nav-menu.show{
+	right: 0 !important;
+
 }
 
 
 @media screen and (max-width:991px) {
 
-	span.uname{
-		display:none !important ;
-	}
+	
 	
 
 	.hamburger{
@@ -5154,7 +5178,22 @@ padding: 50px 30px;
 	}
 
 	.nav-menu{
-		display: none;
+		position: fixed;
+		top: 10%;
+		right: -100%;
+		z-index: 10;
+		width: 100%;
+		transition: all .2s ease-in-out;
+	}
+
+	.menu-items{
+		flex-direction: column;
+		background-color: #fff;
+		margin :10px 0 !important;
+	}
+
+	.menu-items li {
+		margin: 10px 20px !important;
 	}
 
 }

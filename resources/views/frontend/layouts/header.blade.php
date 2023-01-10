@@ -2,29 +2,29 @@
 
 
     <nav>
-        <div class=" container py-5">
+        <div class=" container main-nav">
 
             <div class="d-flex align-items-center justify-content-between">
                 
                 
                 <div class="nav-left d-flex align-items-center justify-content-between">
-                    <div class="main-logo mr-5"><a class="navbar-brand" href="{{url('/')}}"><img src="/frontend/img/dhhirayalogo.png"
+                    <div class="main-logo ml-3 mr-5"><a class="navbar-brand" href="{{url('/')}}"><img src="/frontend/img/dhhirayalogo.png"
                                                     alt=""></a>
                                                 </div>
                     <div class="nav-menu">
-                        <ul class="menu-items d-flex">
+                        <ul class="menu-items">
 
                             <li class="{{Request::path()=='home' ? 'active' : ''}}"><a
                                                         href="{{route('home')}}">Home</a></li>
-                                                <li class="{{Request::path()=='about-us' ? 'active' : ''}} mx-4"><a
+                                                <li class="{{Request::path()=='about-us' ? 'active' : ''}} "><a
                                                         href="{{route('about-us')}}">The Realtors</a></li>
                                                 <li
                                                     class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif">
                                                     <a href="{{route('product-grids')}}">Hot Shot Listings</a></li>
                                                 <!-- {{Helper::getHeaderCategory()}}
-                                                <li class="{{Request::path()=='blog' ? 'active' : ''}} mx-4"><a href="{{route('blog')}}">Blog</a></li>									 -->
+                                                <li class="{{Request::path()=='blog' ? 'active' : ''}} "><a href="{{route('blog')}}">Blog</a></li>									 -->
 
-                                                <li class="{{Request::path()=='contact' ? 'active' : ''}} mx-4"><a
+                                                <li class="{{Request::path()=='contact' ? 'active' : ''}} "><a
                                                         href="{{route('contact')}}">Contact Us</a></li>
 
 
@@ -34,7 +34,7 @@
                     </div>
                     </div>
 
-                <div class="nav-right d-flex align-items-center justify-content-between">
+                <div class="nav-right">
                 @guest
                                  
                                     
@@ -51,7 +51,7 @@
                                              id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                              aria-expanded="false">
                                              <img src="/frontend/img/Group 8.svg" class="user-icon" alt="" width="30px">&nbsp;
-                                             <span class="uname">{{Auth::user()->name}}</span>
+                                             <span>{{Auth::user()->name}}</span>
                                              
                                          </div>
                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -69,7 +69,7 @@
 
                                      @endguest  
 
-                                     <div class="hamburger">
+                                     <div class="hamburger ml-3">
                                         <div class="line"></div>
                                         <div class="line"></div>
                                         <div class="line"></div>

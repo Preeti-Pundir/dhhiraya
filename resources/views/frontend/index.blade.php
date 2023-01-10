@@ -8,7 +8,7 @@
                 @foreach($banners as $key=>$banner)
                 <div class="carousel-item {{(($key==0)? 'active' : '')}}">
                     <img class="first-slide" src="{{$banner->photo}}" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block text-center">
+                    <div class="carousel-caption text-center">
                         <h1 class="wow fadeInDown">{{$banner->title}}</h1>
                         <div class="search-container mt-4">
     <form action="/">
@@ -28,7 +28,7 @@
 <div class="container mt-5">
     <div class="row">
     @foreach($brands as $city)
-        <div class="col-lg-3 col-md-6 col-12  my-3">
+        <div class="col-lg-3 col-md-4 col-sm-6 my-3">
         <div class="my-container">
         <h6>{{$city->title}}<br><br>Comming soon..</h6>
         <img class="newimage" src="{{$city->images}}" alt=""> 
@@ -51,7 +51,7 @@
 <div class="container-fluid-new">
 <div class="container-fluid" style="background-color:#FFFFEE">
     <div class="row align-items-center">
-        <div class="col-md-6">
+        <div class="col-md-6 my-3 ">
         <div class="owl-carousel owl-theme">
   <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
   <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
@@ -63,7 +63,7 @@
 </div>
             <!-- <img src="/frontend/img/Rectangle 23.png" alt=""> -->
         </div>
-        <div class="col-md-6" >
+        <div class="col-md-6 my-3" >
             <h4>Suntec City</h4>
     <div class="d-flex align-items-center mt-4">
         <img src="/frontend/img/Layer_x0020_1.png" alt="" class="pr-4">
@@ -101,7 +101,7 @@
             @if($category_lists)
                 @foreach($category_lists as $cat)
                     @if($cat->is_parent==1)
-                        <div class="col-lg-4 col-md-6 col-12 cat-card py-4 px-3">
+                        <div class="col-lg-4 col-md-6 col-sm-6 cat-card py-4 px-3">
                             <div class="single-banner">
                                 @if($cat->photo)
                                     <img src="{{$cat->photo}}" alt="{{$cat->photo}}" width="25%">
@@ -124,25 +124,9 @@
         </div>
     </div>
 
-<section class="container-fluid-new">
-<div class="container-fluid">
-<div class="row align-items-center">
-    <div class="col-lg-6 col-12  home-fifth"><img src="/frontend/img/Group 103.png" alt="" class="group103img"></div>
-    <div class="col-lg-6 col-12  home-fifth">
-        <h4>Hassle free buying your own property</h4>
-        <p class="mt-5"> Strategy startup research & development equity burn rate<br> validation customer vesting period infrastructure seed round <br>bandwidth ecosystem infographic market.</p>
-        <ul class="mt-5">
-            <li class="mt-3"> <img src="/frontend/img/checklist.svg" alt="" width="20px">&nbsp; Business plan lean startup holy grail disruptive</li>
-            <li class="mt-3"> <img src="/frontend/img/checklist.svg" alt="" width="20px">&nbsp; Crowdfunding beta prototype gen-z incubator niche market.</li>
-            <li class="mt-3"> <img src="/frontend/img/checklist.svg" alt="" width="20px">&nbsp; Strategy startup research & development equity burn rate</li>
-        </ul>
-    </div>
-</div>
-</div>
-</section>
 
 
-
+@include('frontend.layouts.ownproperty')
 
 
 @include('frontend.layouts.newsletter')
@@ -160,7 +144,7 @@
         }
 
         #Gslider .carousel-inner{
-        height: 550px;
+        height: auto;
         }
         #Gslider .carousel-inner img{
             width: 100% !important;
@@ -227,6 +211,40 @@
             background-color: Transparent;
             border:1px solid #000;
             border-radius: 0px !important;
+
+        }
+
+        @media screen and (max-width:991px) {
+            #Gslider .carousel-inner .carousel-caption h1 {
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 100%;
+        color: #fff;
+        }
+
+        #Gslider .carousel-inner .carousel-caption {
+        bottom: 40%;
+        }
+
+        .bannersearch {
+    width: 80% !important;
+    padding: 6px 6px !important;
+    border-radius: 20px !important;
+}
+
+        }
+
+        @media screen and (max-width:767px) {
+            #Gslider .carousel-inner .carousel-caption h1 {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 100%;
+        color: #fff;
+        }
+
+        #Gslider .carousel-inner .carousel-caption {
+        bottom: 30%;
+        }
 
         }
 
