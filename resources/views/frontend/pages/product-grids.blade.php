@@ -30,7 +30,7 @@
                                         </div>
                                         <div class="single-shorter">
                                             
-                                            <select class='sortBy pfilter' name='sortBy' onchange="this.form.submit();">
+                                            <select class='sortBy pfilter'   name='sortBy' onchange="this.form.submit();">
                                                 <option value="">Property type</option>
                                                 <option value="title" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='title') selected @endif>Name</option>
                                                 <option value="price" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='price') selected @endif>Price</option>
