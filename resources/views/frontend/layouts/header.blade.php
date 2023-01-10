@@ -2,7 +2,7 @@
 
 
     <nav>
-        <div class=" container main-nav">
+        <div class=" container main-nav ">
 
             <div class="d-flex align-items-center justify-content-between">
                 
@@ -69,10 +69,10 @@
 
                                      @endguest  
 
-                                     <div class="hamburger ml-3">
-                                        <div class="line"></div>
-                                        <div class="line"></div>
-                                        <div class="line"></div>
+                                     <div class="hamburger mx-3">
+                                        <div class="line one"></div>
+                                        <div class="line two"></div>
+                                        <div class="line three"></div>
                                      </div>
 
                 </div>
@@ -83,16 +83,25 @@
 
     <script>
         const hamburger = document.querySelector(".hamburger");
+        const lineone = document.querySelector(".one");
+        const linetwo = document.querySelector(".two");
+        const linethree = document.querySelector(".three");
         const menu = document.querySelector(".nav-menu");
         hamburger.addEventListener("click" , ()=> {
                 menu.classList.toggle('show')
-        });
+                lineone.classList.toggle('change')
+                linetwo.classList.toggle('change')
+                linethree.classList.toggle('change')
+        })
     </script>
+
+    
 
     <script>
         const header = document.querySelector("header");
         window.addEventListener("scroll", () => {
-                header.classList.toggle("fixed",window.scrollY > 0 );    
+                header.classList.toggle("fixed",window.scrollY > 0 );  
+                  
         })
     </script>
 

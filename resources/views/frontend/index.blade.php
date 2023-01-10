@@ -24,7 +24,7 @@
 @endif
 
 
-@if(count($brands)>0)
+<!-- @if(count($brands)>0)
 <div class="container mt-5">
     <div class="row">
     @foreach($brands as $city)
@@ -38,7 +38,30 @@
        @endforeach
     </div>
 </div>
+@endif -->
+
+@if(count($brands)>0)
+<div class="container mt-5">
+    <div class="row">
+    <div class="owl-carousel owl-theme brandscarousel">
+    @foreach($brands as $city)
+    
+        <div>
+        <div class="my-container">
+        <h6>{{$city->title}}<br><br>Comming soon..</h6>
+        <img class="newimage" src="{{$city->images}}" alt=""> 
+        <img class="imageone" src="{{asset('/frontend/img/brand.png')}}" alt="">    
+        </div>
+        </div>
+     
+       @endforeach
+       </div>
+    </div>
+</div>
 @endif
+
+
+
 
 
 <section class="pt-5 pb-5">
@@ -52,7 +75,7 @@
 <div class="container-fluid" style="background-color:#FFFFEE">
     <div class="row align-items-center">
         <div class="col-md-6 my-3 ">
-        <div class="owl-carousel owl-theme">
+        <div class="owl-carousel owl-theme secondsection ">
   <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
   <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
   <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
@@ -331,7 +354,7 @@ const nextIcon = '<img class="iconprev" src="{{asset('frontend/img/left.png')}}"
         const prevIcon = '<img class="iconnext" src="{{asset('frontend/img/right.png')}}">';
 
 
-        $('.owl-carousel').owlCarousel({
+        $('.secondsection').owlCarousel({
     loop:true,
     dots:false,
 
@@ -343,6 +366,39 @@ const nextIcon = '<img class="iconprev" src="{{asset('frontend/img/left.png')}}"
             items:1,
             nav:true
         }
+    }
+})
+
+    </script>
+
+<script>
+
+
+    $('.brandscarousel').owlCarousel({
+    loop:true,
+    dots:false,
+    margin:30,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            dots:true,
+        },
+
+        767:{
+            items:3,
+            dots:true,
+        },
+
+        991:{
+            items:4,
+        },
+        
+        1199:{
+            items:4,
+        },
+        
+
     }
 })
 
