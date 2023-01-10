@@ -19,9 +19,9 @@
                                 <div class="shop-top">
                                     <div class="shop-shorter">
                                         <div class="single-shorter">
-                                            <label>Show :</label>
-                                            <select class="show" name="show" onchange="this.form.submit();">
-                                                <option value="">Default</option>
+                                            
+                                            <select class="show pfilter" name="show" onchange="this.form.submit();">
+                                                <option value="">City</option>
                                                 <option value="9" @if(!empty($_GET['show']) && $_GET['show']=='9') selected @endif>09</option>
                                                 <option value="15" @if(!empty($_GET['show']) && $_GET['show']=='15') selected @endif>15</option>
                                                 <option value="21" @if(!empty($_GET['show']) && $_GET['show']=='21') selected @endif>21</option>
@@ -29,9 +29,9 @@
                                             </select>
                                         </div>
                                         <div class="single-shorter">
-                                            <label>Sort By :</label>
-                                            <select class='sortBy' name='sortBy' onchange="this.form.submit();">
-                                                <option value="">Default</option>
+                                            
+                                            <select class='sortBy pfilter' name='sortBy' onchange="this.form.submit();">
+                                                <option value="">Property type</option>
                                                 <option value="title" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='title') selected @endif>Name</option>
                                                 <option value="price" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='price') selected @endif>Price</option>
                                                 <option value="category" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='category') selected @endif>Category</option>
@@ -51,7 +51,7 @@
                             {{-- {{$products}} --}}
                             @if(count($products)>0)
                                 @foreach($products as $product)
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ">
+                                    <div class="col-lg-4 col-md-4 col-sm-6 ">
                                         <div class="single-product">
                                             <div class="product-img">
                                                 <a href="{{route('product-detail',$product->slug)}}">

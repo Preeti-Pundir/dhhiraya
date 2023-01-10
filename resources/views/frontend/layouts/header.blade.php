@@ -14,18 +14,21 @@
                     <div class="nav-menu">
                         <ul class="menu-items">
 
-                            <li class="{{Request::path()=='home' ? 'active' : ''}}"><a
-                                                        href="{{route('home')}}">Home</a></li>
-                                                <li class="{{Request::path()=='about-us' ? 'active' : ''}} "><a
-                                                        href="{{route('about-us')}}">The Realtors</a></li>
-                                                <li
-                                                    class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif">
-                                                    <a href="{{route('product-grids')}}">Hot Shot Listings</a></li>
-                                                <!-- {{Helper::getHeaderCategory()}}
-                                                <li class="{{Request::path()=='blog' ? 'active' : ''}} "><a href="{{route('blog')}}">Blog</a></li>									 -->
+                            <li class="{{Request::path()=='home' ? 'active' : ''}}">
+                                <a href="{{route('home')}}">Home</a>
+                            </li>
+                             <li class="{{Request::path()=='about-us' ? 'active' : ''}} ">
+                                <a href="{{route('about-us')}}">The Realtors</a>
+                            </li>
+                            <li class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif">
+                                <a href="{{route('product-grids')}}">Hot Shot Listings</a>
+                            </li>
+                             <!-- {{Helper::getHeaderCategory()}}
+                           <li class="{{Request::path()=='blog' ? 'active' : ''}} "><a href="{{route('blog')}}">Blog</a></li>									 -->
 
-                                                <li class="{{Request::path()=='contact' ? 'active' : ''}} "><a
-                                                        href="{{route('contact')}}">Contact Us</a></li>
+                             <li class="{{Request::path()=='contact' ? 'active' : ''}} ">
+                                <a href="{{route('contact')}}">Contact Us</a>
+                            </li>
 
 
 
@@ -34,7 +37,7 @@
                     </div>
                     </div>
 
-                <div class="nav-right">
+                <div class="nav-right mx-3">
                 @guest
                                  
                                     
