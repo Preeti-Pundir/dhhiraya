@@ -7,8 +7,8 @@
             <div class="d-flex align-items-center justify-content-between">
                 
                 
-                <div class="nav-left d-flex align-items-center justify-content-between">
-                    <div class="main-logo ml-3 mr-5"><a class="navbar-brand" href="{{url('/')}}"><img src="/frontend/img/dhhirayalogo.png"
+                <div class="nav-left d-flex align-items-center justify-content-between ml-3">
+                    <div class="main-logo"><a class="navbar-brand" href="{{url('/')}}"><img src="/frontend/img/dhhirayalogo.png"
                                                     alt=""></a>
                                                 </div>
                     <div class="nav-menu">

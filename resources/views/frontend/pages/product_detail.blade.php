@@ -75,8 +75,8 @@
 					</div>
 
 					<div class="mt-4 text-center">
-					<button class="btn-ma" id="b" >Book a visit</button>
-                                <button class="btn-ma" id="g">Get a call</button>
+					<button class="btn-ma" id="b" data-toggle="modal" data-target="#exampleModal" >Book a visit</button>
+                    <button class="btn-ma" id="g" data-toggle="modal" data-target="#exampleModal">Get a call</button>
 					</div>
 				</div>
 				<div class="col-md-8">
@@ -148,6 +148,15 @@
 		</div>
 
 	</section>
+
+
+	<!-- Button trigger modal -->
+
+
+@include('frontend.layouts.bookavisit')
+
+
+
 
 @endsection
 @push('styles')

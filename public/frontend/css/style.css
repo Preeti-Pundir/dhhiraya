@@ -5106,6 +5106,10 @@ padding: 50px 30px;
 }
   /* Header navbar css */
 
+.main-logo{
+	margin:0 48px 0 0 !important;
+}
+
 .main-nav{
 	padding: 30px 0;
 }
@@ -5182,9 +5186,10 @@ padding: 50px 30px;
 
 @media screen and (max-width:991px) {
 
+	.main-logo{
+		margin:0 0 0 0 !important;
+	}
 	
-	
-
 	.hamburger{
 		display: block;
 	}
@@ -5215,6 +5220,12 @@ padding: 50px 30px;
 
 }
 
+@media screen and (max-width:767px) {
+	.main-logo img{
+		width: 200px !important;
+	}
+}
+
 
 /* hot shot listing page  */
 
@@ -5232,4 +5243,19 @@ padding: 50px 30px;
 	font-size: 11px;
 	width: 120px !important;
 }
+}
+
+/* css for modal */
+
+.visit-modal-input{
+	width: 95%;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.160784);
+	border-radius: 5px;
+	border: none !important;
+	padding: 5px 10px !important;
+}
+
+.modal-body form .row{
+	background-color: #ffffff71 !important;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.160784) !important;
 }
