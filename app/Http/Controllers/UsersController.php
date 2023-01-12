@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\DB;
 use App\User;
 class UsersController extends Controller
 {
+
+    public function AuthRouteAPI(Request $request){
+        return $request->user();
+     }
+     
     /**
      * Display a listing of the resource.
      *

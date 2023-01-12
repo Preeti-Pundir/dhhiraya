@@ -1,4 +1,3 @@
-
 <?php
 
 use App\Http\Controllers\BrandController;
@@ -26,7 +25,7 @@ Route::get('user/logout','FrontendController@logout')->name('user.logout');
 Route::get('user/register','FrontendController@register')->name('register.form');
 Route::post('user/register','FrontendController@registerSubmit')->name('register.submit');
 // Reset password
-Route::post('password-reset', 'FrontendController@showResetForm')->name('password.reset'); 
+Route::get('/password-reset', 'FrontendController@showResetForm')->name('password.reset'); 
 // Socialite 
 Route::get('login/{provider}/', 'Auth\LoginController@redirect')->name('login.redirect');
 Route::get('login/{provider}/callback/', 'Auth\LoginController@Callback')->name('login.callback');
@@ -49,14 +48,9 @@ Route::post('/add-to-cart','CartController@singleAddToCart')->name('single-add-t
 Route::get('cart-delete/{id}','CartController@cartDelete')->name('cart-delete');
 Route::post('cart-update','CartController@cartUpdate')->name('cart.update');
 
-Route::get('/cart',function(){
-    return view('frontend.pages.cart');
-})->name('cart');
 Route::get('/checkout','CartController@checkout')->name('checkout')->middleware('user');
 // Wishlist
-Route::get('/wishlist',function(){
-    return view('frontend.pages.wishlist');
-})->name('wishlist');
+Route::get('/wishlist','WishlistController@showwishlist')->name('wishlist');
 Route::get('/wishlist/{slug}','WishlistController@wishlist')->name('add-to-wishlist')->middleware('user');
 Route::get('wishlist-delete/{id}','WishlistController@wishlistDelete')->name('wishlist-delete');
 Route::post('cart/order','OrderController@store')->name('cart.order');
@@ -100,9 +94,7 @@ Route::get('payment/success', 'PayPalController@success')->name('payment.success
 
 Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::get('/','AdminController@index')->name('admin');
-    Route::get('/file-manager',function(){
-        return view('backend.layouts.file-manager');
-    })->name('file-manager');
+    Route::get('/file-manager','AdminController@fmanager')->name('file-manager');
     // user route
     Route::resource('users','UsersController');
     // Banner
@@ -188,9 +180,7 @@ Route::get('/myaccount', 'FrontendController@accountdetails')->name('user.myacco
 
 });
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
-});
+
 
 
 route::get('category',[CategoryController::class,'index'])->name('backend.category.index');

@@ -16,7 +16,16 @@
                             placeholder="Enter an address, neighbourhood, city, or ZIP code" name="search">
                     </form>
                 </div>
+                <div class="social-media-iocns d-flex align-items-center justify-content-center">
+               
+                <a href="#" class="mx-2" > <img  src="{{asset ('/frontend/img/twitter.svg')}}" alt="">
+               </a>
+               <a href="#" class="mx-2" > <img  src="{{asset ('/frontend/img/fb.svg')}}" alt="">
+               </a>
+               <a href="#" class="mx-2" > <img  src="{{asset ('/frontend/img/insta.svg')}}" alt="">
+               </a> </div>
             </div>
+           
         </div>
         @endforeach
     </div>
@@ -25,21 +34,7 @@
 @endif
 
 
-<!-- @if(count($brands)>0)
-<div class="container mt-5">
-    <div class="row">
-    @foreach($brands as $city)
-        <div class="col-lg-3 col-md-4 col-sm-6 my-3">
-        <div class="my-container">
-        <h6>{{$city->title}}<br><br>Comming soon..</h6>
-        <img class="newimage" src="{{$city->images}}" alt=""> 
-        <img class="imageone" src="{{asset('/frontend/img/brand.png')}}" alt="">    
-        </div>
-     </div>
-       @endforeach
-    </div>
-</div>
-@endif -->
+
 
 @if(count($brands)>0)
 <div class="container mt-5">
@@ -77,16 +72,15 @@
         <div class="container-fluid" style="background-color:#FFFFEE">
             <div class="row align-items-center">
                 <div class="col-md-6 my-3 ">
-                    <div class="owl-carousel owl-theme secondsection ">
-                        <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
-                        <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
-                        <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
-                        <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
-                        <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
-                        <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
-                        <div><img src="/frontend/img/Rectangle 23.png" alt=""></div>
+                    <div class="owl-carousel owl-theme citycarousel">
+                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
+                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
+                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
+                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
+                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
                     </div>
-                    <!-- <img src="/frontend/img/Rectangle 23.png" alt=""> -->
+
+
                 </div>
                 <div class="col-md-6 my-3">
                     <h4>Suntec City</h4>
@@ -353,29 +347,6 @@ function requestFullScreen(el) {
 </script>
 
 <script>
-const nextIcon = '<img class="iconprev" src="{{asset('
-frontend / img / left.png ')}}">';
-const prevIcon = '<img class="iconnext" src="{{asset('
-frontend / img / right.png ')}}">';
-
-
-$('.secondsection').owlCarousel({
-    loop: true,
-    dots: false,
-
-    margin: 10,
-    responsiveClass: true,
-    navText: [nextIcon, prevIcon],
-    responsive: {
-        0: {
-            items: 1,
-            nav: true
-        }
-    }
-})
-</script>
-
-<script>
 $('.brandscarousel').owlCarousel({
     loop: true,
     dots: false,
@@ -404,5 +375,22 @@ $('.brandscarousel').owlCarousel({
     }
 })
 </script>
+
+<script>
+const nextIcon = '<img class="iconprev" src="{{ asset('/frontend/img/left.png') }}">';
+const prevIcon = '<img class="iconnext" src="{{ asset('/frontend/img/right.png') }}">';
+
+$('.citycarousel').owlCarousel({
+    loop: true,
+    dots: false,
+    items: 1,
+    nav:true,
+    responsiveClass: true,
+    navText: [nextIcon, prevIcon],
+   
+})
+</script>
+
+
 
 @endpush

@@ -114,4 +114,8 @@ class AdminController extends Controller
     //     $activity= Activity::all();
     //     return view('backend.layouts.activity')->with('activities',$activity);
     // }
+
+    public function fmanager(){
+        return view('backend.layouts.file-manager');
+    }
 }

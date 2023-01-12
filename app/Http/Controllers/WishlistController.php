@@ -55,4 +55,9 @@ class WishlistController extends Controller
         request()->session()->flash('error','Error please try again');
         return back();       
     }     
+
+
+    public function showwishlist(){
+        return view('frontend.pages.wishlist');
+     }
 }

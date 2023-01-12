@@ -5052,6 +5052,13 @@ Version:1.0
 
 /* Homepage  */
 
+.social-media-iocns{
+    position: fixed !important;
+    bottom: 5% !important;
+    left : 45% !important;
+    right : 45% !important;
+}
+
 @media screen and (max-width: 991px) {
     .home-fifth {
         text-align: center !important;
