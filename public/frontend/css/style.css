@@ -5021,6 +5021,12 @@ Version:1.0
     border: 1px solid #b3b356 !important;
 }
 
+@media screen and (max-width:767px) {
+    .myaccount-tabs {
+        border-right: 0 !important;
+    }
+}
+
 /* Product detail page  */
 
 .pro-detail img {
