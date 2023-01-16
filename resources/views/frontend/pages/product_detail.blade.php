@@ -63,8 +63,8 @@
 
                 <div class="mt-4 text-center">
 
-                   <a href="https://wa.me/9512624584/?text=I want to book a visit. My name is {{Auth::user()->name}} and My email id is :{{Auth::user()->email}}" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
-                   <a href="tel:9512624584"> <button class="btn-ma" id="g" >Get a call</button></a>
+                   <a href="https://wa.me/9512624584/" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
+                   <a href="tel:9512624584"> <button class="btn-ma" id="g" >Make a call</button></a>
                 </div>
             </div>
             <div class="col-md-8">
@@ -114,31 +114,17 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade shadow rounded bg-white show active" id="v-pills-developer"
                         role="tabpanel" aria-labelledby="v-pills-developer-tab">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                        <p class="m-5"> </p>
                     </div>
 
                     <div class="tab-pane fade shadow rounded bg-white" id="v-pills-other-detail" role="tabpanel"
                         aria-labelledby="v-pills-other-detail-tab">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                        <p class="m-5"> </p>
                     </div>
 
                     <div class="tab-pane fade shadow rounded bg-white" id="v-pills-acquisition" role="tabpanel"
                         aria-labelledby="v-pills-acquisition-tab">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="m-5"> </p>
                     </div>
 
 
