@@ -5063,7 +5063,26 @@ Version:1.0
     bottom: 5% !important;
     left : 45% !important;
     right : 45% !important;
+    
 }
+
+@media screen and (max-width:991px) {
+    .social-media-iocns{
+        left : 25% !important;
+        right : 25% !important;
+        
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .social-media-iocns{
+        left : 35% !important;
+        right : 35% !important;
+        
+    }
+}
+
 
 @media screen and (max-width: 991px) {
     .home-fifth {
@@ -5080,8 +5099,8 @@ Version:1.0
 }
 
 .my-container h6 {
-    padding: 50% 20px 50% 20px;
-    font-size: 10px;
+    padding: 40% 0px 50% 0px;
+    font-size: 17px;
     text-align: center;
     z-index: 2;
     position: relative;
@@ -5105,6 +5124,14 @@ Version:1.0
     width: 75% !important;
     height: auto !important;
     z-index: 2 !important;
+}
+
+@media screen and (max-width:767px) {
+    
+.my-container h6 {
+    font-size: 13px;
+    padding: 50% 0px 45% 0px;
+}
 }
 
 /* carousel css for inddexpage */

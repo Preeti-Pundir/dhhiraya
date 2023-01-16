@@ -268,6 +268,13 @@
     }
 
 }
+
+@media screen and (max-width:600px) {
+    #Gslider .carousel-inner .carousel-caption {
+        bottom: 20%;
+    }
+
+}
 </style>
 @endpush
 
