@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Dhhiraya')
+@section('title','Dhiiraaya')
 @section('main-content')
 @if(count($banners)>0)
 <section id="Gslider" class="carousel slide" data-ride="carousel">

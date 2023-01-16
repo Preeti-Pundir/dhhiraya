@@ -23,7 +23,7 @@
 
             <div class="col-lg-4">
                 <div class="login-form">
-                    <p>Login to Dhiiraya Homes</p>
+                    <p>Login to Dhiiraaya Homes</p>
                     <div class="d-flex">
                         <a href="{{route('login.redirect','facebook')}}" class=""><img src="/frontend/img/Group 1.png"
                                 alt=""></a>&nbsp;&nbsp;&nbsp;

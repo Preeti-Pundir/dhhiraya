@@ -11,37 +11,37 @@
 <section>
     <div class="container-fluid">
         <div class="row text-center">
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-5.svg" alt="" width="40px">
                     <p class="mt-4">Residential</p>
                 </div>
             </div>
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-3.svg" alt="" width="40px">
                     <p class="mt-4">Delhi NCR</p>
                 </div>
             </div>
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1.svg" alt="" width="40px">
                     <p class="mt-4">30 FT X 40FT</p>
                 </div>
             </div>
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-4.svg" alt="" width="30px">
                     <p class="mt-4">2.5 CR</p>
                 </div>
             </div>
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-2.svg" alt="" width="40px">
                     <p class="mt-4">3 Bedroom, 2 bathroom</p>
                 </div>
             </div>
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-1.svg" alt="" width="40px">
                     <p class="mt-4">Construction</p>
@@ -54,7 +54,7 @@
 <section class="mt-5 mb-5">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="col-md-4">
+            <div class="col-md-4 my-3">
                 <div class="d-flex flex-column pro-sec-detail">
                     <h5 class="mb-4">Bedroom 2</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -67,7 +67,7 @@
                    <a href="tel:9512624584"> <button class="btn-ma" id="g" >Make a call</button></a>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 my-3">
                 <div class="owl-carousel owl-theme">
                     <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
                     <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
