@@ -17,7 +17,7 @@
                     </form>
                 </div>
                 <div class="social-media-iocns d-flex align-items-center justify-content-center">
-               
+
                 <a href="#" class="mx-2" > <img  src="{{asset ('/frontend/img/twitter.svg')}}" alt="">
                </a>
                <a href="#" class="mx-2" > <img  src="{{asset ('/frontend/img/fb.svg')}}" alt="">
@@ -25,7 +25,7 @@
                <a href="#" class="mx-2" > <img  src="{{asset ('/frontend/img/insta.svg')}}" alt="">
                </a> </div>
             </div>
-           
+
         </div>
         @endforeach
     </div>
@@ -44,7 +44,8 @@
 
             <div>
                 <div class="my-container">
-                    <h6>{{$city->title}}<br><br>Comming soon..</h6>
+
+                    <h6>{{$city->title}}<br><br>{{$city->products_count==0?'Comming Soon' :$city->products_count }}</h6>
                     <img class="newimage" src="{{$city->images}}" alt="">
                     <img class="imageone" src="{{asset('/frontend/img/brand.png')}}" alt="">
                 </div>
@@ -387,7 +388,7 @@ $('.citycarousel').owlCarousel({
     nav:true,
     responsiveClass: true,
     navText: [nextIcon, prevIcon],
-   
+
 })
 </script>
 

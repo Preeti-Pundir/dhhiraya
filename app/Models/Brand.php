@@ -15,7 +15,7 @@ class Brand extends Model
         return $this->hasMany('App\Models\Product','brand_id','id')->where('status','active');
     }
     public static function getProductByBrand($slug){
-        // dd($slug);
+
         return Brand::with('products')->where('slug',$slug)->first();
         // return Product::where('cat_id',$id)->where('child_cat_id',null)->paginate(10);
     }
