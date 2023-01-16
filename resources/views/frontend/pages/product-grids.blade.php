@@ -20,7 +20,7 @@
                                 <div class="shop-shorter">
                                     <div class="single-shorter">
 
-                                        <select class="show pfilter" name="show" onchange="this.form.submit();">
+                                        <select class="show pfilter" name="show" >
                                             <option value="">City</option>
                                             <option value="9" @if(!empty($_GET['show']) && $_GET['show']=='9' ) selected
                                                 @endif>09</option>
@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="single-shorter">
 
-                                        <select class='sortBy pfilter' name='sortBy' onchange="this.form.submit();">
+                                        <select class='sortBy pfilter' name='sortBy' >
                                             <option value="">Property type</option>
                                             <option value="title" @if(!empty($_GET['sortBy']) &&
                                                 $_GET['sortBy']=='title' ) selected @endif>Name</option>
@@ -68,20 +68,17 @@
                                         @endphp
                                         <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                         <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                        @if($product->discount)
-                                        <span class="price-dec">{{$product->discount}} % Off</span>
-                                        @endif
+                                        
                                     </a>
                                     <div class="button-head">
                                         <div class="product-action">
-                                            <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}"
+                                            <a title="Wishlist" href="#"
                                                 class="wishlist" data-id="{{$product->id}}"><img
-                                                    src="/frontend/img/Vector.svg" alt=""><span>Add to
-                                                    Wishlist</span></a>
+                                                    src="/frontend/img/Vector.svg" alt=""></a>
                                         </div>
                                         <div class="product-action-2">
                                             <a title="Add to cart"
-                                                href="{{route('add-to-cart',$product->slug)}}">View</a>
+                                                href="#">View</a>
                                         </div>
                                     </div>
                                 </div>
@@ -91,8 +88,8 @@
                                     @php
                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                     @endphp
-                                    <span>${{number_format($after_discount,2)}}</span>
-                                    <del style="padding-left:4%;">${{number_format($product->price,2)}}</del>
+                                    <span>Rs {{number_format($after_discount,2)}}</span>
+                                   
                                 </div>
                             </div>
                         </div>

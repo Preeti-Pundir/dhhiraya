@@ -87,7 +87,7 @@
                     <p>Powered by Avidus Interactive</p>
                 </div>
                 <div class="col-lg-4 col-md-12">
-                    <p>Copyright © 2021</p>
+                    <p>Copyright © 2023</p>
                 </div>
             </div>
         </div>
