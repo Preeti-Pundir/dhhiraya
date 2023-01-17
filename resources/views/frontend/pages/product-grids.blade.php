@@ -70,6 +70,23 @@
                                         <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                         
                                     </a>
+                                    <div class="button-head-one">
+                                        <!-- <div class="product-action-one">
+                                            <a title="Wishlist" href="#"
+                                                class="wishlist" data-id="{{$product->id}}"><img
+                                                    src="/frontend/img/Vector.svg" alt=""></a>
+                                        </div> -->
+                                        <div class="product-action-one-2">
+                                            <a 
+                                                href="#"><h5>{{$product->title}}</h5></a>
+                                                <br>
+                                                <a 
+                                                href="#">{{$product->size}}</a>
+                                                <br>
+                                                <a 
+                                                href="#">{{$product->condition}}</a>
+                                        </div>
+                                    </div>
                                     <div class="button-head">
                                         <div class="product-action">
                                             <a title="Wishlist" href="#"
@@ -78,11 +95,11 @@
                                         </div>
                                         <div class="product-action-2">
                                             <a title="Add to cart"
-                                                href="#">View</a>
+                                                href="{{route('product-detail',$product->slug)}}">View</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-content">
+                                <!-- <div class="product-content">
                                     <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a>
                                     </h3>
                                     @php
@@ -90,7 +107,7 @@
                                     @endphp
                                     <span>Rs {{number_format($after_discount,2)}}</span>
                                    
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         @endforeach
@@ -291,6 +308,100 @@
     margin-top: 10px;
     color: white;
 }
+
+
+
+/* ********************************* */
+
+
+
+
+.single-product .button-head-one {
+    background: #000;
+    opacity: 0.5;
+    display: inline-block;
+    width: 100%;
+    height:auto;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    z-index: 9;
+    line-height: 50px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.single-product:hover .button-head-one {
+    top: 0;
+    
+}
+
+.single-product .product-img .product-action-one a {
+    background-color: transparent;
+    display: block;
+    font-size: 16px;
+    display: inline-block;
+    /* margin-right: 15px; */
+    /* text-align: right; */
+    height: 52px;
+    position: relative;
+    top: 50;
+}
+
+.single-product .product-img .product-action-one {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: 99;
+    border-radius: 3px;
+}
+
+.single-product .product-img .product-action-one-2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    text-align:center;
+    -webkit-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+}
+.single-product .product-img .product-action-one-2 a {
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    display: inline-block;
+}
+
+.single-product .product-img .product-action-one-2 a h5 {
+   
+    font-size: 20px;
+   
+}
+
+@media screen and (max-width:991px) {
+    .single-product .product-img .product-action-one-2 a {
+    
+    font-size: 12px;
+    
+}
+
+.single-product .product-img .product-action-one-2 a h5 {
+   
+    font-size: 15px;
+   
+}
+
+}
+
+/* ************************************ */
 </style>
 @endpush
 @push('scripts')

@@ -36,6 +36,10 @@ Version:1.0
 21. Footer CSS
 ========================================*/
 
+*{
+    font-family: 'Merriweather', serif !important;
+}
+
 .color-plate {
     position: fixed;
     display: block;
