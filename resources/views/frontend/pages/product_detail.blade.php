@@ -63,8 +63,8 @@
 
                 <div class="mt-4 text-center">
 
-                   <a href="https://wa.me/9512624584/" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
-                   <a href="tel:9512624584"> <button class="btn-ma" id="g" >Make a call</button></a>
+                   <a href="https://wa.me/8390712871/" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
+                   <a href="tel:8390712871"> <button class="btn-ma" id="g" >Make a call</button></a>
                 </div>
             </div>
             <div class="col-md-8 my-3">
