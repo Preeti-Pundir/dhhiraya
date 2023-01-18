@@ -2,9 +2,12 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,7 +39,17 @@ Route::get('/','FrontendController@home')->name('home');
 Route::get('/home', 'FrontendController@index');
 Route::get('/about-us','FrontendController@aboutUs')->name('about-us');
 Route::get('/contact','FrontendController@contact')->name('contact');
+//Route::get('/contact','Messagecontroller@message');
 Route::post('/contact/message','MessageController@store')->name('contact.store');
+
+#################
+Route::get('contact-us', [ContactController::class, 'index']);
+Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+
+// Route::get('contact',[MessageController::class,'message']);
+// Route::post('contact-us', [MessageController::class, 'store'])->name('contact.us.store');
+
+
 Route::get('product-detail/{slug}','FrontendController@productDetail')->name('product-detail');
 Route::post('/product/search','FrontendController@productSearch')->name('product.search');
 Route::get('/product-cat/{slug}','FrontendController@productCat')->name('product-cat');

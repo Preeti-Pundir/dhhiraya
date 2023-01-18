@@ -5,6 +5,7 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Models\Message;
 use App\Events\MessageSent;
+use Illuminate\Support\Facades\Mail;
 class MessageController extends Controller
 {
     /**
@@ -38,31 +39,53 @@ class MessageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    // public function message(){
+    //     return view('backend.message.contactform');
+    // }
     public function store(Request $request)
     {
+
+        // dd($request->all());
         $this->validate($request,[
             'name'=>'string|required|min:2',
             'email'=>'email|required',
             'message'=>'required|min:20|max:200',
-            'subject'=>'string|required',
-            'phone'=>'numeric|required'
+            // 'subject'=>'string|required',
+            // 'phone'=>'numeric|required'
         ]);
+        
         // return $request->all();
+        //  $test = $request->all();
+        // dd($test);        
+        Message::create($request->all());
+        Mail::send('mail', array(
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'subject' => $request->get('subject'),
+            
+        ));
+        //  function($message) use ($request){
+        //     $message->from($request->email);
+        //     $message->to('preetipundir340@gmail.com', 'Admin')->subject($request->get('subject'));
+        // });
+        return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
 
-        $message=Message::create($request->all());
+        // return redirect()->back()->with(['success'=>'Thank you for contact us']);
+
+        //$message=Message::create($request->all());
             // return $message;
-        $data=array();
-        $data['url']=route('message.show',$message->id);
-        $data['date']=$message->created_at->format('F d, Y h:i A');
-        $data['name']=$message->name;
-        $data['email']=$message->email;
-        $data['phone']=$message->phone;
-        $data['message']=$message->message;
-        $data['subject']=$message->subject;
-        $data['photo']=Auth()->user()->photo;
-        // return $data;    
-        event(new MessageSent($data));
-        exit();
+        // $data=array();
+        // $data['url']=route('message.show',$message->id);
+        // $data['date']=$message->created_at->format('F d, Y h:i A');
+        // $data['name']=$message->name;
+        // $data['email']=$message->email;
+        // $data['phone']=$message->phone;
+        // $data['message']=$message->message;
+        // $data['subject']=$message->subject;
+        // $data['photo']=Auth()->user()->photo;
+        // // return $data;    
+        // event(new MessageSent($data));
+        // exit();
     }
 
     /**
@@ -76,6 +99,7 @@ class MessageController extends Controller
         $message=Message::find($id);
         if($message){
             $message->read_at=\Carbon\Carbon::now();
+
             $message->save();
             return view('backend.message.show')->with('message',$message);
         }

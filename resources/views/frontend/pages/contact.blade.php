@@ -56,7 +56,8 @@
                             $settings=DB::table('settings')->get();
                             @endphp
                         </div>
-                        <form class="form-contact form contact_form" method="post" action="{{route('contact.store')}}"
+                       
+                        <form class="form-contact form contact_form" method="post" action="{{route('contact.us.store')}}"
                             id="contactForm" novalidate="novalidate">
                             @csrf
                             <div class="row">
@@ -77,7 +78,7 @@
                                 <div class="col-12">
                                     <div class="form-group message">
                                         <label>your message<span>*</span></label>
-                                        <textarea name="message" id="message" cols="30" rows="9"
+                                        <textarea name="message" id="message" cols="20" rows="9"
                                             placeholder="Enter Message"></textarea>
                                     </div>
                                 </div>
