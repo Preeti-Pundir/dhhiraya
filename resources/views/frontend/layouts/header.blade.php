@@ -5,88 +5,441 @@
 
             <div class="d-flex align-items-center justify-content-between">
 
-
                 <div class="nav-left d-flex align-items-center justify-content-between ml-3">
-                    <div class="main-logo"><a class="navbar-brand" href="{{url('/')}}"><img
-                                src="{{asset ('/frontend/img/dhiiraaya-logo.svg') }}" style="width:150px" alt="">
-                        </a>
-                    </div>
-                    <div class="nav-menu">
-                        <ul class="menu-items pt-2">
-                            <li class="side-logo d-block d-lg-none">
-                                <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset ('/frontend/img/dhiiraaya-logo.svg') }}" style="width:150px"
-                                        alt="">
-                                </a>
-                            </li>
+                        <div class="main-logo"><a class="navbar-brand" href="{{url('/')}}"><img
+                                    src="{{asset ('/frontend/img/dhiiraaya-logo.svg') }}" style="width:150px" alt="">
+                            </a>
+                        </div>
+                        <div class="nav-menu">
+                            <ul class="menu-items pt-2">
+                                <li class="side-logo d-block d-lg-none">
+                                    <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset ('/frontend/img/dhiiraaya-logo.svg') }}" style="width:150px"
+                                            alt="">
+                                    </a>
+                                </li>
+                                <li class="{{Request::path()=='/' ? 'activated' : ''}}">
+                                    <a class="navs-menus" href="{{route('home')}}">Home</a>
+                                </li>
+                                <li class="{{Request::path()=='about-us' ? 'activated' : ''}} ">
+                                    <a class="navs-menus" href="{{route('about-us')}}">The Realtors</a>
+                                
+                                </li>
+                                <li
+                                    class="@if(Request::path()=='product-grids'||Request::path()=='product-lists') activated   @endif subnav ">
+                                    <!-- fot Desktop Screen -->
+                                        <div class="d-none d-lg-block">
+                                                    <a class="navs-menus" href="{{route('product-grids')}}">Hot Shot Listings</a>   
+                                            <div class="subnav-content-desktop">
+                                                <div class="container my-5">
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-md-3 col-sm-12 py-4 ">
+                                                            <!-- Tabs nav -->
+                                                            <div class="nav flex-row flex-md-column myaccount-tabs nav-pills nav-pills-custom  pb-5 pt-3" id="v-pills-tab" role="tablist"
+                                                                aria-orientation="vertical">
+                                                                <a class="nav-link py-3 text-right shadow active" id="v-pills-saved-properties-tab" data-toggle="pill"
+                                                                    href="#v-pills-saved-properties" role="tab" aria-controls="v-pills-saved-properties"
+                                                                    aria-selected="true">
+                                                                    <span class="font-weight-bold small text-uppercase">Delhi Ncr</span></a>
 
-                            <li class="{{Request::path()=='/' ? 'active' : ''}}">
-                                <a href="{{route('home')}}">Home</a>
-                            </li>
-                            <li class="{{Request::path()=='about-us' ? 'active' : ''}} ">
-                                <a href="{{route('about-us')}}">The Realtors</a>
-                            </li>
-                            <li
-                                class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif">
-                                <a href="{{route('product-grids')}}">Hot Shot Listings</a>
-                            </li>
-                            <!-- {{Helper::getHeaderCategory()}}
-                           <li class="{{Request::path()=='blog' ? 'active' : ''}} "><a href="{{route('blog')}}">Blog</a></li>									 -->
+                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-visited-properties-tab" data-toggle="pill"
+                                                                    href="#v-pills-visited-properties" role="tab" aria-controls="v-pills-visited-properties"
+                                                                    aria-selected="false">
+                                                                    <span class="font-weight-bold small text-uppercase">Gurgaon</span></a>
 
-                            <li class="{{Request::path()=='contact' ? 'active' : ''}} ">
-                                <a href="{{route('contact')}}">Contact Us</a>
-                            </li>
+                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-faqs-tab" data-toggle="pill" href="#v-pills-faqs"
+                                                                    role="tab" aria-controls="v-pills-faqs" aria-selected="false">
+                                                                    <span class="font-weight-bold small text-uppercase">Noida</span></a>
+
+                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-terms-tab" data-toggle="pill" href="#v-pills-terms"
+                                                                    role="tab" aria-controls="v-pills-terms" aria-selected="false">
+                                                                    <span class="font-weight-bold small text-uppercase">Chandigargh</span></a>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-9 col-md-9 col-sm-12 py-4">
+                                                            <!-- Tabs content -->
+                                                            <div class="tab-content" id="v-pills-tabContent">
+                                                                <div class="tab-pane fade shadow rounded bg-white show active" id="v-pills-saved-properties"
+                                                                    role="tabpanel" aria-labelledby="v-pills-saved-properties-tab">
+                                                                    <div class="container head-submenu">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4">
+                                                                        <ul>
+                                                                                <li> <h6>Residential Property</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href=""> Apartments</a></li>
+                                                                                <li class="my-2"><a href=""> Individual house</a></li>
+                                                                                <li class="my-2"><a href=""> Pent house</a></li>
+                                                                                <li class="my-2"><a href=""> Cottages</a></li>
+                                                                                <li class="my-2"><a href=""> Villa</a></li>
+                                                                        </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                        
+                                                                            <ul>
+                                                                                <li>  <h6>Commercial Property</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2" ><a href=""> Furnished retail shops</a></li>
+                                                                                <li class="my-2" ><a href=""> Unfurnished retail shops</a></li>
+                                                                                
+                                                                        </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                        
+                                                                            <ul>
+                                                                                <li> <h6> Lands</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href=""> Empty lands</a></li>
+                                                                                
+                                                                        </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+
+                                                                <div class="tab-pane fade shadow rounded bg-white" id="v-pills-visited-properties"
+                                                                    role="tabpanel" aria-labelledby="v-pills-visited-properties-tab">
+                                                                <div class="container head-submenu">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4">
+                                                                        <ul>
+                                                                                <li> <h6>Residential Property</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href=""> Apartments</a></li>
+                                                                                <li class="my-2"><a href=""> Individual house</a></li>
+                                                                                <li class="my-2"><a href=""> Pent house</a></li>
+                                                                                <li class="my-2"><a href=""> Cottages</a></li>
+                                                                                <li class="my-2"><a href=""> Villa</a></li>
+                                                                        </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                        
+                                                                            <ul>
+                                                                                <li>  <h6>Commercial Property</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2" ><a href=""> Furnished retail shops</a></li>
+                                                                                <li class="my-2" ><a href=""> Unfurnished retail shops</a></li>
+                                                                                
+                                                                        </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                        
+                                                                            <ul>
+                                                                                <li> <h6> Lands</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href=""> Empty lands</a></li>
+                                                                                
+                                                                        </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+
+                                                                <div class="tab-pane fade shadow rounded bg-white" id="v-pills-faqs" role="tabpanel"
+                                                                    aria-labelledby="v-pills-faqs-tab">
+                                                                    <div class="container head-submenu">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4">
+                                                                        <ul>
+                                                                                <li> <h6>Residential Property</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href=""> Apartments</a></li>
+                                                                                <li class="my-2"><a href=""> Individual house</a></li>
+                                                                                <li class="my-2"><a href=""> Pent house</a></li>
+                                                                                <li class="my-2"><a href=""> Cottages</a></li>
+                                                                                <li class="my-2"><a href=""> Villa</a></li>
+                                                                        </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                        
+                                                                            <ul>
+                                                                                <li>  <h6>Commercial Property</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2" ><a href=""> Furnished retail shops</a></li>
+                                                                                <li class="my-2" ><a href=""> Unfurnished retail shops</a></li>
+                                                                                
+                                                                        </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                        
+                                                                            <ul>
+                                                                                <li> <h6> Lands</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href=""> Empty lands</a></li>
+                                                                                
+                                                                        </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+
+                                                                <div class="tab-pane fade shadow rounded bg-white" id="v-pills-terms" role="tabpanel"
+                                                                    aria-labelledby="v-pills-terms-tab">
+                                                                    <div class="container head-submenu">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4">
+                                                                        <ul>
+                                                                                <li> <h6>Residential Property</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href=""> Apartments</a></li>
+                                                                                <li class="my-2"><a href=""> Individual house</a></li>
+                                                                                <li class="my-2"><a href=""> Pent house</a></li>
+                                                                                <li class="my-2"><a href=""> Cottages</a></li>
+                                                                                <li class="my-2"><a href=""> Villa</a></li>
+                                                                        </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                        
+                                                                            <ul>
+                                                                                <li>  <h6>Commercial Property</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2" ><a href=""> Furnished retail shops</a></li>
+                                                                                <li class="my-2" ><a href=""> Unfurnished retail shops</a></li>
+                                                                                
+                                                                        </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                        
+                                                                            <ul>
+                                                                                <li> <h6> Lands</h6></li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href=""> Empty lands</a></li>
+                                                                                
+                                                                        </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
 
 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <!-- / For Desktop Screen -->
+                                    <!-- For Mobile Screen -->
+                                        <div class="d-block d-lg-none">
+                                                <a class="navs-menus" href="{{route('product-grids')}}" data-toggle="collapse" data-target="#collapseMain"  aria-controls="collapseMain">Hot Shot Listings</a>
+                                                            
+                                            <div id="collapseMain" class="collapse" aria-labelledby="headingOne" >
+                                                <div class="container my-4">
+                                                    
+                                                    <div class="location-div">
+                                                                    <a data-toggle="collapse" data-target="#locationOne"  aria-controls="locationOne"> Delhi Ncr</a>
+                                                            
+                                                                <div id="locationOne" class="collapse" aria-labelledby="headingOne" >
+                                                                    <div class="container my-2">
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#fcategoryOne"  aria-controls="fcategoryOne"> Residential Property</a>
+                                                                            <div id="fcategoryOne" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Apartments</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#fcategoryTwo"  aria-controls="fcategoryTwo"> Commercial Property</a>
+                                                                            <div id="fcategoryTwo" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Furnished retail shops</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#fcategoryThree"  aria-controls="fcategoryThree"> Lands</a>
+                                                                            <div id="fcategoryThree" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Empty lands</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
+                                                    
+                                                               
+                                                
+                                                    </div>
+                                                    <div class="location-div">
+                                                                    <a data-toggle="collapse" data-target="#locationTwo"  aria-controls="locationTwo"> Gurgaon</a>
+                                                            
+                                                                <div id="locationTwo" class="collapse" aria-labelledby="headingOne" >
+                                                                    <div class="container my-2">
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#scategoryOne"  aria-controls="scategoryOne"> Residential Property</a>
+                                                                            <div id="scategoryOne" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Apartments</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#scategoryTwo"  aria-controls="scategoryTwo"> Commercial Property</a>
+                                                                            <div id="scategoryTwo" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Furnished retail shops</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#scategoryThree"  aria-controls="scategoryThree"> Lands</a>
+                                                                            <div id="scategoryThree" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Empty lands</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
-                        </ul>
-                    </div>
+                                                    
+                                                               
+                                                
+                                                    </div>
+                                                    <div class="location-div">
+                                                                    <a data-toggle="collapse" data-target="#locationThree"  aria-controls="locationThree">Noida</a>
+                                                            
+                                                                <div id="locationThree" class="collapse" aria-labelledby="headingOne" >
+                                                                    <div class="container my-2">
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#tcategoryOne"  aria-controls="tcategoryOne"> Residential Property</a>
+                                                                            <div id="tcategoryOne" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Apartments</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#tcategoryTwo"  aria-controls="tcategoryTwo"> Commercial Property</a>
+                                                                            <div id="tcategoryTwo" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Furnished retail shops</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#tcategoryThree"  aria-controls="tcategoryThree"> Lands</a>
+                                                                            <div id="tcategoryThree" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Empty lands</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                    
+                                                               
+                                                
+                                                    </div>
+                                                    <div class="location-div">
+                                                                    <a data-toggle="collapse" data-target="#locationFour"  aria-controls="locationFour"> Chandigargh</a>
+                                                            
+                                                                <div id="locationFour" class="collapse" aria-labelledby="headingOne" >
+                                                                    <div class="container my-2">
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#focategoryOne"  aria-controls="focategoryOne"> Residential Property</a>
+                                                                            <div id="focategoryOne" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Apartments</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#focategoryTwo"  aria-controls="focategoryTwo"> Commercial Property</a>
+                                                                            <div id="focategoryTwo" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Furnished retail shops</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                    <div class="category-div">
+                                                                        <a data-toggle="collapse" data-target="#focategoryThree"  aria-controls="focategoryThree"> Lands</a>
+                                                                            <div id="focategoryThree" class="collapse" aria-labelledby="headingOne" >
+                                                                                <div class="container my-2">
+                                                                                        <a href="#">Empty lands</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                    
+                                                               
+                                                
+                                                    </div>
+                                                </div>
+                                                            <!-- /For Mobile Screen -->
+                                            </div> 
+                                        </div>              
+                                </li>
+                                <li class="{{Request::path()=='contact' ? 'activated' : ''}} ">
+                                    <a class="navs-menus" href="{{route('contact')}}">Contact Us</a>
+                                </li>
+                            </ul>
+                    
+                        </div>
                 </div>
+                    <div class="nav-right mx-3">
+                        @guest
 
-                <div class="nav-right mx-3">
-                    @guest
 
-
-                    <div class="curser-pointer">
-                        <div class="d-flex align-items-center">
-                            <img src="/frontend/img/Group 8.svg" alt="" width="30px">&nbsp;
-                            <a href="{{route('login.form')}}">SIGN IN</a>
-                        </div>
-                    </div>
-
-                    @else
-                    <div class="curser-pointer">
-                        <div class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <img src="/frontend/img/Group 8.svg" class="user-icon" alt="" width="30px">&nbsp;
-                            <span>{{Auth::user()->name}}</span>
-
-                        </div>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="{{route('user.myaccount')}}">My Account</a>
-                            @if(Auth::user()->role == "admin")
-                            <a class="dropdown-item" href="{{route('admin')}}">Dashboard</a>
-                            @else
-                            <a class="dropdown-item" href="{{route('user')}}">Dashboard</a>
-                            @endif
-                            <a class="dropdown-item" href="{{route('user.logout')}}">Logout</a>
+                        <div class="curser-pointer">
+                            <div class="d-flex align-items-center">
+                                <img src="/frontend/img/Group 8.svg" alt="" width="30px">&nbsp;
+                                <a href="{{route('login.form')}}">SIGN IN</a>
+                            </div>
                         </div>
 
+                        @else
+                        <div class="curser-pointer">
+                            <div class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <img src="/frontend/img/Group 8.svg" class="user-icon" alt="" width="30px">&nbsp;
+                                <span>{{Auth::user()->name}}</span>
+
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{route('user.myaccount')}}">My Account</a>
+                                @if(Auth::user()->role == "admin")
+                                <a class="dropdown-item" href="{{route('admin')}}">Dashboard</a>
+                                @else
+                                <a class="dropdown-item" href="{{route('user')}}">Dashboard</a>
+                                @endif
+                                <a class="dropdown-item" href="{{route('user.logout')}}">Logout</a>
+                            </div>
+
+                        </div>
+
+
+                        @endguest
+
+                        <div class="hamburger mx-3">
+                            <div class="line one"></div>
+                            <div class="line two"></div>
+                            <div class="line three"></div>
+                        </div>
+
                     </div>
 
-
-                    @endguest
-
-                    <div class="hamburger mx-3">
-                        <div class="line one"></div>
-                        <div class="line two"></div>
-                        <div class="line three"></div>
-                    </div>
-
-                </div>
-
+               
             </div>
-        </div>
+</div>
     </nav>
 
     <script>
