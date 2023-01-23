@@ -22,13 +22,13 @@
                                 </li>
                                 <li class="{{Request::path()=='about-us' ? 'activated' : ''}} ">
                                     <a class="navs-menus" href="{{route('about-us')}}">The Realtors</a>
-                                
+
                                 </li>
                                 <li
                                     class="@if(Request::path()=='product-grids'||Request::path()=='product-lists') activated   @endif subnav ">
                                     <!-- fot Desktop Screen -->
                                         <div class="d-none d-lg-block">
-                                                    <a class="navs-menus" href="{{route('product-grids')}}">Hot Shot Listings</a>   
+                                        <a class="navs-menus" href="{{route('product-grids')}}">Hot Shot Listings</a>
                                             <div class="subnav-content-desktop">
                                                 <div class="container my-5">
                                                     <div class="row">
@@ -36,24 +36,12 @@
                                                             <!-- Tabs nav -->
                                                             <div class="nav flex-row flex-md-column myaccount-tabs nav-pills nav-pills-custom  pb-5 pt-3" id="v-pills-tab" role="tablist"
                                                                 aria-orientation="vertical">
-                                                                <a class="nav-link py-3 text-right shadow active" id="v-pills-saved-properties-tab" data-toggle="pill"
+                                                                 @foreach($brands as $brand)
+                                                                   <a class="nav-link py-3 text-right shadow active" id="v-pills-saved-properties-tab" data-toggle="pill"
                                                                     href="#v-pills-saved-properties" role="tab" aria-controls="v-pills-saved-properties"
                                                                     aria-selected="true">
-                                                                    <span class="font-weight-bold small text-uppercase">Delhi Ncr</span></a>
-
-                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-visited-properties-tab" data-toggle="pill"
-                                                                    href="#v-pills-visited-properties" role="tab" aria-controls="v-pills-visited-properties"
-                                                                    aria-selected="false">
-                                                                    <span class="font-weight-bold small text-uppercase">Gurgaon</span></a>
-
-                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-faqs-tab" data-toggle="pill" href="#v-pills-faqs"
-                                                                    role="tab" aria-controls="v-pills-faqs" aria-selected="false">
-                                                                    <span class="font-weight-bold small text-uppercase">Noida</span></a>
-
-                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-terms-tab" data-toggle="pill" href="#v-pills-terms"
-                                                                    role="tab" aria-controls="v-pills-terms" aria-selected="false">
-                                                                    <span class="font-weight-bold small text-uppercase">Chandigargh</span></a>
-
+                                                                    <span class="font-weight-bold small text-uppercase">{{$brand->title}}</span></a>
+                                                                 @endforeach
                                                             </div>
                                                         </div>
 
@@ -76,22 +64,22 @@
                                                                         </ul>
                                                                         </div>
                                                                         <div class="col-lg-4">
-                                                                        
+
                                                                             <ul>
                                                                                 <li>  <h6>Commercial Property</h6></li>
                                                                                 <br>
                                                                                 <li class="my-2" ><a href=""> Furnished retail shops</a></li>
                                                                                 <li class="my-2" ><a href=""> Unfurnished retail shops</a></li>
-                                                                                
+
                                                                         </ul>
                                                                         </div>
                                                                         <div class="col-lg-4">
-                                                                        
+
                                                                             <ul>
                                                                                 <li> <h6> Lands</h6></li>
                                                                                 <br>
                                                                                 <li class="my-2"><a href=""> Empty lands</a></li>
-                                                                                
+
                                                                         </ul>
                                                                         </div>
                                                                     </div>
@@ -114,22 +102,22 @@
                                                                         </ul>
                                                                         </div>
                                                                         <div class="col-lg-4">
-                                                                        
+
                                                                             <ul>
                                                                                 <li>  <h6>Commercial Property</h6></li>
                                                                                 <br>
                                                                                 <li class="my-2" ><a href=""> Furnished retail shops</a></li>
                                                                                 <li class="my-2" ><a href=""> Unfurnished retail shops</a></li>
-                                                                                
+
                                                                         </ul>
                                                                         </div>
                                                                         <div class="col-lg-4">
-                                                                        
+
                                                                             <ul>
                                                                                 <li> <h6> Lands</h6></li>
                                                                                 <br>
                                                                                 <li class="my-2"><a href=""> Empty lands</a></li>
-                                                                                
+
                                                                         </ul>
                                                                         </div>
                                                                     </div>
@@ -152,22 +140,22 @@
                                                                         </ul>
                                                                         </div>
                                                                         <div class="col-lg-4">
-                                                                        
+
                                                                             <ul>
                                                                                 <li>  <h6>Commercial Property</h6></li>
                                                                                 <br>
                                                                                 <li class="my-2" ><a href=""> Furnished retail shops</a></li>
                                                                                 <li class="my-2" ><a href=""> Unfurnished retail shops</a></li>
-                                                                                
+
                                                                         </ul>
                                                                         </div>
                                                                         <div class="col-lg-4">
-                                                                        
+
                                                                             <ul>
                                                                                 <li> <h6> Lands</h6></li>
                                                                                 <br>
                                                                                 <li class="my-2"><a href=""> Empty lands</a></li>
-                                                                                
+
                                                                         </ul>
                                                                         </div>
                                                                     </div>
@@ -190,22 +178,22 @@
                                                                         </ul>
                                                                         </div>
                                                                         <div class="col-lg-4">
-                                                                        
+
                                                                             <ul>
                                                                                 <li>  <h6>Commercial Property</h6></li>
                                                                                 <br>
                                                                                 <li class="my-2" ><a href=""> Furnished retail shops</a></li>
                                                                                 <li class="my-2" ><a href=""> Unfurnished retail shops</a></li>
-                                                                                
+
                                                                         </ul>
                                                                         </div>
                                                                         <div class="col-lg-4">
-                                                                        
+
                                                                             <ul>
                                                                                 <li> <h6> Lands</h6></li>
                                                                                 <br>
                                                                                 <li class="my-2"><a href=""> Empty lands</a></li>
-                                                                                
+
                                                                         </ul>
                                                                         </div>
                                                                     </div>
@@ -223,13 +211,13 @@
                                     <!-- For Mobile Screen -->
                                         <div class="d-block d-lg-none">
                                                 <a class="navs-menus" href="{{route('product-grids')}}" data-toggle="collapse" data-target="#collapseMain"  aria-controls="collapseMain">Hot Shot Listings</a>
-                                                            
+
                                             <div id="collapseMain" class="collapse" aria-labelledby="headingOne" >
                                                 <div class="container my-4">
-                                                    
+
                                                     <div class="location-div">
                                                                     <a data-toggle="collapse" data-target="#locationOne"  aria-controls="locationOne"> Delhi Ncr</a>
-                                                            
+
                                                                 <div id="locationOne" class="collapse" aria-labelledby="headingOne" >
                                                                     <div class="container my-2">
                                                                     <div class="category-div">
@@ -239,7 +227,7 @@
                                                                                         <a href="#">Apartments</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#fcategoryTwo"  aria-controls="fcategoryTwo"> Commercial Property</a>
@@ -248,7 +236,7 @@
                                                                                         <a href="#">Furnished retail shops</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#fcategoryThree"  aria-controls="fcategoryThree"> Lands</a>
@@ -257,18 +245,18 @@
                                                                                         <a href="#">Empty lands</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                 </div>
                                                             </div>
 
-                                                    
-                                                               
-                                                
+
+
+
                                                     </div>
                                                     <div class="location-div">
                                                                     <a data-toggle="collapse" data-target="#locationTwo"  aria-controls="locationTwo"> Gurgaon</a>
-                                                            
+
                                                                 <div id="locationTwo" class="collapse" aria-labelledby="headingOne" >
                                                                     <div class="container my-2">
                                                                     <div class="category-div">
@@ -278,7 +266,7 @@
                                                                                         <a href="#">Apartments</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#scategoryTwo"  aria-controls="scategoryTwo"> Commercial Property</a>
@@ -287,7 +275,7 @@
                                                                                         <a href="#">Furnished retail shops</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#scategoryThree"  aria-controls="scategoryThree"> Lands</a>
@@ -296,18 +284,18 @@
                                                                                         <a href="#">Empty lands</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                 </div>
                                                             </div>
 
-                                                    
-                                                               
-                                                
+
+
+
                                                     </div>
                                                     <div class="location-div">
                                                                     <a data-toggle="collapse" data-target="#locationThree"  aria-controls="locationThree">Noida</a>
-                                                            
+
                                                                 <div id="locationThree" class="collapse" aria-labelledby="headingOne" >
                                                                     <div class="container my-2">
                                                                     <div class="category-div">
@@ -317,7 +305,7 @@
                                                                                         <a href="#">Apartments</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#tcategoryTwo"  aria-controls="tcategoryTwo"> Commercial Property</a>
@@ -326,7 +314,7 @@
                                                                                         <a href="#">Furnished retail shops</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#tcategoryThree"  aria-controls="tcategoryThree"> Lands</a>
@@ -335,18 +323,18 @@
                                                                                         <a href="#">Empty lands</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                 </div>
                                                             </div>
 
-                                                    
-                                                               
-                                                
+
+
+
                                                     </div>
                                                     <div class="location-div">
                                                                     <a data-toggle="collapse" data-target="#locationFour"  aria-controls="locationFour"> Chandigargh</a>
-                                                            
+
                                                                 <div id="locationFour" class="collapse" aria-labelledby="headingOne" >
                                                                     <div class="container my-2">
                                                                     <div class="category-div">
@@ -356,7 +344,7 @@
                                                                                         <a href="#">Apartments</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#focategoryTwo"  aria-controls="focategoryTwo"> Commercial Property</a>
@@ -365,7 +353,7 @@
                                                                                         <a href="#">Furnished retail shops</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#focategoryThree"  aria-controls="focategoryThree"> Lands</a>
@@ -374,25 +362,25 @@
                                                                                         <a href="#">Empty lands</a>
                                                                                 </div>
                                                                             </div>
-                                                                    
+
                                                                     </div>
                                                                 </div>
                                                             </div>
 
-                                                    
-                                                               
-                                                
+
+
+
                                                     </div>
                                                 </div>
                                                             <!-- /For Mobile Screen -->
-                                            </div> 
-                                        </div>              
+                                            </div>
+                                        </div>
                                 </li>
                                 <li class="{{Request::path()=='contact' ? 'activated' : ''}} ">
                                     <a class="navs-menus" href="{{route('contact')}}">Contact Us</a>
                                 </li>
                             </ul>
-                    
+
                         </div>
                 </div>
                     <div class="nav-right mx-3">
@@ -437,7 +425,7 @@
 
                     </div>
 
-               
+
             </div>
 </div>
     </nav>
