@@ -36,7 +36,7 @@
                                                             <!-- Tabs nav -->
                                                             <div class="nav flex-row flex-md-column myaccount-tabs nav-pills nav-pills-custom  pb-5 pt-3" id="v-pills-tab" role="tablist"
                                                                 aria-orientation="vertical">
-                                                                <a class="nav-link py-3 text-right shadow active" id="v-pills-saved-properties-tab" data-toggle="pill"
+                                                                <!-- <a class="nav-link py-3 text-right shadow active" id="v-pills-saved-properties-tab" data-toggle="pill"
                                                                     href="#v-pills-saved-properties" role="tab" aria-controls="v-pills-saved-properties"
                                                                     aria-selected="true">
                                                                     <span class="font-weight-bold small text-uppercase">Delhi Ncr</span></a>
@@ -52,7 +52,13 @@
 
                                                                 <a class="nav-link py-3 text-right shadow" id="v-pills-terms-tab" data-toggle="pill" href="#v-pills-terms"
                                                                     role="tab" aria-controls="v-pills-terms" aria-selected="false">
-                                                                    <span class="font-weight-bold small text-uppercase">Chandigargh</span></a>
+                                                                    <span class="font-weight-bold small text-uppercase">Chandigargh</span></a> -->
+                                                                    @foreach($brands as $brand)
+                                                                   <a class="nav-link py-3 text-right shadow active" id="v-pills-saved-properties-tab" data-toggle="pill"
+                                                                    href="#v-pills-saved-properties" role="tab" aria-controls="v-pills-saved-properties"
+                                                                    aria-selected="true">
+                                                                    <span class="font-weight-bold small text-uppercase">{{$brand->title}}</span></a>
+                                                                 @endforeach
 
                                                             </div>
                                                         </div>
@@ -222,18 +228,18 @@
                                     <!-- / For Desktop Screen -->
                                     <!-- For Mobile Screen -->
                                         <div class="d-block d-lg-none">
-                                                <a class="navs-menus" href="{{route('product-grids')}}" data-toggle="collapse" data-target="#collapseMain"  aria-controls="collapseMain">Hot Shot Listings</a>
+                                                <a class="navs-menus" href="{{route('product-grids')}}" data-toggle="collapse" data-target="#collapseMain"  aria-controls="collapseMain">Hot Shot Listings </a>
                                                             
                                             <div id="collapseMain" class="collapse" aria-labelledby="headingOne" >
-                                                <div class="container my-4">
+                                               
                                                     
-                                                    <div class="location-div">
-                                                                    <a data-toggle="collapse" data-target="#locationOne"  aria-controls="locationOne"> Delhi Ncr</a>
+                                                    <div class="location-div mx-1 my-2">
+                                                                    <a data-toggle="collapse" data-target="#locationOne"  aria-controls="locationOne"> Delhi Ncr </a>
                                                             
                                                                 <div id="locationOne" class="collapse" aria-labelledby="headingOne" >
-                                                                    <div class="container my-2">
+                                                                   
                                                                     <div class="category-div">
-                                                                        <a data-toggle="collapse" data-target="#fcategoryOne"  aria-controls="fcategoryOne"> Residential Property</a>
+                                                                        <a data-toggle="collapse" data-target="#fcategoryOne"  aria-controls="fcategoryOne"> Residential Property </a>
                                                                             <div id="fcategoryOne" class="collapse" aria-labelledby="headingOne" >
                                                                                 <div class="container my-2">
                                                                                         <a href="#">Apartments</a>
@@ -242,7 +248,7 @@
                                                                     
                                                                     </div>
                                                                     <div class="category-div">
-                                                                        <a data-toggle="collapse" data-target="#fcategoryTwo"  aria-controls="fcategoryTwo"> Commercial Property</a>
+                                                                        <a data-toggle="collapse" data-target="#fcategoryTwo"  aria-controls="fcategoryTwo"> Commercial Property </a>
                                                                             <div id="fcategoryTwo" class="collapse" aria-labelledby="headingOne" >
                                                                                 <div class="container my-2">
                                                                                         <a href="#">Furnished retail shops</a>
@@ -251,7 +257,7 @@
                                                                     
                                                                     </div>
                                                                     <div class="category-div">
-                                                                        <a data-toggle="collapse" data-target="#fcategoryThree"  aria-controls="fcategoryThree"> Lands</a>
+                                                                        <a data-toggle="collapse" data-target="#fcategoryThree"  aria-controls="fcategoryThree"> Lands </a>
                                                                             <div id="fcategoryThree" class="collapse" aria-labelledby="headingOne" >
                                                                                 <div class="container my-2">
                                                                                         <a href="#">Empty lands</a>
@@ -259,18 +265,18 @@
                                                                             </div>
                                                                     
                                                                     </div>
-                                                                </div>
+                                                            
                                                             </div>
 
                                                     
                                                                
                                                 
                                                     </div>
-                                                    <div class="location-div">
+                                                    <div class="location-div mx-1 my-2">
                                                                     <a data-toggle="collapse" data-target="#locationTwo"  aria-controls="locationTwo"> Gurgaon</a>
                                                             
                                                                 <div id="locationTwo" class="collapse" aria-labelledby="headingOne" >
-                                                                    <div class="container my-2">
+                                                                
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#scategoryOne"  aria-controls="scategoryOne"> Residential Property</a>
                                                                             <div id="scategoryOne" class="collapse" aria-labelledby="headingOne" >
@@ -298,18 +304,18 @@
                                                                             </div>
                                                                     
                                                                     </div>
-                                                                </div>
+                                                                
                                                             </div>
 
                                                     
                                                                
                                                 
                                                     </div>
-                                                    <div class="location-div">
+                                                    <div class="location-div mx-1 my-2">
                                                                     <a data-toggle="collapse" data-target="#locationThree"  aria-controls="locationThree">Noida</a>
                                                             
                                                                 <div id="locationThree" class="collapse" aria-labelledby="headingOne" >
-                                                                    <div class="container my-2">
+                                                                   
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#tcategoryOne"  aria-controls="tcategoryOne"> Residential Property</a>
                                                                             <div id="tcategoryOne" class="collapse" aria-labelledby="headingOne" >
@@ -337,18 +343,18 @@
                                                                             </div>
                                                                     
                                                                     </div>
-                                                                </div>
+                                                               
                                                             </div>
 
                                                     
                                                                
                                                 
                                                     </div>
-                                                    <div class="location-div">
+                                                    <div class="location-div mx-1 my-2">
                                                                     <a data-toggle="collapse" data-target="#locationFour"  aria-controls="locationFour"> Chandigargh</a>
                                                             
                                                                 <div id="locationFour" class="collapse" aria-labelledby="headingOne" >
-                                                                    <div class="container my-2">
+                                                                    
                                                                     <div class="category-div">
                                                                         <a data-toggle="collapse" data-target="#focategoryOne"  aria-controls="focategoryOne"> Residential Property</a>
                                                                             <div id="focategoryOne" class="collapse" aria-labelledby="headingOne" >
@@ -376,14 +382,14 @@
                                                                             </div>
                                                                     
                                                                     </div>
-                                                                </div>
+                                                                
                                                             </div>
 
                                                     
                                                                
                                                 
                                                     </div>
-                                                </div>
+                                                
                                                             <!-- /For Mobile Screen -->
                                             </div> 
                                         </div>              
@@ -395,7 +401,7 @@
                     
                         </div>
                 </div>
-                    <div class="nav-right mx-3">
+                    <div class="nav-right mx-2">
                         @guest
 
 

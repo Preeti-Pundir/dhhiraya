@@ -3404,7 +3404,7 @@ Version:1.0
    Login & Register CSS
 ========================================*/
 .shop.login {
-    padding: 100px 0;
+    padding: 20px 0;
 }
 .shop.login .login-form h2 {
     position: relative;
@@ -4998,6 +4998,25 @@ Version:1.0
     color: #ffffff;
 }
 
+.shop .fcare h2{
+    margin: 70px 100px;
+}
+
+.shop .fcare p{
+    margin: 100px 100px;
+}
+
+@media screen and (max-width:767px) {
+    .shop .fcare h2{
+        margin: 40px 50px;
+    }
+    
+    .shop .fcare p{
+        margin: 50px 50px;
+    }
+}
+
+
 /* Myaccount page */
 
 .myaccount-tabs {
@@ -5200,7 +5219,7 @@ Version:1.0
     color: #000;
     width: 100%;
     height: auto;
-    z-index: 999999;
+    z-index: 999999; 
 }  
   
 .subnav:hover .subnav-content-desktop {
@@ -5284,7 +5303,7 @@ Version:1.0
         top: 0;
         left: -100%;
         z-index: 10;
-        width: 50%;
+        width: 65%;
         transition: all 0.4s ease-in;
         z-index: 99999999;
     }

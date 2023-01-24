@@ -7,21 +7,21 @@
 
 <!-- Shop Login -->
 <section class="shop login section">
-    <div class="container-fluid">
+    <div class="container-fluid" style="max-width:1500px !important">
         <div class="row">
-            <div class="col-lg-2"></div>
-
-            <div class="col-lg-2">
-                <h2 class="pb-5">Find
+            
+            <div class="col-lg-4 col-md-12 my-3 fcare text-white" style="background-color:#B3B356;">
+                <h2 class="">Find
                     Comfortable
                     Real Estate
                     Here</h2>
 
-                <p class="pt-5 mt-5 ">Having troubles? Get Help</p>
+                <p class="text-white">Having troubles? <u>Get Help</u></p>
             </div>
-            <div class="col-lg-2"></div>
+            
+<div class="col-lg-2"></div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-12 my-3">
                 <div class="login-form">
                     <p>Login to Dhiiraaya Homes</p>
                     <div class="d-flex">

@@ -19,7 +19,7 @@
 
 
     <!-- Header -->
-    @include('frontend.layouts.header')
+    @include('frontend.layouts.header',['brands' => \App\Models\Brand::all()])
 
 
     <!-- Main-content -->
