@@ -28,7 +28,7 @@ class WishlistController extends Controller
         $already_wishlist = Wishlist::where('user_id', auth()->user()->id)->where('cart_id',null)->where('product_id', $product->id)->first();
         // return $already_wishlist;
         if($already_wishlist) {
-            request()->session()->flash('error','You already placed in wishlist');
+            request()->session()->flash('error','You already placed in Saved Properties');
             return back();
         }else{
             
@@ -41,7 +41,7 @@ class WishlistController extends Controller
             if ($wishlist->product->stock < $wishlist->quantity || $wishlist->product->stock <= 0) return back()->with('error','Stock not sufficient!.');
             $wishlist->save();
         }
-        request()->session()->flash('success','Product successfully added to wishlist');
+        request()->session()->flash('success','Property successfully added to Saved Properties');
         return back();       
     }  
     
@@ -49,7 +49,7 @@ class WishlistController extends Controller
         $wishlist = Wishlist::find($request->id);
         if ($wishlist) {
             $wishlist->delete();
-            request()->session()->flash('success','Wishlist successfully removed');
+            request()->session()->flash('success','Property successfully removed');
             return back();  
         }
         request()->session()->flash('error','Error please try again');

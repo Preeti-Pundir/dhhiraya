@@ -1944,6 +1944,8 @@ Version:1.0
 .single-product .product-img .product-action.pro-action-width-dec-2 {
     bottom: 45px;
 }
+
+
 .single-product .product-img .product-action-2 {
     position: absolute;
     left: 11px;
@@ -1965,17 +1967,18 @@ Version:1.0
     line-height: 1;
     display: inline-block;
 }
-.single-product .product-img .product-action-2 a:hover {
-    /* color:#F7941D; */
-}
+
+
 .single-product .button-head {
+   display: block !important;
+   margin: 0 auto;
     background: #b3b356;
     opacity: 0.72;
-    display: inline-block;
     height: 40px;
-    width: 100%;
+    width: 99%;
     position: absolute;
-    left: 10;
+    left: 50%;
+    transform: translate(-50%, 0%);
     bottom: -50px;
     z-index: 9;
     height: 50px;
@@ -1985,7 +1988,7 @@ Version:1.0
     transition: all 0.4s ease;
 }
 .single-product:hover .button-head {
-    bottom: 4px;
+    bottom: 3px;
 }
 .single-product .product-img .shop-list-quickview {
     position: absolute;

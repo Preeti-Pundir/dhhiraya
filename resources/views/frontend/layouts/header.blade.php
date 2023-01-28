@@ -36,29 +36,29 @@
                                                             <!-- Tabs nav -->
                                                             <div class="nav flex-row flex-md-column myaccount-tabs nav-pills nav-pills-custom  pb-5 pt-3" id="v-pills-tab" role="tablist"
                                                                 aria-orientation="vertical">
-                                                                <!-- <a class="nav-link py-3 text-right shadow active" id="v-pills-saved-properties-tab" data-toggle="pill"
-                                                                    href="#v-pills-saved-properties" role="tab" aria-controls="v-pills-saved-properties"
+                                                                <a class="nav-link py-3 text-right shadow active" id="v-pills-first-properties-tab" data-toggle="pill"
+                                                                    href="#v-pills-first-properties" role="tab" aria-controls="v-pills-first-properties"
                                                                     aria-selected="true">
                                                                     <span class="font-weight-bold small text-uppercase">Delhi Ncr</span></a>
 
-                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-visited-properties-tab" data-toggle="pill"
-                                                                    href="#v-pills-visited-properties" role="tab" aria-controls="v-pills-visited-properties"
+                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-second-properties-tab" data-toggle="pill"
+                                                                    href="#v-pills-second-properties" role="tab" aria-controls="v-pills-second-properties"
                                                                     aria-selected="false">
                                                                     <span class="font-weight-bold small text-uppercase">Gurgaon</span></a>
 
-                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-faqs-tab" data-toggle="pill" href="#v-pills-faqs"
-                                                                    role="tab" aria-controls="v-pills-faqs" aria-selected="false">
+                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-third-tab" data-toggle="pill" href="#v-pills-third"
+                                                                    role="tab" aria-controls="v-pills-third" aria-selected="false">
                                                                     <span class="font-weight-bold small text-uppercase">Noida</span></a>
 
-                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-terms-tab" data-toggle="pill" href="#v-pills-terms"
-                                                                    role="tab" aria-controls="v-pills-terms" aria-selected="false">
-                                                                    <span class="font-weight-bold small text-uppercase">Chandigargh</span></a> -->
-                                                                    @foreach($brands as $brand)
-                                                                   <a class="nav-link py-3 text-right shadow active" id="v-pills-saved-properties-tab" data-toggle="pill"
-                                                                    href="#v-pills-saved-properties" role="tab" aria-controls="v-pills-saved-properties"
+                                                                <a class="nav-link py-3 text-right shadow" id="v-pills-fourth-tab" data-toggle="pill" href="#v-pills-fourth"
+                                                                    role="tab" aria-controls="v-pills-fourth" aria-selected="false">
+                                                                    <span class="font-weight-bold small text-uppercase">Chandigargh</span></a>
+                                                                    <!-- @foreach($brands as $brand)
+                                                                   <a class="nav-link py-3 text-right shadow active" id="v-pills-first-properties-tab" data-toggle="pill"
+                                                                    href="#v-pills-first-properties" role="tab" aria-controls="v-pills-first-properties"
                                                                     aria-selected="true">
                                                                     <span class="font-weight-bold small text-uppercase">{{$brand->title}}</span></a>
-                                                                 @endforeach
+                                                                 @endforeach -->
 
                                                             </div>
                                                         </div>
@@ -66,8 +66,8 @@
                                                         <div class="col-lg-9 col-md-9 col-sm-12 py-4">
                                                             <!-- Tabs content -->
                                                             <div class="tab-content" id="v-pills-tabContent">
-                                                                <div class="tab-pane fade shadow rounded bg-white show active" id="v-pills-saved-properties"
-                                                                    role="tabpanel" aria-labelledby="v-pills-saved-properties-tab">
+                                                                <div class="tab-pane fade shadow rounded bg-white show active" id="v-pills-first-properties"
+                                                                    role="tabpanel" aria-labelledby="v-pills-first-properties-tab">
                                                                     <div class="container head-submenu">
                                                                     <div class="row">
                                                                         <div class="col-lg-4">
@@ -104,8 +104,8 @@
                                                                 </div>
                                                                 </div>
 
-                                                                <div class="tab-pane fade shadow rounded bg-white" id="v-pills-visited-properties"
-                                                                    role="tabpanel" aria-labelledby="v-pills-visited-properties-tab">
+                                                                <div class="tab-pane fade shadow rounded bg-white" id="v-pills-second-properties"
+                                                                    role="tabpanel" aria-labelledby="v-pills-second-properties-tab">
                                                                 <div class="container head-submenu">
                                                                     <div class="row">
                                                                         <div class="col-lg-4">
@@ -142,8 +142,8 @@
                                                                 </div>
                                                                 </div>
 
-                                                                <div class="tab-pane fade shadow rounded bg-white" id="v-pills-faqs" role="tabpanel"
-                                                                    aria-labelledby="v-pills-faqs-tab">
+                                                                <div class="tab-pane fade shadow rounded bg-white" id="v-pills-third" role="tabpanel"
+                                                                    aria-labelledby="v-pills-third-tab">
                                                                     <div class="container head-submenu">
                                                                     <div class="row">
                                                                         <div class="col-lg-4">
@@ -180,8 +180,8 @@
                                                                 </div>
                                                                 </div>
 
-                                                                <div class="tab-pane fade shadow rounded bg-white" id="v-pills-terms" role="tabpanel"
-                                                                    aria-labelledby="v-pills-terms-tab">
+                                                                <div class="tab-pane fade shadow rounded bg-white" id="v-pills-fourth" role="tabpanel"
+                                                                    aria-labelledby="v-pills-fourth-tab">
                                                                     <div class="container head-submenu">
                                                                     <div class="row">
                                                                         <div class="col-lg-4">
@@ -403,8 +403,6 @@
                 </div>
                     <div class="nav-right mx-2">
                         @guest
-
-
                         <div class="curser-pointer">
                             <div class="d-flex align-items-center">
                                 <img src="/frontend/img/Group 8.svg" alt="" width="30px">&nbsp;

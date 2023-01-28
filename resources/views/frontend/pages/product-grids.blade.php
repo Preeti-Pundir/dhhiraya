@@ -89,13 +89,15 @@
                                     </div>
                                     <div class="button-head">
                                         <div class="product-action">
-                                            <a title="Wishlist" href="#"
-                                                class="wishlist" data-id="{{$product->id}}"><img
+                                            <a title="Save property" href="{{route('add-to-wishlist',$product->slug)}}" class="wishlist" data-id="{{$product->id}}"><img
                                                     src="/frontend/img/Vector.svg" alt=""></a>
                                         </div>
                                         <div class="product-action-2">
-                                            <a title="Add to cart"
+                                           
+                                            <a title="View the product"
                                                 href="{{route('product-detail',$product->slug)}}">View</a>
+                                               
+                                                <!-- <a href="{{route('add-to-cart',$product->slug)}}">Visited Property</a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -360,6 +362,7 @@
 
 .single-product .product-img .product-action-one-2 {
     position: absolute;
+    width:50% !important;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
