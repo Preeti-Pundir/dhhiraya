@@ -5047,6 +5047,14 @@ Version:1.0
     border: 1px solid #b3b356 !important;
 }
 
+.hsummary p{
+    /* width: 300px ; */
+    overflow: hidden;    
+    white-space: nowrap;
+    /* text-overflow: clip; */
+    text-overflow: ellipsis;
+}
+
 @media screen and (max-width:767px) {
     .myaccount-tabs {
         border-right: 0 !important;

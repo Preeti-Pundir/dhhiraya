@@ -93,10 +93,16 @@
                                                     src="/frontend/img/Vector.svg" alt=""></a>
                                         </div>
                                         <div class="product-action-2">
-                                           
+                                           @guest
+                                           <a title="View the product"
+                                                href="{{route('login.form')}}">View</a>
+                                                @elseif(Auth::user()->survey === 'pending')
+                                            <a title="View the product"
+                                                href="/">View</a>
+                                                @else
                                             <a title="View the product"
                                                 href="{{route('product-detail',$product->slug)}}">View</a>
-                                               
+                                               @endguest
                                                 <!-- <a href="{{route('add-to-cart',$product->slug)}}">Visited Property</a> -->
                                         </div>
                                     </div>

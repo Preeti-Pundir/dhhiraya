@@ -5,7 +5,12 @@
 
 <section>
     <div class="container-fluid">
-        <img src="/frontend/img/Rectangle.png" alt="" width="100%">
+    @php 
+	$photo=explode(',',$product_detail->photo);
+	@endphp
+	@foreach($photo as $data)
+        <img src="{{$data}}" alt="{{$data}}" width="100%" style="height:500px;">
+        @endforeach
     </div>
 </section>
 <section>
@@ -14,13 +19,13 @@
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-5.svg" alt="" width="40px">
-                    <p class="mt-4">Residential</p>
+                    <p class="mt-4">{{$product_detail->cat_info['title']}}</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-3.svg" alt="" width="40px">
-                    <p class="mt-4">Delhi NCR</p>
+                    <p class="mt-3">{{$product_detail->brand['title']}}</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
@@ -32,7 +37,7 @@
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-4.svg" alt="" width="30px">
-                    <p class="mt-4">2.5 CR</p>
+                    <p class="mt-4">{{number_format($product_detail->price)}} CR</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
@@ -56,9 +61,8 @@
         <div class="row align-items-center">
             <div class="col-md-4 my-3">
                 <div class="d-flex flex-column pro-sec-detail">
-                    <h5 class="mb-4">Bedroom 2</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minina aliqua. Ut enim ad </p>
+                    <h5 class="mb-4">{{$product_detail->title}}</h5>
+                    <p>{!!($product_detail->summary)!!}</p>
                 </div>
 
                 <div class="mt-4 text-center">
@@ -119,7 +123,7 @@
 
                     <div class="tab-pane fade shadow rounded bg-white" id="v-pills-other-detail" role="tabpanel"
                         aria-labelledby="v-pills-other-detail-tab">
-                        <p class="m-5"> </p>
+                        <p class="m-5">{!!($product_detail->description)!!} </p>
                     </div>
 
                     <div class="tab-pane fade shadow rounded bg-white" id="v-pills-acquisition" role="tabpanel"

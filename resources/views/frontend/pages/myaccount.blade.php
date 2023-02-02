@@ -21,10 +21,10 @@
                         aria-selected="true">
                         <span class="font-weight-bold small text-uppercase">saved properties</span></a>
 
-                    <a class="nav-link mb-0 mb-md-5 p-3 shadow" id="v-pills-visited-properties-tab" data-toggle="pill"
+                    <!-- <a class="nav-link mb-0 mb-md-5 p-3 shadow" id="v-pills-visited-properties-tab" data-toggle="pill"
                         href="#v-pills-visited-properties" role="tab" aria-controls="v-pills-visited-properties"
                         aria-selected="false">
-                        <span class="font-weight-bold small text-uppercase">Visited properties</span></a>
+                        <span class="font-weight-bold small text-uppercase">Visited properties</span></a> -->
 
                     <a class="nav-link mb-0 mb-md-5 p-3 shadow" id="v-pills-faqs-tab" data-toggle="pill" href="#v-pills-faqs"
                         role="tab" aria-controls="v-pills-faqs" aria-selected="false">
@@ -51,15 +51,16 @@
                             <div class="row properties align-items-center ">
                                 <!-- <div class="col-lg-4 col-md-4 col-sm-4 my-1"><img src="/frontend/img/Rectangle 51.png" alt=""></div> -->
                                 @php 
-                                            $photo=explode(',',$wishlist->product['photo']);
+                                 $photo=explode(',',$wishlist->product['photo']);
                                 @endphp
                                 <div class="image col-lg-4 col-md-4 col-sm-4 my-1" data-title="No">
                                     <img src="{{$photo[0]}}" alt="{{$photo[0]}}" style="width:100%; height:150px" >
                                 </div>
-                                <div class="col-lg-5 col-md-8 col-sm-8 my-1">
+    
+                                <div class="col-lg-5 col-md-8 col-sm-8 my-1 hsummary">
                                    
-                                    <h4><a href="{{route('product-detail',$wishlist->product['slug'])}}">{{$wishlist->product['title']}}</a></h4>
-                                    <p style="line-height:2">{!!($wishlist['summary'])!!}</p>
+                                    <h5 class="my-2"><a href="{{route('product-detail',$wishlist->product['slug'])}}">{{$wishlist->product['title']}}</a></h5>
+                                    <p style="line-height:2;">{!!($wishlist->product['summary'])!!}</p>
                                     <div class="action my-4" data-title="Remove"><a href="{{route('wishlist-delete',$wishlist->id)}}">Remove Property</a></div>
                                         
                                         <!-- <div class="total-amount" data-title="Total"><span>${{$wishlist['amount']}}</span></div> -->
@@ -91,7 +92,7 @@
                     </div>
                     </div>
 
-                    <div class="tab-pane fade shadow rounded bg-white py-5" id="v-pills-visited-properties"
+                    <!-- <div class="tab-pane fade shadow rounded bg-white py-5" id="v-pills-visited-properties"
                         role="tabpanel" aria-labelledby="v-pills-visited-properties-tab">
                         <div class="container ">
                         @if(count(Helper::getAllProductFromCart()) > 0)
@@ -105,10 +106,10 @@
                                 <div class="col-lg-5 col-md-8 col-sm-8 my-1">
                                     <h4><a href="{{route('product-detail',$cart->product['slug'])}}" target="_blank">{{$cart->product['title']}}</a></h4>
                                     <p style="line-height:2">{!!($cart['summary']) !!}</p>
-                                    <!-- <div class="price" data-title="Price"><span>${{number_format($cart['price'],2)}}</span></div> -->
+                                    <div class="price" data-title="Price"><span>${{number_format($cart['price'],2)}}</span></div>
 											
 											
-											<!-- <div class="action" data-title="Remove"><a href="{{route('cart-delete',$cart->id)}}">Remove Property</a></div> --> 
+											<div class="action" data-title="Remove"><a href="{{route('cart-delete',$cart->id)}}">Remove Property</a></div> 
                                 </div>
                                 <div class="col-lg-3 col-md-12 col-sm-12 my-1 ">
                                     <div class="d-flex d-md-block">
@@ -131,7 +132,7 @@
 
                             
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="tab-pane fade shadow rounded bg-white py-5" id="v-pills-faqs" role="tabpanel"
                         aria-labelledby="v-pills-faqs-tab">

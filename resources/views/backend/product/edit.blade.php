@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group">
-          <label for="description" class="col-form-label">Description</label>
+          <label for="description" class="col-form-label">Other Details</label>
           <textarea class="form-control" id="description" name="description">{{$product->description}}</textarea>
           @error('description')
           <span class="text-danger">{{$message}}</span>
@@ -33,10 +33,10 @@
         </div>
 
 
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="is_featured">Is Featured</label><br>
           <input type="checkbox" name='is_featured' id='is_featured' value='{{$product->is_featured}}' {{(($product->is_featured) ? 'checked' : '')}}> Yes                        
-        </div>
+        </div> -->
               {{-- {{$categories}} --}}
 
         <div class="form-group">
@@ -54,11 +54,21 @@
 
         @endphp
         {{-- {{$product->child_cat_id}} --}}
-        <div class="form-group {{(($product->child_cat_id)? '' : 'd-none')}}" id="child_cat_div">
+        <!-- <div class="form-group {{(($product->child_cat_id)? '' : 'd-none')}}" id="child_cat_div">
           <label for="child_cat_id">Sub Category</label>
           <select name="child_cat_id" id="child_cat_id" class="form-control">
               <option value="">--Select any sub category--</option>
               
+          </select>
+        </div> -->
+
+        <div class="form-group">
+          <label for="brand_id">Location</label>
+          <select name="brand_id" class="form-control">
+              <option value="">--Select Brand--</option>
+             @foreach($brands as $brand)
+              <option value="{{$brand->id}}" {{(($product->brand_id==$brand->id)? 'selected':'')}}>{{$brand->title}}</option>
+             @endforeach
           </select>
         </div>
 
@@ -70,14 +80,14 @@
           @enderror
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="discount" class="col-form-label">Discount(%)</label>
           <input id="discount" type="number" name="discount" min="0" max="100" placeholder="Enter discount"  value="{{$product->discount}}" class="form-control">
           @error('discount')
           <span class="text-danger">{{$message}}</span>
           @enderror
-        </div>
-        <div class="form-group">
+        </div> -->
+        <!-- <div class="form-group">
           <label for="size">Size</label>
           <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
               <option value="">--Select any size--</option>
@@ -92,18 +102,10 @@
               <option value="XL"  @if( in_array( "XL",$data ) ) selected @endif>Extra Large</option>
               @endforeach
           </select>
-        </div>
-        <div class="form-group">
-          <label for="brand_id">Brand</label>
-          <select name="brand_id" class="form-control">
-              <option value="">--Select Brand--</option>
-             @foreach($brands as $brand)
-              <option value="{{$brand->id}}" {{(($product->brand_id==$brand->id)? 'selected':'')}}>{{$brand->title}}</option>
-             @endforeach
-          </select>
-        </div>
+        </div> -->
+       
 
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="condition">Condition</label>
           <select name="condition" class="form-control">
               <option value="">--Select Condition--</option>
@@ -111,15 +113,15 @@
               <option value="new" {{(($product->condition=='new')? 'selected':'')}}>New</option>
               <option value="hot" {{(($product->condition=='hot')? 'selected':'')}}>Hot</option>
           </select>
-        </div>
+        </div> -->
 
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="stock">Quantity <span class="text-danger">*</span></label>
           <input id="quantity" type="number" name="stock" min="0" placeholder="Enter quantity"  value="{{$product->stock}}" class="form-control">
           @error('stock')
           <span class="text-danger">{{$message}}</span>
           @enderror
-        </div>
+        </div> -->
         <div class="form-group">
           <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
           <div class="input-group">
