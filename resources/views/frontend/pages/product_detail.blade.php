@@ -5,7 +5,7 @@
 
 <section>
     <div class="container-fluid">
-    @php 
+    @php
 	$photo=explode(',',$product_detail->photo);
 	@endphp
 	@foreach($photo as $data)
@@ -31,7 +31,7 @@
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1.svg" alt="" width="40px">
-                    <p class="mt-4">30 FT X 40FT</p>
+                    <p class="mt-4">{{$product_detail->area}}</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
@@ -43,7 +43,7 @@
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-2.svg" alt="" width="40px">
-                    <p class="mt-4">3 Bedroom, 2 bathroom</p>
+                    <p class="mt-4">{{$product_detail->rooms}}</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
