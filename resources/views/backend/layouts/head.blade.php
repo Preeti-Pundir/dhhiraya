@@ -6,7 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+<<<<<<< HEAD
     {{-- <title>E-SHOP || DASHBOARD</title> --}}
+=======
+    <title> DASHBOARD</title>
+>>>>>>> b123c02cd9d3865c1ece179091dc37e0e7cad339
   
     <!-- Custom fonts for this template-->
     <link href="{{asset('backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">

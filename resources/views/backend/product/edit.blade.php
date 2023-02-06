@@ -78,6 +78,22 @@
           @enderror
         </div>
         <div class="form-group">
+          <label for="condition">Size</label>
+          <select name="Size" class="form-control">
+            @foreach($items as $item)              
+                  @php 
+                  $data=explode(',',$item->size);
+                  // dd($data);
+                  @endphp
+              <option value="">--Select size--</option>
+              <option value="default" {{(($product->condition=='default')? 'selected':'')}}>Default</option>
+              <option value="30 FT X 40FT" {{(($product->condition=='30 FT X 40FT')? 'selected':'')}}>30 FT X 40FT</option>
+              <option value="40 FT X 60FT" {{(($product->condition=='40 FT X 60FT')? 'selected':'')}}>40 FT X 60FT</option>
+            @endforeach
+          </select>
+        </div>
+
+        {{-- <div class="form-group">
           <label for="size">Size</label>
           <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
               <option value="">--Select any size--</option>
@@ -86,13 +102,16 @@
                 $data=explode(',',$item->size);
                 // dd($data);
                 @endphp
-              <option value="S"  @if( in_array( "S",$data ) ) selected @endif>Small</option>
-              <option value="M"  @if( in_array( "M",$data ) ) selected @endif>Medium</option>
-              <option value="L"  @if( in_array( "L",$data ) ) selected @endif>Large</option>
-              <option value="XL"  @if( in_array( "XL",$data ) ) selected @endif>Extra Large</option>
+                <select name="condition" class="form-control">
+                <option value="test"  @if( in_array( "S",$data ) ) selected @endif>select</option>
+                 <option value="30 FT X 40FT"  @if( in_array( "30 FT X 40FT",$data ) ) selected @endif>30 FT X 40FT</option>
+                 <option value="40 FT X 60FT"  @if( in_array( "40 FT X 60FT",$data ) ) selected @endif>40 FT X 60FT</option>
+                 <option value="60 FT X 90FT"  @if( in_array( "60 FT X 90FT",$data ) ) selected @endif>60 FT X 90FT</option>
+                 <option value="90 FT X 90FT"  @if( in_array( "XL",$data ) ) selected @endif>90 FT X 120FT</option>
+              
               @endforeach
           </select>
-        </div>
+        </div> --}}
         <div class="form-group">
           <label for="brand_id">Brand</label>
           <select name="brand_id" class="form-control">
@@ -108,8 +127,8 @@
           <select name="condition" class="form-control">
               <option value="">--Select Condition--</option>
               <option value="default" {{(($product->condition=='default')? 'selected':'')}}>Default</option>
-              <option value="new" {{(($product->condition=='new')? 'selected':'')}}>New</option>
-              <option value="hot" {{(($product->condition=='hot')? 'selected':'')}}>Hot</option>
+              <option value="Furnished" {{(($product->condition=='Furnished')? 'selected':'')}}>Furnished</option>
+              <option value="Ongoing" {{(($product->condition=='Ongoing')? 'selected':'')}}>Ongoing</option>
           </select>
         </div>
 
@@ -120,15 +139,17 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
+        
         <div class="form-group">
           <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
           <div class="input-group">
-              <span class="input-group-btn">
+              {{-- <span class="input-group-btn">
                   <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary text-white">
                   <i class="fas fa-image"></i> Choose
                   </a>
               </span>
-          <input id="thumbnail" class="form-control" type="text" name="photo" value="{{$product->photo}}">
+          <input id="thumbnail" class="form-control" type="text" name="photo" value="{{$product->photo}}"> --}}
+          <input type="file" class="form-control" name="photo[]" multiple  value="{{$product->photo}}" />
         </div>
         <div id="holder" style="margin-top:15px;max-height:100px;"></div>
           @error('photo')

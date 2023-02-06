@@ -1,8 +1,10 @@
- {{-- <h2>Hey, It's me {{ $message->name }}</h2> 
-<br>
-<strong>Name: </strong>{{ $message->name }} <br>
-<strong>Email: </strong>{{ $message->email }} <br>
-<strong>Message: </strong>{{ $message->message }} <br><br>  --}}
-testing
-  
+ 
+ 
 
+testting
+
+
+ <h2>Hey, It's me {{ $data->name }}</h2> 
+ <strong>Name: </strong>{{$data->name}}
+<strong>Email: </strong>{{$data->email}}
+<strong>Message: </strong>{{$data->message}}

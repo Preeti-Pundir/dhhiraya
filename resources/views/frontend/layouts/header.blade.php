@@ -8,13 +8,13 @@
 
                 <div class="nav-left d-flex align-items-center justify-content-between ml-3">
                     <div class="main-logo"><a class="navbar-brand" href="{{url('/')}}"><img
-                                src="/frontend/img/dhhirayalogo.png" alt="">
+                                src="{{asset ('/frontend/img/dhiiraaya-logo.svg') }}" style="width:150px" alt="">
                         </a>
                     </div>
                     <div class="nav-menu">
                         <ul class="menu-items pt-2">
                             <li class="side-logo d-block d-lg-none">
-                                <a class="navbar-brand" href="{{url('/')}}"><img src="/frontend/img/dhhirayalogo.png"
+                                <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset ('/frontend/img/dhiiraaya-logo.svg') }}" style="width:150px"
                                         alt="">
                                 </a>
                             </li>

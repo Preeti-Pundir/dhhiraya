@@ -9,7 +9,7 @@
                 <div class="single-footer about">
                     <div class="logo">
                         <!-- <a href="index.html"><img src="{{asset('backend/img/dhhirayalogo.png')}}" alt="#"></a> -->
-                        <a href="index.html"><img src="/frontend/img/dhhirayalogo.png" alt="#"></a>
+                        <a href="index.html"><img src="{{asset ('/frontend/img/dhiiraaya-logo.svg') }}" style="width:150px" alt="#"></a>
                     </div>
                     @php
                     $settings=DB::table('settings')->get();
@@ -81,13 +81,13 @@
         <div class="container pt-3 pb-3">
             <div class="row text-center">
                 <div class="col-lg-4 col-md-12">
-                    <p>Dhiirayahomes.com</p>
+                    <p>Dhiiraayahomes.com</p>
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <p>Powered by Avidus Interactive</p>
                 </div>
                 <div class="col-lg-4 col-md-12">
-                    <p>Copyright © 2021</p>
+                    <p>Copyright © 2023</p>
                 </div>
             </div>
         </div>

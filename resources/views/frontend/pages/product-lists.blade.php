@@ -1,51 +1,50 @@
 @extends('frontend.layouts.master')
 
-@section('title','E-SHOP || PRODUCT PAGE')
+@section('title',' PRODUCT PAGE')
 
 @section('main-content')
-	
-	
+
+
 		<form action="{{route('shop.filter')}}" method="POST">
 		@csrf
 			<!-- Product Style 1 -->
 			<section class="product-area shop-sidebar shop-list shop section">
 				<div class="container">
 					<div class="row">
-						
+
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="row">
-								<div class="col-12">
-									<!-- Shop Top -->
-									<div class="shop-top">
-										<div class="shop-shorter">
-											<div class="single-shorter">
-												<label>Show :</label>
-												<select class="show" name="show" onchange="this.form.submit();">
-													<option value="">Default</option>
-													<option value="9" @if(!empty($_GET['show']) && $_GET['show']=='9') selected @endif>09</option>
-													<option value="15" @if(!empty($_GET['show']) && $_GET['show']=='15') selected @endif>15</option>
-													<option value="21" @if(!empty($_GET['show']) && $_GET['show']=='21') selected @endif>21</option>
-													<option value="30" @if(!empty($_GET['show']) && $_GET['show']=='30') selected @endif>30</option>
-												</select>
-											</div>
-											<div class="single-shorter">
-												<label>Sort By :</label>
-												<select class='sortBy' name='sortBy' onchange="this.form.submit();">
-													<option value="">Default</option>
-													<option value="title" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='title') selected @endif>Name</option>
-													<option value="price" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='price') selected @endif>Price</option>
-													<option value="category" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='category') selected @endif>Category</option>
-													<option value="brand" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='brand') selected @endif>Brand</option>
-												</select>
-											</div>
-										</div>
-										<ul class="view-mode">
-											<li><a href="{{route('product-grids')}}"><i class="fa fa-th-large"></i></a></li>
-											<li class="active"><a href="javascript:void(0)"><i class="fa fa-th-list"></i></a></li>
-										</ul>
-									</div>
-									<!--/ End Shop Top -->
-								</div>
+							<div class="col-12">
+                            <!-- Shop Top -->
+                            <div class="shop-top">
+                                <div class="shop-shorter">
+                                    <div class="single-shorter">
+                                         <select class="show pfilter" name="category"  onchange="this.form.submit();">
+                                            <option value="">Property Type</option>
+                                             @foreach($categorys as $key => $value)
+                                               <option value="{{ $key }}"
+                                            >{{ $value }}</option>
+                                         @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="single-shorter">
+
+                                          <select class="sortBy pfilter" name="brand"  onchange="this.form.submit();">
+                                            <option value="">City</option>
+                                             @foreach($brands as $key => $value)
+                                               <option value="{{ $key }}"
+                                            >{{ $value }}</option>
+                                         @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- <ul class="view-mode">
+                                        <li class="active"><a href="javascript:void(0)"><i class="fa fa-th-large"></i></a></li>
+                                        <li><a href="{{route('product-lists')}}"><i class="fa fa-th-list"></i></a></li>
+                                    </ul> -->
+                            </div>
+                            <!--/ End Shop Top -->
+                        </div>
 							</div>
 							<div class="row">
 								@if(count($products))
@@ -58,7 +57,7 @@
 													<div class="single-product">
 														<div class="product-img">
 															<a href="{{route('product-detail',$product->slug)}}">
-															@php 
+															@php
 																$photo=explode(',',$product->photo);
 															@endphp
 															<img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
@@ -90,7 +89,7 @@
 														{{-- <p>{!! html_entity_decode($product->summary) !!}</p> --}}
 														</div>
 														<p class="des pt-2">{!! html_entity_decode($product->summary) !!}</p>
-														<a href="javascript:void(0)" class="btn cart" data-id="{{$product->id}}">Buy Now!</a>
+
 													</div>
 												</div>
 											</div>
@@ -110,7 +109,7 @@
 					</div>
 				</div>
 			</section>
-			<!--/ End Product Style 1  -->	
+			<!--/ End Product Style 1  -->
 		</form>
 		<!-- Modal -->
 		@if($products)
@@ -127,7 +126,7 @@
 											<!-- Product Slider -->
 												<div class="product-gallery">
 													<div class="quickview-slider-active">
-														@php 
+														@php
 															$photo=explode(',',$product->photo);
 														// dd($photo);
 														@endphp
@@ -158,7 +157,7 @@
 															@for($i=1; $i<=5; $i++)
 																@if($rate>=$i)
 																	<i class="yellow fa fa-star"></i>
-																@else 
+																@else
 																<i class="fa fa-star"></i>
 																@endif
 															@endfor
@@ -168,7 +167,7 @@
 													<div class="quickview-stock">
 														@if($product->stock >0)
 														<span><i class="fa fa-check-circle-o"></i> {{$product->stock}} in stock</span>
-														@else 
+														@else
 														<span><i class="fa fa-times-circle-o text-danger"></i> {{$product->stock}} out stock</span>
 														@endif
 													</div>
@@ -184,7 +183,7 @@
 													<div class="size">
 														<h4>Size</h4>
 														<ul>
-															@php 
+															@php
 																$sizes=explode(',',$product->size);
 																// dd($sizes);
 															@endphp
@@ -195,7 +194,7 @@
 													</div>
 												@endif
 												<form action="{{route('single-add-to-cart')}}" method="POST">
-													@csrf 
+													@csrf
 													<div class="quantity">
 														<!-- Input Order -->
 														<div class="input-group">
@@ -297,7 +296,7 @@
 					else{
                         swal('error',response.msg,'error').then(function(){
 							// document.location.href=document.location.href;
-						}); 
+						});
                     }
                 }
             })
@@ -316,7 +315,7 @@
             if($("#price_range").length > 0 && $("#price_range").val()){
                 price_range = $("#price_range").val().trim();
             }
-            
+
             let price = price_range.split('-');
             $("#slider-range").slider({
                 range: true,

@@ -7,6 +7,7 @@ use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,7 +86,9 @@ Route::get('blog-cat/{slug}','FrontendController@blogByCategory')->name('blog.ca
 Route::get('blog-tag/{slug}','FrontendController@blogByTag')->name('blog.tag');
 
 // NewsLetter
-Route::post('/subscribe','FrontendController@subscribe')->name('subscribe');
+Route::post('subscribe-news-letter',[UserController::class,'subscribe'])->name('subscribe');
+
+//Route::post('/subscribe','FrontendController@subscribe')->name('subscribe');
 
 // Product Review
 Route::resource('/review','ProductReviewController');

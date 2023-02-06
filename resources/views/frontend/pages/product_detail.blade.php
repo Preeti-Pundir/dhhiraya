@@ -11,37 +11,56 @@
 <section>
     <div class="container-fluid">
         <div class="row text-center">
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
-                    <img src="/frontend/img/Layer_x0020_1-5.svg" alt="" width="40px">
-                    <p class="mt-4">Residential</p>
+                   
+                     <img src="/frontend/img/Layer_x0020_1-5.svg" alt="" width="40px">
+                     <select class="show pfilter" name="categories"  onchange="this.form.submit();">
+                         @foreach($categories as $cat)
+                         <option value="{{ $cat }}">{{ $cat->title }}</option>
+                         @endforeach
+                     </select>
+                        {{-- <p class="mt-4">Residential</p>  --}}
                 </div>
             </div>
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-3.svg" alt="" width="40px">
+                    <select class="show pfilter" name="brand"  onchange="this.form.submit();">
+                        @foreach($Brands as $brand)
+                        <option value="{{ $brand }}">{{ $brand->title }}</option>
+                        @endforeach
+                    </select>
                     <p class="mt-4">Delhi NCR</p>
                 </div>
             </div>
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1.svg" alt="" width="40px">
-                    <p class="mt-4">30 FT X 40FT</p>
+                    <select class="show pfilter" name="products"  onchange="this.form.submit();">
+                        @foreach($products as $product)
+                        <option value="{{ $product }}">{{ $product->size }}</option>
+                        @endforeach
+                    </select>
+                    {{-- <p class="mt-4">30 FT X 40FT</p> --}}
                 </div>
             </div>
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-4.svg" alt="" width="30px">
+                    @foreach($products as $product)
+                        <option value="{{ $product }}">{{ $product->price }}</option>
+                        @endforeach
                     <p class="mt-4">2.5 CR</p>
                 </div>
             </div>
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-2.svg" alt="" width="40px">
                     <p class="mt-4">3 Bedroom, 2 bathroom</p>
                 </div>
             </div>
-            <div class="col-md-2 border-size-box">
+            <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-1.svg" alt="" width="40px">
                     <p class="mt-4">Construction</p>
@@ -54,7 +73,7 @@
 <section class="mt-5 mb-5">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="col-md-4">
+            <div class="col-md-4 my-3">
                 <div class="d-flex flex-column pro-sec-detail">
                     <h5 class="mb-4">Bedroom 2</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -63,11 +82,11 @@
 
                 <div class="mt-4 text-center">
 
-                   <a href="https://wa.me/9512624584/?text=I want to book a visit. My name is {{Auth::user()->name}} and My email id is :{{Auth::user()->email}}" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
-                   <a href="tel:9512624584"> <button class="btn-ma" id="g" >Get a call</button></a>
+                   <a href="https://wa.me/8390712871/" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
+                   <a href="tel:8390712871"> <button class="btn-ma" id="g" >Make a call</button></a>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 my-3">
                 <div class="owl-carousel owl-theme">
                     <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
                     <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
@@ -114,31 +133,17 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade shadow rounded bg-white show active" id="v-pills-developer"
                         role="tabpanel" aria-labelledby="v-pills-developer-tab">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                        <p class="m-5"> </p>
                     </div>
 
                     <div class="tab-pane fade shadow rounded bg-white" id="v-pills-other-detail" role="tabpanel"
                         aria-labelledby="v-pills-other-detail-tab">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                        <p class="m-5"> </p>
                     </div>
 
                     <div class="tab-pane fade shadow rounded bg-white" id="v-pills-acquisition" role="tabpanel"
                         aria-labelledby="v-pills-acquisition-tab">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="m-5"> </p>
                     </div>
 
 

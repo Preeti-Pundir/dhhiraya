@@ -7,7 +7,8 @@
                     <div class="inner">
                         <h4>Get the latest property news</h4>
                         <p> Strategy startup research & development equity burn rate validation customer vesting period infrastructure seed round bandwidth ecosystem infographic market.</p>
-                        <form action="{{route('subscribe')}}" method="post" class="newsletter-inner">
+                        
+                            <form action="{{route('subscribe')}}" method="post" class="newsletter-inner">
                             @csrf
                             <input name="email" placeholder="Your e-mail here" required="" type="email">
                             <button class="btn" type="submit">Submit</button>
@@ -17,4 +18,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> 

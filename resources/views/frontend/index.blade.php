@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Dhhiraya')
+@section('title','Dhiiraaya')
 @section('main-content')
 @if(count($banners)>0)
 <section id="Gslider" class="carousel slide" data-ride="carousel">
@@ -265,6 +265,13 @@
 
     #Gslider .carousel-inner .carousel-caption {
         bottom: 30%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    #Gslider .carousel-inner .carousel-caption {
+        bottom: 20%;
     }
 
 }

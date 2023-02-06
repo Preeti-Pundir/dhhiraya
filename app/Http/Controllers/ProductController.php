@@ -32,6 +32,7 @@ class ProductController extends Controller
     {
         $brand=Brand::get();
         $category=Category::where('is_parent',1)->get();
+       
         // return $category;
         return view('backend.product.create')->with('categories',$category)->with('brands',$brand);
     }
@@ -49,7 +50,7 @@ class ProductController extends Controller
             'title'=>'string|required',
             'summary'=>'string|required',
             'description'=>'string|nullable',
-            'photo'=>'string|required',
+            // 'photo'=>'string|required',
             'size'=>'nullable',
             'stock'=>"required|numeric",
             'cat_id'=>'required|exists:categories,id',
@@ -64,6 +65,7 @@ class ProductController extends Controller
 
         $data=$request->all();
         $slug=Str::slug($request->title);
+        $allowedfileExtension=['pdf','jpg','png','docx'];
         $count=Product::where('slug',$slug)->count();
         if($count>0){
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
@@ -148,6 +150,7 @@ class ProductController extends Controller
 
         $data=$request->all();
         $data['is_featured']=$request->input('is_featured',0);
+     
         $size=$request->input('size');
         if($size){
             $data['size']=implode(',',$size);

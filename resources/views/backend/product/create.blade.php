@@ -5,7 +5,7 @@
 <div class="card">
     <h5 class="card-header">Add Product</h5>
     <div class="card-body">
-      <form method="post" action="{{route('product.store')}}">
+      <form method="post" action="{{route('product.store')}}" enctype="multipart/form-data" multiple data-live-search="true">
         {{csrf_field()}}
         <div class="form-group">
           <label for="inputTitle" class="col-form-label">Title <span class="text-danger">*</span></label>
@@ -60,7 +60,12 @@
 
         <div class="form-group">
           <label for="price" class="col-form-label">Price(NRS) <span class="text-danger">*</span></label>
-          <input id="price" type="number" name="price" placeholder="Enter price"  value="{{old('price')}}" class="form-control">
+          <select name="price[]" class="form-control selectpicker" >  {{-- multiple data-live-search="true" --}}
+          
+              <option value="">--Select any price--</option>
+              <input id="price" type="number" name="price" placeholder="Enter price"  value="{{old('price')}}" class="form-control">
+              
+          </select>
           @error('price')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -73,14 +78,16 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
+
         <div class="form-group">
           <label for="size">Size</label>
-          <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
+          <select name="size[]" class="form-control selectpicker" >
+            {{-- multiple data-live-search="true" --}}
               <option value="">--Select any size--</option>
-              <option value="S">Small (S)</option>
-              <option value="M">Medium (M)</option>
-              <option value="L">Large (L)</option>
-              <option value="XL">Extra Large (XL)</option>
+              <option value="30 FT X 40FT">30 FT X 40FT</option>
+              <option value="40 FT X 60FT">40 FT X 60FT</option>
+              <option value="60 FT X 90FT">60 FT X 90FT</option>
+              <option value="90 FT X 120FT">90 FT X 120FT</option>
           </select>
         </div>
 
@@ -101,8 +108,8 @@
           <select name="condition" class="form-control">
               <option value="">--Select Condition--</option>
               <option value="default">Default</option>
-              <option value="new">New</option>
-              <option value="hot">Hot</option>
+              <option value="Furnished">Furnished</option>
+              <option value="Ongoing">Ongoing</option>
           </select>
         </div>
 
@@ -113,15 +120,20 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
+
+
+
         <div class="form-group">
           <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
           <div class="input-group">
-              <span class="input-group-btn">
+            
+              {{-- <span class="input-group-btn">
                   <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
                   <i class="fa fa-picture-o"></i> Choose
                   </a>
-              </span>
-          <input id="thumbnail" class="form-control" type="text" name="photo" value="{{old('photo')}}">
+              </span> --}}
+              <input type="file" class="form-control" name="photo[]" multiple />
+          {{-- <input id="thumbnail" class="form-control" type="text" name="photo[]" multiple value="{{old('photo')}}"> --}}
         </div>
         <div id="holder" style="margin-top:15px;max-height:100px;"></div>
           @error('photo')

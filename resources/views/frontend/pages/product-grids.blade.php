@@ -19,31 +19,20 @@
                             <div class="shop-top">
                                 <div class="shop-shorter">
                                     <div class="single-shorter">
-
-                                        <select class="show pfilter" name="show" onchange="this.form.submit();">
-                                            <option value="">City</option>
-                                            <option value="9" @if(!empty($_GET['show']) && $_GET['show']=='9' ) selected
-                                                @endif>09</option>
-                                            <option value="15" @if(!empty($_GET['show']) && $_GET['show']=='15' )
-                                                selected @endif>15</option>
-                                            <option value="21" @if(!empty($_GET['show']) && $_GET['show']=='21' )
-                                                selected @endif>21</option>
-                                            <option value="30" @if(!empty($_GET['show']) && $_GET['show']=='30' )
-                                                selected @endif>30</option>
+                                        <select class="show pfilter" name="brand"  onchange="this.form.submit();">
+                                            <option value="">Property Type</option>
+                                             @foreach($categorys as $key => $value)
+                                               <option value="{{ $key }}">{{ $value }}</option>
+                                         @endforeach
                                         </select>
                                     </div>
                                     <div class="single-shorter">
-
-                                        <select class='sortBy pfilter' name='sortBy' onchange="this.form.submit();">
-                                            <option value="">Property type</option>
-                                            <option value="title" @if(!empty($_GET['sortBy']) &&
-                                                $_GET['sortBy']=='title' ) selected @endif>Name</option>
-                                            <option value="price" @if(!empty($_GET['sortBy']) &&
-                                                $_GET['sortBy']=='price' ) selected @endif>Price</option>
-                                            <option value="category" @if(!empty($_GET['sortBy']) &&
-                                                $_GET['sortBy']=='category' ) selected @endif>Category</option>
-                                            <option value="brand" @if(!empty($_GET['sortBy']) &&
-                                                $_GET['sortBy']=='brand' ) selected @endif>Brand</option>
+                                         <select class="sortBy pfilter" name="brand"  onchange="this.form.submit();">
+                                             <option value="">City</option>
+                                             @foreach($brands as $key => $value)
+                                               <option value="{{ $key }}"
+                                            >{{ $value }}</option>
+                                         @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -68,41 +57,51 @@
                                         @endphp
                                         <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                         <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                        @if($product->discount)
-                                        <span class="price-dec">{{$product->discount}} % Off</span>
-                                        @endif
                                     </a>
+                                    <div class="button-head-one">
+                                        <!-- <div class="product-action-one">
+                                            <a title="Wishlist" href="#"
+                                                class="wishlist" data-id="{{$product->id}}"><img
+                                                    src="/frontend/img/Vector.svg" alt=""></a>
+                                        </div> -->
+                                        <div class="product-action-one-2">
+                                            <a
+                                                href="#"><h5>{{$product->title}}</h5></a>
+                                                <br>
+                                                <a
+                                                href="#">{{$product->size}}</a>
+                                                <br>
+                                                <a
+                                                href="#">{{$product->condition}}</a>
+                                        </div>
+                                    </div>
                                     <div class="button-head">
                                         <div class="product-action">
-                                            <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}"
+                                            <a title="Wishlist" href="#"
                                                 class="wishlist" data-id="{{$product->id}}"><img
-                                                    src="/frontend/img/Vector.svg" alt=""><span>Add to
-                                                    Wishlist</span></a>
+                                                    src="/frontend/img/Vector.svg" alt=""></a>
                                         </div>
                                         <div class="product-action-2">
                                             <a title="Add to cart"
-                                                href="{{route('add-to-cart',$product->slug)}}">View</a>
+                                                href="{{route('product-detail',$product->slug)}}">View</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-content">
+                                <!-- <div class="product-content">
                                     <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a>
                                     </h3>
                                     @php
                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                     @endphp
-                                    <span>${{number_format($after_discount,2)}}</span>
-                                    <del style="padding-left:4%;">${{number_format($product->price,2)}}</del>
-                                </div>
+                                    <span>Rs {{number_format($after_discount,2)}}</span>
+
+                                </div> -->
                             </div>
                         </div>
                         @endforeach
                         @else
                         <h4 class="text-warning" style="margin:100px auto;">There are no products.</h4>
                         @endif
-
-
-
                     </div>
                     <div class="row">
                         <div class="col-md-12 justify-content-center d-flex">
@@ -294,6 +293,100 @@
     margin-top: 10px;
     color: white;
 }
+
+
+
+/* ********************************* */
+
+
+
+
+.single-product .button-head-one {
+    background: #000;
+    opacity: 0.5;
+    display: inline-block;
+    width: 100%;
+    height:auto;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    z-index: 9;
+    line-height: 50px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.single-product:hover .button-head-one {
+    top: 0;
+
+}
+
+.single-product .product-img .product-action-one a {
+    background-color: transparent;
+    display: block;
+    font-size: 16px;
+    display: inline-block;
+    /* margin-right: 15px; */
+    /* text-align: right; */
+    height: 52px;
+    position: relative;
+    top: 50;
+}
+
+.single-product .product-img .product-action-one {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: 99;
+    border-radius: 3px;
+}
+
+.single-product .product-img .product-action-one-2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    text-align:center;
+    -webkit-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+}
+.single-product .product-img .product-action-one-2 a {
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    display: inline-block;
+}
+
+.single-product .product-img .product-action-one-2 a h5 {
+
+    font-size: 20px;
+
+}
+
+@media screen and (max-width:991px) {
+    .single-product .product-img .product-action-one-2 a {
+
+    font-size: 12px;
+
+}
+
+.single-product .product-img .product-action-one-2 a h5 {
+
+    font-size: 15px;
+
+}
+
+}
+
+/* ************************************ */
 </style>
 @endpush
 @push('scripts')
@@ -363,3 +456,4 @@ $(document).ready(function() {
 })
 </script>
 @endpush
+
