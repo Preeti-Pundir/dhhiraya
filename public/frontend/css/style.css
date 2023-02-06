@@ -27,7 +27,7 @@ Version:1.0
 15. Newslatter CSS
 16. About Us CSS
 17. Team CSS
-18. Blog CSS	
+18. Blog CSS
 	+ Blog Archive
 	+ Blog Sidebar
 	+ Blog Single
@@ -36,8 +36,8 @@ Version:1.0
 21. Footer CSS
 ========================================*/
 
-*{
-    font-family: 'Merriweather', serif !important;
+* {
+    font-family: "Merriweather", serif !important;
 }
 
 .color-plate {
@@ -1945,7 +1945,6 @@ Version:1.0
     bottom: 45px;
 }
 
-
 .single-product .product-img .product-action-2 {
     position: absolute;
     left: 11px;
@@ -1968,10 +1967,9 @@ Version:1.0
     display: inline-block;
 }
 
-
 .single-product .button-head {
-   display: block !important;
-   margin: 0 auto;
+    display: block !important;
+    margin: 0 auto;
     background: #b3b356;
     opacity: 0.72;
     height: 40px;
@@ -5001,24 +4999,23 @@ Version:1.0
     color: #ffffff;
 }
 
-.shop .fcare h2{
+.shop .fcare h2 {
     margin: 70px 100px;
 }
 
-.shop .fcare p{
+.shop .fcare p {
     margin: 100px 100px;
 }
 
-@media screen and (max-width:767px) {
-    .shop .fcare h2{
+@media screen and (max-width: 767px) {
+    .shop .fcare h2 {
         margin: 40px 50px;
     }
-    
-    .shop .fcare p{
+
+    .shop .fcare p {
         margin: 50px 50px;
     }
 }
-
 
 /* Myaccount page */
 
@@ -5036,6 +5033,16 @@ Version:1.0
     padding: 12px;
     margin: 5px;
     border-radius: 0 !important;
+    outline: none;
+}
+
+.btn-whish {
+    width: 50px;
+    padding: 9px;
+    margin: 0px 10px 10px 10px;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    border: 1px solid #b3b356 !important;
 }
 
 .btn-ma#b {
@@ -5047,15 +5054,15 @@ Version:1.0
     border: 1px solid #b3b356 !important;
 }
 
-.hsummary p{
+.hsummary p {
     /* width: 300px ; */
-    overflow: hidden;    
+    overflow: hidden;
     white-space: nowrap;
     /* text-overflow: clip; */
     text-overflow: ellipsis;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .myaccount-tabs {
         border-right: 0 !important;
     }
@@ -5092,31 +5099,26 @@ Version:1.0
 
 /* Homepage  */
 
-.social-media-iocns{
+.social-media-iocns {
     position: fixed !important;
     bottom: 5% !important;
-    left : 45% !important;
-    right : 45% !important;
-    
+    left: 45% !important;
+    right: 45% !important;
 }
 
-@media screen and (max-width:991px) {
-    .social-media-iocns{
-        left : 25% !important;
-        right : 25% !important;
-        
+@media screen and (max-width: 991px) {
+    .social-media-iocns {
+        left: 25% !important;
+        right: 25% !important;
     }
 }
 
-
-@media screen and (max-width:767px) {
-    .social-media-iocns{
-        left : 35% !important;
-        right : 35% !important;
-        
+@media screen and (max-width: 767px) {
+    .social-media-iocns {
+        left: 35% !important;
+        right: 35% !important;
     }
 }
-
 
 @media screen and (max-width: 991px) {
     .home-fifth {
@@ -5160,12 +5162,11 @@ Version:1.0
     z-index: 2 !important;
 }
 
-@media screen and (max-width:767px) {
-    
-.my-container h6 {
-    font-size: 13px;
-    padding: 50% 0px 45% 0px;
-}
+@media screen and (max-width: 767px) {
+    .my-container h6 {
+        font-size: 13px;
+        padding: 50% 0px 45% 0px;
+    }
 }
 
 /* carousel css for inddexpage */
@@ -5220,8 +5221,6 @@ Version:1.0
     margin: 0 10px;
 }
 
-
-
 .subnav-content-desktop {
     display: none;
     position: absolute;
@@ -5230,28 +5229,26 @@ Version:1.0
     color: #000;
     width: 100%;
     height: auto;
-    z-index: 999999; 
-}  
-  
+    z-index: 999999;
+}
+
 .subnav:hover .subnav-content-desktop {
     display: block;
 }
 
-.head-submenu ul li h6{
+.head-submenu ul li h6 {
     color: #b3b356;
 }
 
-.head-submenu ul li:hover{
+.head-submenu ul li:hover {
     color: #b3b356;
 }
-
 
 .header nav .nav-menu ul li.activated .navs-menus {
     color: #000;
     border-bottom: 5px solid #b3b356;
     padding-bottom: 12px;
 }
-
 
 .header.fixed {
     position: fixed;
@@ -5296,10 +5293,6 @@ Version:1.0
     transform: rotatez(45deg) translate(-5px) !important;
 }
 
-
-
-
-
 @media screen and (max-width: 991px) {
     .main-logo {
         margin: 0 0 0 0 !important;
@@ -5324,14 +5317,11 @@ Version:1.0
         background-color: #fff;
         height: 100vh;
         margin: 10px 0 !important;
-       
     }
 
     .menu-items li {
         margin: 10px 20px !important;
     }
-
-   
 }
 
 @media screen and (max-width: 767px) {
@@ -5371,3 +5361,60 @@ Version:1.0
     background-color: #ffffff71 !important;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.160784) !important;
 }
+
+/* Survey form css */
+
+.step.active {
+    display: block !important;
+}
+
+.step {
+    display: none;
+}
+
+.dot-step ul li p {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #b3b35670 ;
+}
+
+.dot-step ul li div{
+
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+}
+
+.dot-step ul li {
+    position: relative;
+    margin-right: 13px;
+}
+
+.dot-step ul li:last-child {
+    margin-right: 0;
+}
+
+.dot-step ul li:before {
+    content: " ";
+    position: absolute;
+    top: 0%;
+    transform: translateY(-50%);
+    left: 29px;
+    width: 100%;
+    height: 2px;
+    background-color: #b3b35670;
+}
+
+.dot-step ul li:last-child::before {
+    display: none;
+}
+
+
+.dot-step ul li.active p {
+    width: 20px;
+    height: 20px;
+    background-color: #b3b356;
+}
+
+

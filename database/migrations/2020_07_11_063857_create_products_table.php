@@ -18,7 +18,9 @@ class CreateProductsTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('summary');
-            $table->longText('description')->nullable();
+            $table->longText('developer');
+            $table->longText('description');
+            $table->longText('acquisition');
             $table->text('photo');
             $table->integer('stock')->default(1);
             $table->string('size')->default('M')->nullable();
@@ -45,5 +47,6 @@ class CreateProductsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('products');
-    }
+
+   }
 }

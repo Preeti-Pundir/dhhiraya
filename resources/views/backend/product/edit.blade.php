@@ -24,10 +24,28 @@
                     @enderror
                 </div>
 
+
+
                 <div class="form-group">
                     <label for="description" class="col-form-label">Other Details</label>
                     <textarea class="form-control" id="description" name="description">{{ $product->description }}</textarea>
                     @error('description')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="developer" class="col-form-label">Developer</label>
+                    <textarea class="form-control" id="developer" name="developer">{{ $product->developer }}</textarea>
+                    @error('developer')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="acquisition" class="col-form-label">Acquisition</label>
+                    <textarea class="form-control" id="acquisition" name="acquisition">{{ $product->acquisition }}</textarea>
+                    @error('acquisition')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>

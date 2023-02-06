@@ -6,9 +6,9 @@
 <section>
     <div class="container-fluid">
     @php
-	$photo=explode(',',$product_detail->photo);
-	@endphp
-	@foreach($photo as $data)
+    $photo=explode(',',$product_detail->photo);
+    @endphp
+    @foreach($photo as $data)
         <img src="{{$data}}" alt="{{$data}}" width="100%" style="height:500px;">
         @endforeach
     </div>
@@ -66,9 +66,9 @@
                 </div>
 
                 <div class="mt-4 text-center">
-
                    <a href="https://wa.me/8390712871/" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
                    <a href="tel:8390712871"> <button class="btn-ma" id="g" >Make a call</button></a>
+                   <a href="{{route('add-to-wishlist',$product_detail->slug)}}"> <button class="btn-whish" ><img src="/frontend/img/wish.svg" alt=""></button></a>
                 </div>
             </div>
             <div class="col-md-8 my-3">
@@ -118,17 +118,17 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade shadow rounded bg-white show active" id="v-pills-developer"
                         role="tabpanel" aria-labelledby="v-pills-developer-tab">
-                        <p class="m-5"> </p>
+                        <p class="">{!!($product_detail->developer)!!}</p>
                     </div>
 
                     <div class="tab-pane fade shadow rounded bg-white" id="v-pills-other-detail" role="tabpanel"
                         aria-labelledby="v-pills-other-detail-tab">
-                        <p class="m-5">{!!($product_detail->description)!!} </p>
+                        <p class="">{!!($product_detail->description)!!}</p>
                     </div>
 
                     <div class="tab-pane fade shadow rounded bg-white" id="v-pills-acquisition" role="tabpanel"
                         aria-labelledby="v-pills-acquisition-tab">
-                        <p class="m-5"> </p>
+                        <p class="">{!!($product_detail->acquisition)!!}</p>
                     </div>
 
 
@@ -147,15 +147,91 @@
             seed round bandwidth ecosystem infographic market.</p>
 
 
+            <div class="row my-5">
+                {{-- {{$product_detail->rel_prods}} --}}
+                <div class="col-12">
+                    <div class="owl-carousel popular-slider">
+                        @foreach($product_detail->rel_prods as $data)
+                        @if($data->id !==$product_detail->id)
+                        <!-- Start Single Product -->
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="{{route('product-detail',$data->slug)}}">
+                                    @php
+                                    $photo=explode(',',$data->photo);
+                                    @endphp
+                                    <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}" style="height:450px;" >
+
+
+                                </a>
+                                <div class="button-head-one">
+                                    <!-- <div class="product-action-one">
+                                        <a title="Wishlist" href="#"
+                                            class="wishlist" data-id="{{$data->id}}"><img
+                                                src="/frontend/img/Vector.svg" alt=""></a>
+                                    </div> -->
+                                    <div class="product-action-one-2">
+                                        <a
+                                            href="#"><h6>{{$data->title}}</h6></a>
+                                            <br>
+                                            <a
+                                            href="#">{{$data->brand['title']}}</a>
+                                            <br>
+                                            <a
+                                            href="#">{{$data->area}}</a>
+                                            <br>
+                                            <a
+                                            href="#">{{$data->rooms}}</a>
+                                    </div>
+                                </div>
+                                <div class="button-head">
+                                    <div class="product-action">
+                                        <a title="Save property" href="{{route('add-to-wishlist',$data->slug)}}" class="wishlist" data-id="{{$data->id}}"><img
+                                                src="/frontend/img/Vector.svg" alt=""></a>
+                                    </div>
+                                    <div class="product-action-2">
+                                       @guest
+                                       <a title="View the product"
+                                            href="{{route('login.form')}}">View</a>
+                                            @elseif(Auth::user()->survey === 'pending')
+                                            <a data-toggle="modal" data-target="#exampleModal">
+                                               View
+                                            </a>
+                                            @else
+                                        <a title="View the product"
+                                            href="{{route('product-detail',$data->slug)}}">View</a>
+                                           @endguest
+                                            <!-- <a href="{{route('add-to-cart',$data->slug)}}">Visited Property</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="product-content">
+                                <h3><a href="{{route('product-detail',$data->slug)}}">{{$data->title}}</a>
+                                </h3>
+                                @php
+                                $after_discount=($data->price-($data->price*$data->discount)/100);
+                                @endphp
+                                <span>Rs {{number_format($after_discount,2)}}</span>
+
+                            </div> -->
+                        </div>
+                        <!-- End Single Product -->
+
+                        @endif
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
     </div>
 
 </section>
 
 
-<!-- Button trigger modal -->
 
 
-@include('frontend.layouts.bookavisit')
+
+{{-- @include('frontend.layouts.bookavisit') --}}
 
 
 
@@ -231,3 +307,4 @@ $('.owl-carousel').owlCarousel({
 
 
 @endpush
+

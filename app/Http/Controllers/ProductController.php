@@ -48,7 +48,9 @@ class ProductController extends Controller
         $this->validate($request,[
             'title'=>'string|required',
             'summary'=>'string|required',
-            'description'=>'string|nullable',
+            'description'=>'string|required',
+            'developer'=>'string|required',
+            'acquisition'=>'string|required',
             'area'=>'string|required',
             'rooms'=>'string|required',
             'photo'=>'string|required',
@@ -129,7 +131,9 @@ class ProductController extends Controller
         $this->validate($request,[
             'title'=>'string|required',
             'summary'=>'string|required',
-            'description'=>'string|nullable',
+            'description'=>'string|required',
+            'developer'=>'string|required',
+            'acquisition'=>'string|required',
             'area'=>'string|required',
             'rooms'=>'string|required',
             'photo'=>'string|required',
