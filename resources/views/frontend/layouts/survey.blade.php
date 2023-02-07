@@ -74,6 +74,12 @@
                                         From a friend/family
                                     </label>
 
+                                    {{-- @error('que_1')
+                                    <span class="text-danger">
+                                        {{$message}}
+                                    </span>
+                                    @enderror --}}
+
                             </div>
                             <div>
                                 <button type="button" class="btn-ma next-btn" id="b" >Next</button>
@@ -226,6 +232,7 @@
                                     </label>
 
                             </div>
+
                             <div>
                                 <button type="button" class="btn-ma prev-btn" id="b" >Back</button>
                                 <button type="submit" class="btn-ma submit-btn" id="b" >Submit</button>
@@ -246,8 +253,6 @@
     const prevBtn = document.querySelectorAll('form .prev-btn');
     const progressbar = Array.from(document.querySelectorAll('ul li.progressbar'));
 
-
-
     const submitBtn = document.querySelector('.submit-btn');
 
    nextBtn.forEach(button=>{
@@ -262,25 +267,6 @@
     })
    })
 
-//    submitBtn.addEventListener('click', (e)=>{
-//     e.preventDefault();
-//     const inputs = [];
-//     const form = document.querySelectorAll('input[type="radio"]').forEach(radio=>{
-//         if(radio.checked){
-//         const {name ,value} = radio;
-//         inputs.push({name , value})
-//         }
-//     })
-//     console.log(inputs);
-//    })
-
-
-
-
-
-
-
-
 
 
    function changeStep(btn){
@@ -289,13 +275,13 @@
     const active = document.querySelector('form .step.active');
     const pActive = document.querySelector('ul li.progressbar.active');
     index = steps.indexOf(active);
+
     pindex = progressbar.indexOf(pActive);
     steps[index].classList.remove('active');
     progressbar[pindex].classList.remove('active');
     if(btn === 'next'){
-        index ++;
-        pindex ++;
-
+            index ++;
+            pindex ++;
     }else if(btn === 'prev'){
         index --;
         pindex --;

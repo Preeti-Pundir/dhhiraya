@@ -23,10 +23,22 @@ class surveyController extends Controller
 
         $data = $req->all();
         $data['user_id'] = Auth::user()->id;
-        Survey::create($data);
+        $survey = Survey::create($data);
         // User::where('id',auth()->user()->id)->update(['survey'=>'done']);
-        request()->session()->flash('success','Thank you ');
-        return back();
+        if($survey){
+
+            request()->session()->flash('success','Thank you for submitting the servey now you can check the product details ');
+            
+        }else{
+
+        request()->session()->flash('error','Please Provide all the answer to see the Product Details');
+
+        }
+        return redirect()->back();
+
+
+
+
 
    }
 }

@@ -2,9 +2,9 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('admin')}}">
-      
+
       <div class="sidebar-brand-text mx-3">Dhiiraaya</div>
-      
+
     </a>
 
     <!-- Divider -->
@@ -98,7 +98,7 @@
     </li>
 
 
-   
+
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
@@ -112,8 +112,15 @@
             <i class="fas fa-users"></i>
             <span>Users</span></a>
     </li>
+    {{-- <li class="nav-item">
+        <a class="nav-link"
+         href="{{route('survey.index')}}"
+         >
+            <i class="fas fa-poll"></i>
+            <span>Survey</span></a>
+    </li> --}}
      <!-- General settings -->
-   
+
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
       <button class="rounded-circle border-0" id="sidebarToggle"></button>

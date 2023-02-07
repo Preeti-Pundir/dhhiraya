@@ -57,6 +57,7 @@ class ProductController extends Controller
             'cat_id'=>'required|exists:categories,id',
             'brand_id'=>'required|exists:brands,id',
             'status'=>'required|in:active,inactive',
+            'pr_condition'=>'required|in:Ready to move in,Construction',
             'price'=>'required|numeric',
 
         ]);
@@ -140,6 +141,7 @@ class ProductController extends Controller
             'cat_id'=>'required|exists:categories,id',
             'brand_id'=>'required|exists:brands,id',
             'status'=>'required|in:active,inactive',
+            'pr_condition'=>'required|in:Ready to move in,Construction',
             'price'=>'required|numeric',
         ]);
 

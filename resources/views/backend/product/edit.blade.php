@@ -69,6 +69,17 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                    <label for="pr_condition" class="col-form-label">Condition <span class="text-danger">*</span></label>
+                    <select name="pr_condition" class="form-control">
+                        <option value="Ready to move in" {{ $product->pr_condition == 'Ready to move in' ? 'selected' : '' }}>Ready to move in</option>
+                        <option value="Construction" {{ $product->pr_condition == 'Construction' ? 'selected' : '' }}>Construction</option>
+                    </select>
+                    @error('pr_condition')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
                 <!-- <div class="form-group">
                       <label for="is_featured">Is Featured</label><br>
                       <input type="checkbox" name='is_featured' id='is_featured' value='{{ $product->is_featured }}' {{ $product->is_featured ? 'checked' : '' }}> Yes

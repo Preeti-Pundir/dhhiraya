@@ -49,7 +49,7 @@
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-1.svg" alt="" width="40px">
-                    <p class="mt-4">Construction</p>
+                    <p class="mt-4">{{$product_detail->pr_condition}}</p>
                 </div>
             </div>
         </div>
