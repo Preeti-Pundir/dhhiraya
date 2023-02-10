@@ -320,7 +320,7 @@ th {
 
 label {
     display: inline-block;
-    
+
 }
 
 button {
@@ -5261,7 +5261,8 @@ button.close {
     opacity: 0.93;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.160784);
     border-radius: 15px;
-    max-height: 400px;
+    height: 400px ;
+
 
 }
 

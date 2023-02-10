@@ -53,38 +53,36 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex align-items-center justify-content-around my-5">
-
-                                <input type="radio" name="que_1" value="Social Media" id="flexRadioDefault1">
-                                <label for="flexRadioDefault1">
+                            <div class="d-block d-md-flex align-items-center justify-content-between my-5">
+                                <div class="">
+                                <input type="radio" name="que_1" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault1">&nbsp;
                                     Social Media
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_1" value="Word of mouth" id="flexRadioDefault2">
-                                <label for="flexRadioDefault2">
+                                <div class="">
+                                <input type="radio" name="que_1" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault2">&nbsp;
                                     Word of mouth
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_1" value="Newspaper ads" id="flexRadioDefault3">
-                                <label for="flexRadioDefault3">
+                                <div class="">
+                                <input type="radio" name="que_1" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault3">&nbsp;
                                     Newspaper ads
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_1" value="From a friend/family"
-                                    id="flexRadioDefault4">
-                                <label for="flexRadioDefault4">
+                                <div class="">
+                                <input type="radio" name="que_1" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault4">&nbsp;
                                     From a friend/family
                                 </label>
+                                </div>
 
 
-                                {{-- @error('que_1')
-                                    <span class="text-danger">
-                                        {{$message}}
-                                    </span>
-                                    @enderror --}}
 
                             </div>
                             <div>
@@ -101,31 +99,36 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex align-items-center justify-content-around my-5">
-
-                                <input type="radio" name="que_2" value="Social Media" id="flexRadioDefault1">
-                                <label for="flexRadioDefault1">
+                            <div class="d-block d-md-flex align-items-center justify-content-between my-5">
+                                <div class="">
+                                <input type="radio" name="que_2" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault1">&nbsp;
                                     Social Media
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_2" value="Word of mouth" id="flexRadioDefault2">
-                                <label for="flexRadioDefault2">
+                                <div class="">
+                                <input type="radio" name="que_2" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault2">&nbsp;
                                     Word of mouth
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_2" value="Newspaper ads" id="flexRadioDefault3">
-                                <label for="flexRadioDefault3">
+                                <div class="">
+                                <input type="radio" name="que_2" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault3">&nbsp;
                                     Newspaper ads
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_2" value="From a friend/family"
-                                    id="flexRadioDefault4">
-                                <label for="flexRadioDefault4">
+                                <div class="">
+                                <input type="radio" name="que_2" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault4">&nbsp;
                                     From a friend/family
                                 </label>
+                                </div>
+
+
 
                             </div>
                             <div>
@@ -143,31 +146,36 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex align-items-center justify-content-around my-5">
-
-                                <input type="radio" name="que_3" value="Social Media" id="flexRadioDefault1">
-                                <label for="flexRadioDefault1">
+                            <div class="d-block d-md-flex align-items-center justify-content-between my-5">
+                                <div class="">
+                                <input type="radio" name="que_3" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault1">&nbsp;
                                     Social Media
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_3" value="Word of mouth" id="flexRadioDefault2">
-                                <label for="flexRadioDefault2">
+                                <div class="">
+                                <input type="radio" name="que_3" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault2">&nbsp;
                                     Word of mouth
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_3" value="Newspaper ads" id="flexRadioDefault3">
-                                <label for="flexRadioDefault3">
+                                <div class="">
+                                <input type="radio" name="que_3" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault3">&nbsp;
                                     Newspaper ads
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_3" value="From a friend/family"
-                                    id="flexRadioDefault4">
-                                <label for="flexRadioDefault4">
+                                <div class="">
+                                <input type="radio" name="que_3" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault4">&nbsp;
                                     From a friend/family
                                 </label>
+                                </div>
+
+
 
                             </div>
                             <div>
@@ -185,31 +193,36 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex align-items-center justify-content-around my-5">
-
-                                <input type="radio" name="que_4" value="Social Media" id="flexRadioDefault1">
-                                <label for="flexRadioDefault1">
+                            <div class="d-block d-md-flex align-items-center justify-content-between my-5">
+                                <div class="">
+                                <input type="radio" name="que_4" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault1">&nbsp;
                                     Social Media
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_4" value="Word of mouth" id="flexRadioDefault2">
-                                <label for="flexRadioDefault2">
+                                <div class="">
+                                <input type="radio" name="que_4" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault2">&nbsp;
                                     Word of mouth
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_4" value="Newspaper ads" id="flexRadioDefault3">
-                                <label for="flexRadioDefault3">
+                                <div class="">
+                                <input type="radio" name="que_4" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault3">&nbsp;
                                     Newspaper ads
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_4" value="From a friend/family"
-                                    id="flexRadioDefault4">
-                                <label for="flexRadioDefault4">
+                                <div class="">
+                                <input type="radio" name="que_4" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault4">&nbsp;
                                     From a friend/family
                                 </label>
+                                </div>
+
+
 
                             </div>
                             <div>
@@ -227,34 +240,42 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex align-items-center justify-content-around my-5">
-
-                                <input type="radio" name="que_5" value="Social Media" id="flexRadioDefault1">
-                                <label for="flexRadioDefault1">
+                            <div class="d-block d-md-flex align-items-center justify-content-between my-5">
+                                <div class="">
+                                <input type="radio" name="que_5" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault1">&nbsp;
                                     Social Media
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_5" value="Word of mouth" id="flexRadioDefault2">
-                                <label for="flexRadioDefault2">
+                                <div class="">
+                                <input type="radio" name="que_5" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault2">&nbsp;
                                     Word of mouth
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_5" value="Newspaper ads" id="flexRadioDefault3">
-                                <label for="flexRadioDefault3">
+                                <div class="">
+                                <input type="radio" name="que_5" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault3">&nbsp;
                                     Newspaper ads
                                 </label>
+                                </div>
 
-
-                                <input type="radio" name="que_5" value="From a friend/family"
-                                    id="flexRadioDefault4">
-                                <label for="flexRadioDefault4">
+                                <div class="">
+                                <input type="radio" name="que_5" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
+                                <label for="flexRadioDefault4">&nbsp;
                                     From a friend/family
                                 </label>
+                                </div>
+
+
 
                             </div>
 
+                            <div>
+                                <p class="text-danger error-msg"></p>
+                            </div>
 
                             <div>
                                 <button type="button" class="btn-ma prev-btn" id="b">Back</button>
@@ -294,22 +315,7 @@
     })
 
 
-    // $(document).ready(function(){
-    //     $("form").on('submit',function(e){
-    //         e.preventDefault();
-    //         var formData = $('form').serializeArray();
-    //         $.ajax({
-    //                 url: "{{ url('/surveystore') }}",
-    //                 type: 'post',
-    //                 data: inputs,
-    //                 datatype: 'json',
-    //                 success: function(res) {
-    //                     alert("Data saved");
-    //                     location.reload();
-    //                 }
-    //             })
-    //     })
-    // });
+
 
     submitBtn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -325,9 +331,8 @@
                         location.reload();
                     },
                     error: function(data){
+                        // $(".error-msg").text("Please fill all the data");
                         alert("Please fill all the data");
-
-
                     }
 
                 })

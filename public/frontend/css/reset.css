@@ -1145,12 +1145,12 @@ object {
   color: #fff;
   border-color:transparent;
 }
-.modal-dialog .modal-content .modal-body {
+/* .modal-dialog .modal-content .modal-body {
 	padding: 0px;
 	overflow-y: auto;
 	height: auto;
 
-}
+} */
 .quickview-content {
 	padding: 40px 40px;
 }

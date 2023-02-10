@@ -354,16 +354,25 @@
                                 <!-- / For Desktop Screen -->
                                 <!-- For Mobile Screen -->
                                 <div class="d-block d-lg-none">
-                                    <a class="navs-menus" href="{{ route('product-grids') }}" data-toggle="collapse"
-                                        data-target="#collapseMain" aria-controls="collapseMain">Hot Shot Listings
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a class="navs-menus" href="{{ route('product-grids') }}">Hot Shot Listings</a>
+
+                                    <a   data-toggle="collapse"
+                                        data-target="#collapseMain" aria-controls="collapseMain"><img src="/frontend/img/downarrow.png" alt="" width="20">
                                     </a>
+                                     </div>
 
                                     <div id="collapseMain" class="collapse" aria-labelledby="headingOne">
 
 
                                         <div class="location-div mx-1 my-2">
+                                            <div class="container">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a>Delhi NCR</a>
                                             <a data-toggle="collapse" data-target="#locationOne"
-                                                aria-controls="locationOne"> Delhi Ncr </a>
+                                                aria-controls="locationOne"> <img src="/frontend/img/downarrow.png" alt="" width="15"> </a>
+
+                                            </div>
 
                                             <div id="locationOne" class="collapse" aria-labelledby="headingOne">
 
@@ -406,10 +415,15 @@
 
 
 
+                                            </div>
                                         </div>
                                         <div class="location-div mx-1 my-2">
+                                            <div class="container">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a>Gurgaon</a>
                                             <a data-toggle="collapse" data-target="#locationTwo"
-                                                aria-controls="locationTwo"> Gurgaon</a>
+                                                aria-controls="locationTwo"> <img src="/frontend/img/downarrow.png" alt="" width="15"></a>
+                                            </div>
 
                                             <div id="locationTwo" class="collapse" aria-labelledby="headingOne">
 
@@ -452,10 +466,15 @@
 
 
 
+                                            </div>
                                         </div>
                                         <div class="location-div mx-1 my-2">
+                                            <div class="container">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a>Noida</a>
                                             <a data-toggle="collapse" data-target="#locationThree"
-                                                aria-controls="locationThree">Noida</a>
+                                                aria-controls="locationThree"><img src="/frontend/img/downarrow.png" alt="" width="15"></a>
+                                            </div>
 
                                             <div id="locationThree" class="collapse" aria-labelledby="headingOne">
 
@@ -498,10 +517,15 @@
 
 
 
+                                            </div>
                                         </div>
                                         <div class="location-div mx-1 my-2">
+                                            <div class="container">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a>Chandigargh</a>
                                             <a data-toggle="collapse" data-target="#locationFour"
-                                                aria-controls="locationFour"> Chandigargh</a>
+                                                aria-controls="locationFour"><img src="/frontend/img/downarrow.png" alt="" width="15"> </a>
+                                            </div>
 
                                             <div id="locationFour" class="collapse" aria-labelledby="headingOne">
 
@@ -544,6 +568,7 @@
 
 
 
+                                            </div>
                                         </div>
 
                                         <!-- /For Mobile Screen -->

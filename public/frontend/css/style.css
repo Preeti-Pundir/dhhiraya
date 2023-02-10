@@ -5417,4 +5417,13 @@ Version:1.0
     background-color: #b3b356;
 }
 
+@media screen and (max-width:767px) {
 
+    .modal-content {
+
+        height: 550px !important ;
+
+
+    }
+
+}

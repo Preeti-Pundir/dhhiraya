@@ -151,10 +151,10 @@
     border-bottom: 1px solid #e9ecef;
 }
 
-.modal-dialog .modal-content .modal-body {
+/* .modal-dialog .modal-content .modal-body {
     height: 100px;
     padding: 10px 20px;
-}
+} */
 
 .modal-dialog .modal-content {
     width: 50%;
