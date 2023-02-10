@@ -86,7 +86,7 @@ class ProductController extends Controller
         else{
             request()->session()->flash('error','Please try again!!');
         }
-        return redirect()->route('product.index');
+        return redirect()->route('product-grids');
 
     }
 

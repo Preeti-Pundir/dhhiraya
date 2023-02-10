@@ -12,14 +12,14 @@ class surveyController extends Controller
     public function store(Request $req){
 
 
-          $this->validate($req,[
+            $this->validate($req,[
             'que_1' => 'required',
             'que_2' => 'required',
             'que_3' => 'required',
             'que_4' => 'required',
             'que_5' => 'required',
-
         ]);
+
 
         $data = $req->all();
         $data['user_id'] = Auth::user()->id;
@@ -27,14 +27,14 @@ class surveyController extends Controller
         // User::where('id',auth()->user()->id)->update(['survey'=>'done']);
         if($survey){
 
-            request()->session()->flash('success','Thank you for submitting the servey now you can check the product details ');
-            
+        request()->session()->flash('success','Thank you for submitting the servey now you can check the product details ');
+
         }else{
 
         request()->session()->flash('error','Please Provide all the answer to see the Product Details');
 
         }
-        return redirect()->back();
+        return redirect()->route('product-grids');
 
 
 

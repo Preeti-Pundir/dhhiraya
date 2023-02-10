@@ -184,6 +184,7 @@ Route::get('/myaccount', 'FrontendController@accountdetails')->name('user.myacco
 
 //Survey data
 
+// Route::get('/surveystore', 'surveyController@create')->name('survay-store');
 Route::post('/surveystore', 'surveyController@store')->name('survay-store');
 
 route::get('category',[CategoryController::class,'index'])->name('backend.category.index');

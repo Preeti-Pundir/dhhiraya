@@ -36,7 +36,7 @@
                                                     <!-- Tabs nav -->
                                                     <div class="nav flex-row flex-md-column myaccount-tabs nav-pills nav-pills-custom  pb-5 pt-3"
                                                         id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                                        <a class="nav-link py-3 text-right shadow active"
+                                                        {{-- <a class="nav-link py-3 text-right shadow active"
                                                             id="v-pills-first-properties-tab" data-toggle="pill"
                                                             href="#v-pills-first-properties" role="tab"
                                                             aria-controls="v-pills-first-properties"
@@ -64,20 +64,74 @@
                                                             href="#v-pills-fourth" role="tab"
                                                             aria-controls="v-pills-fourth" aria-selected="false">
                                                             <span
-                                                                class="font-weight-bold small text-uppercase">Chandigargh</span></a>
-                                                        <!-- @foreach ($brands as $brand)
-<a class="nav-link py-3 text-right shadow active" id="v-pills-first-properties-tab" data-toggle="pill"
-                                                                    href="#v-pills-first-properties" role="tab" aria-controls="v-pills-first-properties"
+                                                                class="font-weight-bold small text-uppercase">Chandigargh</span></a> --}}
+                                                         @foreach ($brands as $brand)
+                                                                    <a class="nav-link py-3 text-right shadow active" id="v-pills-{{ $brand->slug }}-properties-tab" data-toggle="pill"
+                                                                    href="#v-pills-{{ $brand->slug }}-properties" role="tab" aria-controls="v-pills-{{ $brand->slug }}-properties"
                                                                     aria-selected="true">
                                                                     <span class="font-weight-bold small text-uppercase">{{ $brand->title }}</span></a>
-@endforeach -->
+                                                            @endforeach
 
                                                     </div>
                                                 </div>
 
                                                 <div class="col-lg-9 col-md-9 col-sm-12 py-4">
                                                     <!-- Tabs content -->
-                                                    <div class="tab-content" id="v-pills-tabContent">
+                                                    @foreach ($brands as $brand)
+                                                        <div class="tab-pane fade shadow rounded bg-white  show "
+                                                            id="v-pills-{{ $brand->slug }}-properties" role="tabpanel"
+                                                            aria-labelledby="v-pills-{{ $brand->slug }}-properties-tab">
+                                                            <div class="container head-submenu">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <h6>Residential Property</h6>
+                                                                            </li>
+                                                                            <br>
+                                                                            <li class="my-2"><a href="">
+                                                                                    Apartments</a></li>
+                                                                            <li class="my-2"><a href="">
+                                                                                    Individual house</a></li>
+                                                                            <li class="my-2"><a href=""> Pent
+                                                                                    house</a></li>
+                                                                            <li class="my-2"><a href="">
+                                                                                    Cottages</a></li>
+                                                                            <li class="my-2"><a href="">
+                                                                                    Villa</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="col-lg-4">
+
+                                                                        <ul>
+                                                                            <li>
+                                                                                <h6>Commercial Property</h6>
+                                                                            </li>
+                                                                            <br>
+                                                                            <li class="my-2"><a href="">
+                                                                                    Furnished retail shops</a></li>
+                                                                            <li class="my-2"><a href="">
+                                                                                    Unfurnished retail shops</a></li>
+
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="col-lg-4">
+
+                                                                        <ul>
+                                                                            <li>
+                                                                                <h6> Lands</h6>
+                                                                            </li>
+                                                                            <br>
+                                                                            <li class="my-2"><a href="">
+                                                                                    Empty lands</a></li>
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    @endforeach
+                                                    {{-- <div class="tab-content" id="v-pills-tabContent">
                                                         <div class="tab-pane fade shadow rounded bg-white show active"
                                                             id="v-pills-first-properties" role="tabpanel"
                                                             aria-labelledby="v-pills-first-properties-tab">
@@ -291,7 +345,7 @@
                                                         </div>
 
 
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
