@@ -321,10 +321,15 @@
                     data: formData,
                     datatype: 'json',
                     success: function(data) {
-                        
                         alert("Data saved");
                         location.reload();
+                    },
+                    error: function(data){
+                        alert("Please fill all the data");
+
+
                     }
+
                 })
 
     })
