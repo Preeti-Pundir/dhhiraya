@@ -121,7 +121,6 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     // Message
     Route::resource('/message','MessageController');
     Route::get('/message/five','MessageController@messageFive')->name('messages.five');
-
     // Order
     Route::resource('/order','OrderController');
     // Shipping
@@ -131,6 +130,8 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     // Settings
     Route::get('settings','AdminController@settings')->name('settings');
     Route::post('setting/update','AdminController@settingsUpdate')->name('settings.update');
+    //Survey
+    Route::get('/survey','surveyController@index')->name('survey.index');
 
     // Notification
     Route::get('/notification/{id}','NotificationController@show')->name('admin.notification');

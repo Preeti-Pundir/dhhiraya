@@ -9,6 +9,18 @@ use Auth;
 
 class surveyController extends Controller
 {
+
+
+    public function index(){
+
+
+        $surveys = Survey::all();
+
+        return view('backend.survey.index',compact('surveys'));
+    }
+
+
+
     public function store(Request $req){
 
 

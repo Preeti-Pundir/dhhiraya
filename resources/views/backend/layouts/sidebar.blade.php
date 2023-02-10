@@ -112,13 +112,13 @@
             <i class="fas fa-users"></i>
             <span>Users</span></a>
     </li>
-    {{-- <li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link"
          href="{{route('survey.index')}}"
          >
             <i class="fas fa-poll"></i>
             <span>Survey</span></a>
-    </li> --}}
+    </li>
      <!-- General settings -->
 
     <!-- Sidebar Toggler (Sidebar) -->
