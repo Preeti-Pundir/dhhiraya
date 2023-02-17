@@ -35,10 +35,10 @@
                     <h4>Services</h4>
                     <ul>
 
-                        <li><a href="#">Commercial Property</a></li>
-                        <li><a href="#">Residential Property</a></li>
+                        <li><a href="{{route('product-lists')}}">Commercial Property</a></li>
+                        <li><a href="{{route('product-lists')}}">Residential Property</a></li>
                         <!-- <li><a href="{{ route('contact') }}">Contact Us</a></li> -->
-                        <li><a href="#">Holiday homes</a></li>
+                        <li><a href="{{route('product-lists')}}">Holiday homes</a></li>
 
 
 
@@ -52,9 +52,9 @@
                     <h4>About Us</h4>
                     <ul>
                         <li><a href="{{ route('about-us') }}">About</a></li>
-                        <li><a href="#">Our Team</a></li>
+                        <li><a href="">Our Team</a></li>
                         <!-- <li><a href="#">Money-back</a></li> -->
-                        <li><a href="#">Policy</a></li>
+                        <li><a href="">Policy</a></li>
 
                     </ul>
                 </div>

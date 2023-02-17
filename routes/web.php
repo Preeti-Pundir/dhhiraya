@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -37,7 +39,7 @@ Route::get('/home', 'FrontendController@index');
 Route::post('/news', 'FrontendController@news');
 Route::get('/about-us','FrontendController@aboutUs')->name('about-us');
 Route::get('/contact','FrontendController@contact')->name('contact');
-Route::post('/contact/message','MessageController@store')->name('contact.store');
+Route::post('/send-email',[ContactController::class,'sendEmail'])->name('Sendemail');
 Route::get('product-detail/{slug}','FrontendController@productDetail')->name('product-detail');
 Route::post('/product/search','FrontendController@productSearch')->name('product.search');
 Route::get('/product-cat/{slug}','FrontendController@productCat')->name('product-cat');

@@ -14,7 +14,7 @@
                     <form action="{{route('product.search')}}" method="post">
                         @csrf
                         <input type="search" name="search" class="bannersearch"
-                            placeholder="Enter an address, neighbourhood, city, or ZIP code" name="search">
+                            placeholder="Enter product name" name="search">
                     </form>
                 </div>
                 <div class="social-media-iocns d-flex align-items-center justify-content-center">

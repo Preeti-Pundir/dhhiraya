@@ -89,15 +89,15 @@
                                                                                 <h6>Residential Property</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Apartments</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Individual house</a></li>
-                                                                            <li class="my-2"><a href=""> Pent
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
                                                                                     house</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Cottages</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Villa</a></li>
                                                                         </ul>
                                                                     </div>
@@ -108,9 +108,9 @@
                                                                                 <h6>Commercial Property</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Furnished retail shops</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Unfurnished retail shops</a></li>
 
                                                                         </ul>
@@ -122,7 +122,7 @@
                                                                                 <h6> Lands</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Empty lands</a></li>
 
                                                                         </ul>
@@ -143,15 +143,15 @@
                                                                                 <h6>Residential Property</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Apartments</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Individual house</a></li>
-                                                                            <li class="my-2"><a href=""> Pent
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
                                                                                     house</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Cottages</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Villa</a></li>
                                                                         </ul>
                                                                     </div>
@@ -162,9 +162,9 @@
                                                                                 <h6>Commercial Property</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Furnished retail shops</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Unfurnished retail shops</a></li>
 
                                                                         </ul>
@@ -176,7 +176,7 @@
                                                                                 <h6> Lands</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Empty lands</a></li>
 
                                                                         </ul>
@@ -196,15 +196,15 @@
                                                                                 <h6>Residential Property</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Apartments</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Individual house</a></li>
-                                                                            <li class="my-2"><a href=""> Pent
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
                                                                                     house</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Cottages</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Villa</a></li>
                                                                         </ul>
                                                                     </div>
@@ -215,9 +215,9 @@
                                                                                 <h6>Commercial Property</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Furnished retail shops</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Unfurnished retail shops</a></li>
 
                                                                         </ul>
@@ -229,7 +229,7 @@
                                                                                 <h6> Lands</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Empty lands</a></li>
 
                                                                         </ul>
@@ -249,15 +249,15 @@
                                                                                 <h6>Residential Property</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Apartments</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Individual house</a></li>
-                                                                            <li class="my-2"><a href=""> Pent
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
                                                                                     house</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Cottages</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Villa</a></li>
                                                                         </ul>
                                                                     </div>
@@ -268,9 +268,9 @@
                                                                                 <h6>Commercial Property</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Furnished retail shops</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Unfurnished retail shops</a></li>
 
                                                                         </ul>
@@ -282,7 +282,7 @@
                                                                                 <h6> Lands</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Empty lands</a></li>
 
                                                                         </ul>
@@ -302,15 +302,15 @@
                                                                                 <h6>Residential Property</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Apartments</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Individual house</a></li>
-                                                                            <li class="my-2"><a href=""> Pent
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
                                                                                     house</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Cottages</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Villa</a></li>
                                                                         </ul>
                                                                     </div>
@@ -321,9 +321,9 @@
                                                                                 <h6>Commercial Property</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Furnished retail shops</a></li>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Unfurnished retail shops</a></li>
 
                                                                         </ul>
@@ -335,7 +335,7 @@
                                                                                 <h6> Lands</h6>
                                                                             </li>
                                                                             <br>
-                                                                            <li class="my-2"><a href="">
+                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
                                                                                     Empty lands</a></li>
 
                                                                         </ul>
@@ -382,7 +382,7 @@
                                                     <div id="fcategoryOne" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Apartments</a>
+                                                            <a href="{{ route('product-grids') }}">Apartments</a>
                                                         </div>
                                                     </div>
 
@@ -393,7 +393,7 @@
                                                     <div id="fcategoryTwo" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Furnished retail shops</a>
+                                                            <a href="{{ route('product-grids') }}">Furnished retail shops</a>
                                                         </div>
                                                     </div>
 
@@ -404,7 +404,7 @@
                                                     <div id="fcategoryThree" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Empty lands</a>
+                                                            <a href="{{ route('product-grids') }}">Empty lands</a>
                                                         </div>
                                                     </div>
 
@@ -433,7 +433,7 @@
                                                     <div id="scategoryOne" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Apartments</a>
+                                                            <a href="{{ route('product-grids') }}">Apartments</a>
                                                         </div>
                                                     </div>
 
@@ -444,7 +444,7 @@
                                                     <div id="scategoryTwo" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Furnished retail shops</a>
+                                                            <a href="{{ route('product-grids') }}">Furnished retail shops</a>
                                                         </div>
                                                     </div>
 
@@ -455,7 +455,7 @@
                                                     <div id="scategoryThree" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Empty lands</a>
+                                                            <a href="{{ route('product-grids') }}">Empty lands</a>
                                                         </div>
                                                     </div>
 
@@ -484,7 +484,7 @@
                                                     <div id="tcategoryOne" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Apartments</a>
+                                                            <a href="{{ route('product-grids') }}">Apartments</a>
                                                         </div>
                                                     </div>
 
@@ -495,7 +495,7 @@
                                                     <div id="tcategoryTwo" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Furnished retail shops</a>
+                                                            <a href="{{ route('product-grids') }}">Furnished retail shops</a>
                                                         </div>
                                                     </div>
 
@@ -506,7 +506,7 @@
                                                     <div id="tcategoryThree" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Empty lands</a>
+                                                            <a href="{{ route('product-grids') }}">Empty lands</a>
                                                         </div>
                                                     </div>
 
@@ -535,7 +535,7 @@
                                                     <div id="focategoryOne" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Apartments</a>
+                                                            <a href="{{ route('product-grids') }}">Apartments</a>
                                                         </div>
                                                     </div>
 
@@ -546,7 +546,7 @@
                                                     <div id="focategoryTwo" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Furnished retail shops</a>
+                                                            <a href="{{ route('product-grids') }}">Furnished retail shops</a>
                                                         </div>
                                                     </div>
 
@@ -557,7 +557,7 @@
                                                     <div id="focategoryThree" class="collapse"
                                                         aria-labelledby="headingOne">
                                                         <div class="container my-2">
-                                                            <a href="#">Empty lands</a>
+                                                            <a href="{{ route('product-grids') }}">Empty lands</a>
                                                         </div>
                                                     </div>
 

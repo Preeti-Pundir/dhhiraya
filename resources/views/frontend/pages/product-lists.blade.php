@@ -13,6 +13,37 @@
 					<div class="row">
 
 						<div class="col-lg-12 col-md-12 col-12">
+                            <div class="row">
+                                <div class="col-12">
+                                    <!-- Shop Top -->
+                                    <div class="shop-top">
+                                        <div class="shop-shorter">
+                                            <div class="single-shorter">
+                                                <select class="show pfilter" name="category"  onchange="this.form.submit();">
+                                                    <option value="">Property Type</option>
+                                                     @foreach($categorys as $key => $value)
+                                                       <option value="{{ $key }}">{{ $value }}</option>
+                                                 @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="single-shorter">
+                                                 <select class="sortBy pfilter" name="brand"  onchange="this.form.submit();">
+                                                     <option value="">City</option>
+                                                     @foreach($brands as $key => $value)
+                                                       <option value="{{ $key }}"
+                                                    >{{ $value }}</option>
+                                                 @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- <ul class="view-mode">
+                                                <li class="active"><a href="javascript:void(0)"><i class="fa fa-th-large"></i></a></li>
+                                                <li><a href="{{route('product-lists')}}"><i class="fa fa-th-list"></i></a></li>
+                                            </ul> -->
+                                    </div>
+                                    <!--/ End Shop Top -->
+                                </div>
+                            </div>
 
 
 							<div class="row">

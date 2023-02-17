@@ -19,33 +19,20 @@
                             <div class="shop-top">
                                 <div class="shop-shorter">
                                     <div class="single-shorter">
-
-                                        <select class="show pfilter" name="show" >
-                                            <option value="">City</option>
-                                            {{-- @foreach($products as $product)
-                                            <option value="{{$product->brand['id']}}" >{{$product->brand['title']}}
-                                            </option>
-                                            @endforeach --}}
+                                        <select class="show pfilter" name="category"  onchange="this.form.submit();">
+                                            <option value="">Property Type</option>
+                                             @foreach($categorys as $key => $value)
+                                               <option value="{{ $key }}">{{ $value }}</option>
+                                         @endforeach
                                         </select>
                                     </div>
                                     <div class="single-shorter">
-
-                                        <select class='sortBy pfilter' name='sortBy' >
-                                            <option value="">Property type</option>
-                                            {{-- @foreach($products as $product)
-                                            <option value="{{$product->brand['id']}}" >{{$product->brand['title']}}
-                                            </option>
-                                            @endforeach --}}
-                                            {{-- @foreach ()
-                                            <option value="title" @if(!empty($_GET['sortBy']) &&
-                                            $_GET['sortBy']=='title' ) selected @endif>Name</option>
-                                            @endforeach --}}
-                                            {{-- <option value="price" @if(!empty($_GET['sortBy']) &&
-                                                $_GET['sortBy']=='price' ) selected @endif>Price</option>
-                                            <option value="category" @if(!empty($_GET['sortBy']) &&
-                                                $_GET['sortBy']=='category' ) selected @endif>Category</option>
-                                            <option value="brand" @if(!empty($_GET['sortBy']) &&
-                                                $_GET['sortBy']=='brand' ) selected @endif>Brand</option> --}}
+                                         <select class="sortBy pfilter" name="brand"  onchange="this.form.submit();">
+                                             <option value="">City</option>
+                                             @foreach($brands as $key => $value)
+                                               <option value="{{ $key }}"
+                                            >{{ $value }}</option>
+                                         @endforeach
                                         </select>
                                     </div>
                                 </div>

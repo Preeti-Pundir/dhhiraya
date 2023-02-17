@@ -1,3 +1,3 @@
 Hi <br/>
-This is mail  to  inform new property  has been  add in .<br />
+This mail is to inform you that new property has been added.<br />
 Thank you !!

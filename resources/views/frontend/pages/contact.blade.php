@@ -52,13 +52,15 @@
 
                     <div class="form-main">
                         <div class="title">
-                            @php
-                            $settings=DB::table('settings')->get();
-                            @endphp
+
                         </div>
-                        <form class="form-contact form contact_form" method="post" action="{{route('contact.store')}}"
-                            id="contactForm" novalidate="novalidate">
+                        <form class="form-contact form contact_form" method="post" action="{{route('Sendemail')}}">
                             @csrf
+                            @if(session()->has('message'))
+                            <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                            </div>
+                        @endif
                             <div class="row">
                                 <div class="col-lg-12 col-12">
                                     <div class="form-group">
@@ -77,7 +79,7 @@
                                 <div class="col-12">
                                     <div class="form-group message">
                                         <label>your message<span>*</span></label>
-                                        <textarea name="message" id="message" cols="30" rows="9"
+                                        <textarea name="msg" id="msg" cols="30" rows="9"
                                             placeholder="Enter Message"></textarea>
                                     </div>
                                 </div>
