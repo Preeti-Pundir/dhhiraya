@@ -160,6 +160,8 @@ class FrontendController extends Controller
 
         return view('frontend.pages.product-lists')->with('products',$products)->with('recent_products',$recent_products);
     }
+
+   
     public function productFilter(Request $request){
             $data= $request->all();
             // return $data;

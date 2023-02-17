@@ -334,9 +334,7 @@
                         // $(".error-msg").text("Please fill all the data");
                         alert("Please fill all the data");
                     }
-
                 })
-
     })
 
 

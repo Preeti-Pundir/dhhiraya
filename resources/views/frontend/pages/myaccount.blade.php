@@ -59,7 +59,17 @@
 
                                 <div class="col-lg-5 col-md-8 col-sm-8 my-1 hsummary">
 
-                                    <h5 class="my-2"><a href="{{route('product-detail',$wishlist->product['slug'])}}">{{$wishlist->product['title']}}</a></h5>
+                                    <h5 class="my-2">
+                                        @if(Auth::user()->survey === 'pending')
+                                        <a class="curser-pointer" data-toggle="modal" data-target="#exampleModal">
+                                            {{$wishlist->product['title']}}
+                                        </a>
+                                        @else
+                                        <a class="curser-pointer" href="{{route('product-detail',$wishlist->product['slug'])}}">
+                                            {{$wishlist->product['title']}}
+                                        </a>
+                                        @endif
+                                    </h5>
                                     <p style="line-height:2;">{!!($wishlist->product['summary'])!!}</p>
                                     <div class="action my-4" data-title="Remove"><a href="{{route('wishlist-delete',$wishlist->id)}}">Remove Property</a></div>
 

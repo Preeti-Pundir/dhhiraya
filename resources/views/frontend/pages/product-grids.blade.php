@@ -22,28 +22,30 @@
 
                                         <select class="show pfilter" name="show" >
                                             <option value="">City</option>
-                                            <option value="9" @if(!empty($_GET['show']) && $_GET['show']=='9' ) selected
-                                                @endif>09</option>
-                                            <option value="15" @if(!empty($_GET['show']) && $_GET['show']=='15' )
-                                                selected @endif>15</option>
-                                            <option value="21" @if(!empty($_GET['show']) && $_GET['show']=='21' )
-                                                selected @endif>21</option>
-                                            <option value="30" @if(!empty($_GET['show']) && $_GET['show']=='30' )
-                                                selected @endif>30</option>
+                                            {{-- @foreach($products as $product)
+                                            <option value="{{$product->brand['id']}}" >{{$product->brand['title']}}
+                                            </option>
+                                            @endforeach --}}
                                         </select>
                                     </div>
                                     <div class="single-shorter">
 
                                         <select class='sortBy pfilter' name='sortBy' >
                                             <option value="">Property type</option>
+                                            {{-- @foreach($products as $product)
+                                            <option value="{{$product->brand['id']}}" >{{$product->brand['title']}}
+                                            </option>
+                                            @endforeach --}}
+                                            {{-- @foreach ()
                                             <option value="title" @if(!empty($_GET['sortBy']) &&
-                                                $_GET['sortBy']=='title' ) selected @endif>Name</option>
-                                            <option value="price" @if(!empty($_GET['sortBy']) &&
+                                            $_GET['sortBy']=='title' ) selected @endif>Name</option>
+                                            @endforeach --}}
+                                            {{-- <option value="price" @if(!empty($_GET['sortBy']) &&
                                                 $_GET['sortBy']=='price' ) selected @endif>Price</option>
                                             <option value="category" @if(!empty($_GET['sortBy']) &&
                                                 $_GET['sortBy']=='category' ) selected @endif>Category</option>
                                             <option value="brand" @if(!empty($_GET['sortBy']) &&
-                                                $_GET['sortBy']=='brand' ) selected @endif>Brand</option>
+                                                $_GET['sortBy']=='brand' ) selected @endif>Brand</option> --}}
                                         </select>
                                     </div>
                                 </div>
