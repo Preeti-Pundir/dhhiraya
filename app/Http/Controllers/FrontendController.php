@@ -10,9 +10,10 @@ use App\Models\Post;
 use App\Models\Cart;
 use App\Models\Brand;
 use App\User;
+use App\Newsletter;
 use Auth;
 use Session;
-use Newsletter;
+// use Newsletter;
 use DB;
 use Hash;
 use Illuminate\Support\Str;
@@ -423,21 +424,10 @@ class FrontendController extends Controller
     }
 
     public function subscribe(Request $request){
-        if(! Newsletter::isSubscribed($request->email)){
-                Newsletter::subscribePending($request->email);
-                if(Newsletter::lastActionSucceeded()){
-                    request()->session()->flash('success','Subscribed! Please check your email');
-                    return redirect()->route('home');
-                }
-                else{
-                    Newsletter::getLastError();
-                    return back()->with('error','Something went wrong! please try again');
-                }
-            }
-            else{
-                request()->session()->flash('error','Already Subscribed');
-                return back();
-            }
-    }
 
+        Newsletter::create($request->all());
+        request()->session()->flash('success', 'Subscribed! Please check your email');
+        return redirect()->route('home');
+
+    }
 }

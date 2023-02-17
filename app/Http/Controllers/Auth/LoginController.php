@@ -47,10 +47,10 @@ class LoginController extends Controller
 
     public function redirect($provider)
     {
-        // dd($provider);
+        //  dd($provider);
      return Socialite::driver($provider)->redirect();
     }
- 
+
     public function Callback($provider)
     {
         $userSocial =   Socialite::driver($provider)->stateless()->user();
@@ -67,7 +67,9 @@ class LoginController extends Controller
                 'provider_id'   => $userSocial->getId(),
                 'provider'      => $provider,
             ]);
-         return redirect()->route('home');
+            return redirect('/')->with('success','your account is sucessfully registered please login again');
+
+          //request()->session()->flash('success','Product Successfully added');
         }
     }
 }

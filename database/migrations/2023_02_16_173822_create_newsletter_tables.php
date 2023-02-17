@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddImageToBrandTable extends Migration
+class CreateNewsletterTables extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddImageToBrandTable extends Migration
      */
     public function up()
     {
-        Schema::table('Brands', function (Blueprint $table) {
-            $table->string('images');
+        Schema::create('newsletters', function (Blueprint $table) {
+            $table->id();
+            $table->string('email');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddImageToBrandTable extends Migration
      */
     public function down()
     {
-        Schema::table('Brands', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('newsletter_tables');
     }
 }

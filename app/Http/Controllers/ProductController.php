@@ -30,6 +30,7 @@ class ProductController extends Controller
      */
     public function create()
     {
+
         $brand=Brand::get();
         $category=Category::where('is_parent',1)->get();
         // return $category;
@@ -80,6 +81,15 @@ class ProductController extends Controller
         // return $size;
         // return $data;
         $status=Product::create($data);
+        $details = [
+            'subject' => 'New Property  Has Been  Add .'
+        ];
+
+        $job = (new \App\Jobs\SendQueueEmail($details))
+        ->delay(now()->addSeconds(2));
+
+        dispatch($job);
+        echo "Mail send successfully !!";
         if($status){
             request()->session()->flash('success','Product Successfully added');
         }
