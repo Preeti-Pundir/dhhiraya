@@ -261,13 +261,15 @@ class FrontendController extends Controller
         $products=Category::getProductByCat($request->slug);
         // return $request->slug;
         $recent_products=Product::where('status','active')->orderBy('id','DESC')->limit(3)->get();
+        $category = Category::select('id', 'title')->pluck('title', 'id')->toArray();
+        $brands = Brand::select('id', 'title')->pluck('title', 'id')->toArray();
 
 
         if(request()->is('/product-grids')){
-            return view('frontend.pages.product-grids')->with('products',$products->products)->with('recent_products',$recent_products);
+            return view('frontend.pages.product-grids')->with('products',$products->products)->with('recent_products',$recent_products)->with('categorys', $category)->with('brands', $brands);
         }
         else{
-            return view('frontend.pages.product-lists')->with('products',$products->products)->with('recent_products',$recent_products);
+            return view('frontend.pages.product-lists')->with('products',$products->products)->with('recent_products',$recent_products)->with('categorys', $category)->with('brands', $brands);
         }
 
     }
