@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->string('photo')->nullable();
             $table->enum('role',['admin','user'])->default('user');
+            $table->enum('survey',['done','pending'])->default('pending');
             $table->string('provider')->nullable();
             $table->string('provider_id')->nullable();
             $table->enum('status',['active','inactive'])->default('active');

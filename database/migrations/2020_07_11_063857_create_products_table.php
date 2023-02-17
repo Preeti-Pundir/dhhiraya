@@ -18,12 +18,15 @@ class CreateProductsTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('summary');
-            $table->longText('description')->nullable();
+            $table->longText('developer');
+            $table->longText('description');
+            $table->longText('acquisition');
             $table->text('photo');
             $table->integer('stock')->default(1);
             $table->string('size')->default('M')->nullable();
             $table->enum('condition',['default','new','hot'])->default('default');
             $table->enum('status',['active','inactive'])->default('inactive');
+            $table->enum('pr_condition',['Ready to move in','Construction'])->default('Construction');
             $table->float('price');
             $table->float('discount')->nullabale();
             $table->boolean('is_featured')->deault(false);
@@ -45,5 +48,6 @@ class CreateProductsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('products');
-    }
+
+   }
 }

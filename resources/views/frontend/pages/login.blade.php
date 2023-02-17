@@ -7,27 +7,27 @@
 
 <!-- Shop Login -->
 <section class="shop login section">
-    <div class="container-fluid">
+    <div class="container-fluid" style="max-width:1500px !important">
         <div class="row">
-            <div class="col-lg-2"></div>
 
-            <div class="col-lg-2">
-                <h2 class="pb-5">Find
+            <div class="col-lg-4 col-md-12 my-3 fcare text-white" style="background-color:#B3B356;">
+                <h2 class="">Find
                     Comfortable
                     Real Estate
                     Here</h2>
 
-                <p class="pt-5 mt-5 ">Having troubles? Get Help</p>
+                <p class="text-white">Having troubles? <u>Get Help</u></p>
             </div>
-            <div class="col-lg-2"></div>
 
-            <div class="col-lg-4">
+<div class="col-lg-2"></div>
+
+            <div class="col-lg-4 col-md-12 my-3">
                 <div class="login-form">
                     <p>Login to Dhiiraaya Homes</p>
-                    <div class="d-flex">
-                        <a href="{{route('login.redirect','facebook')}}" class=""><img src="/frontend/img/Group 1.png"
+                     <div class="d-flex">
+                        <a href="{{route('login.redirect','google')}}" class=""><img src="/frontend/img/Group 1.png"
                                 alt=""></a>&nbsp;&nbsp;&nbsp;
-                        <a href="{{route('login.redirect','google')}}" class=""><img src="/frontend/img/Group 2.png"
+                        <a href="{{route('login.redirect','facebook')}}" class=""><img src="/frontend/img/Group 2.png"
                                 alt=""></a>
 
                     </div>
@@ -132,7 +132,7 @@
     background: rgb(243, 26, 26) !important;
 }
 
-/* 
+/*
     .label-float{
   position: relative;
   padding-top: 13px;

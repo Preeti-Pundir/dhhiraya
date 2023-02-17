@@ -30,6 +30,7 @@ class ProductController extends Controller
      */
     public function create()
     {
+
         $brand=Brand::get();
         $category=Category::where('is_parent',1)->get();
         // return $category;
@@ -48,18 +49,18 @@ class ProductController extends Controller
         $this->validate($request,[
             'title'=>'string|required',
             'summary'=>'string|required',
-            'description'=>'string|nullable',
+            'description'=>'string|required',
+            'developer'=>'string|required',
+            'acquisition'=>'string|required',
+            'area'=>'string|required',
+            'rooms'=>'string|required',
             'photo'=>'string|required',
-            'size'=>'nullable',
-            'stock'=>"required|numeric",
             'cat_id'=>'required|exists:categories,id',
-            'brand_id'=>'nullable|exists:brands,id',
-            'child_cat_id'=>'nullable|exists:categories,id',
-            'is_featured'=>'sometimes|in:1',
+            'brand_id'=>'required|exists:brands,id',
             'status'=>'required|in:active,inactive',
-            'condition'=>'required|in:default,new,hot',
+            'pr_condition'=>'required|in:Ready to move in,Construction',
             'price'=>'required|numeric',
-            'discount'=>'nullable|numeric'
+
         ]);
 
         $data=$request->all();
@@ -80,13 +81,22 @@ class ProductController extends Controller
         // return $size;
         // return $data;
         $status=Product::create($data);
+        $details = [
+            'subject' => 'New Property  Has Been  Add .'
+        ];
+
+        $job = (new \App\Jobs\SendQueueEmail($details))
+        ->delay(now()->addSeconds(2));
+
+        dispatch($job);
+        echo "Mail send successfully !!";
         if($status){
             request()->session()->flash('success','Product Successfully added');
         }
         else{
             request()->session()->flash('error','Please try again!!');
         }
-        return redirect()->route('product.index');
+        return redirect()->route('product-grids');
 
     }
 
@@ -132,18 +142,17 @@ class ProductController extends Controller
         $this->validate($request,[
             'title'=>'string|required',
             'summary'=>'string|required',
-            'description'=>'string|nullable',
+            'description'=>'string|required',
+            'developer'=>'string|required',
+            'acquisition'=>'string|required',
+            'area'=>'string|required',
+            'rooms'=>'string|required',
             'photo'=>'string|required',
-            'size'=>'nullable',
-            'stock'=>"required|numeric",
             'cat_id'=>'required|exists:categories,id',
-            'child_cat_id'=>'nullable|exists:categories,id',
-            'is_featured'=>'sometimes|in:1',
-            'brand_id'=>'nullable|exists:brands,id',
+            'brand_id'=>'required|exists:brands,id',
             'status'=>'required|in:active,inactive',
-            'condition'=>'required|in:default,new,hot',
+            'pr_condition'=>'required|in:Ready to move in,Construction',
             'price'=>'required|numeric',
-            'discount'=>'nullable|numeric'
         ]);
 
         $data=$request->all();
@@ -176,7 +185,7 @@ class ProductController extends Controller
     {
         $product=Product::findOrFail($id);
         $status=$product->delete();
-        
+
         if($status){
             request()->session()->flash('success','Product successfully deleted');
         }

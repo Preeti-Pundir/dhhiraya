@@ -18,13 +18,13 @@ class CartController extends Controller
     public function addToCart(Request $request){
         // dd($request->all());
         if (empty($request->slug)) {
-            request()->session()->flash('error','Invalid Products');
+            request()->session()->flash('error','Invalid Property');
             return back();
         }        
         $product = Product::where('slug', $request->slug)->first();
         // return $product;
         if (empty($product)) {
-            request()->session()->flash('error','Invalid Products');
+            request()->session()->flash('error','Invalid Property');
             return back();
         }
 
@@ -50,7 +50,7 @@ class CartController extends Controller
             $cart->save();
             $wishlist=Wishlist::where('user_id',auth()->user()->id)->where('cart_id',null)->update(['cart_id'=>$cart->id]);
         }
-        request()->session()->flash('success','Product successfully added to cart');
+        request()->session()->flash('success','Property successfully added to Visited Properties');
         return back();       
     }  
 
@@ -96,7 +96,7 @@ class CartController extends Controller
             // return $cart;
             $cart->save();
         }
-        request()->session()->flash('success','Product successfully added to cart.');
+        request()->session()->flash('success','Property successfully added to Visted Properties.');
         return back();       
     } 
     
@@ -104,7 +104,7 @@ class CartController extends Controller
         $cart = Cart::find($request->id);
         if ($cart) {
             $cart->delete();
-            request()->session()->flash('success','Cart successfully removed');
+            request()->session()->flash('success','Property successfully removed');
             return back();  
         }
         request()->session()->flash('error','Error please try again');
@@ -138,14 +138,14 @@ class CartController extends Controller
                     $cart->amount = $after_price * $quant;
                     // return $cart->price;
                     $cart->save();
-                    $success = 'Cart successfully updated!';
+                    $success = 'Visited properties successfully updated!';
                 }else{
-                    $error[] = 'Cart Invalid!';
+                    $error[] = 'Visited property Invalid!';
                 }
             }
             return back()->with($error)->with('success', $success);
         }else{
-            return back()->with('Cart Invalid!');
+            return back()->with('Property Invalid!');
         }    
     }
 

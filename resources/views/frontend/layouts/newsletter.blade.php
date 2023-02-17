@@ -12,6 +12,7 @@
                             <input name="email" placeholder="Your e-mail here" required="" type="email">
                             <button class="btn" type="submit">Submit</button>
                         </form>
+                        
                     </div>
                 </div>
             </div>

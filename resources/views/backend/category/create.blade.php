@@ -23,7 +23,7 @@
           @enderror
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="is_parent">Is Parent</label><br>
           <input type="checkbox" name='is_parent' id='is_parent' value='1' checked> Yes                        
         </div>
@@ -37,7 +37,7 @@
                   <option value='{{$parent_cat->id}}'>{{$parent_cat->title}}</option>
               @endforeach
           </select>
-        </div>
+        </div> -->
 
         <div class="form-group">
           <label for="inputPhoto" class="col-form-label">Photo</label>

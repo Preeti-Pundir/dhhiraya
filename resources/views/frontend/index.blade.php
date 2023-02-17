@@ -11,8 +11,9 @@
             <div class="carousel-caption text-center">
                 <h1 class="wow fadeInDown">{{$banner->title}}</h1>
                 <div class="search-container mt-4">
-                    <form action="/">
-                        <input type="text" class="bannersearch"
+                    <form action="{{route('product.search')}}" method="post">
+                        @csrf
+                        <input type="search" name="search" class="bannersearch"
                             placeholder="Enter an address, neighbourhood, city, or ZIP code" name="search">
                     </form>
                 </div>

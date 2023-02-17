@@ -31,7 +31,7 @@
           @enderror
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
         <label for="inputPhoto" class="col-form-label">Photo</label>
         <div class="input-group">
             <span class="input-group-btn">
@@ -45,7 +45,7 @@
           @error('photo')
           <span class="text-danger">{{$message}}</span>
           @enderror
-        </div>
+        </div> -->
         @php 
         $roles=DB::table('users')->select('role')->get();
         @endphp

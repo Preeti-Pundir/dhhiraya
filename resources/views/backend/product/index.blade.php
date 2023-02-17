@@ -21,13 +21,15 @@
               <th>S.N.</th>
               <th>Title</th>
               <th>Category</th>
-              <th>Is Featured</th>
+              <th>Area</th>
+              <th>Rooms</th>
+              <!-- <th>Is Featured</th> -->
               <th>Price</th>
-              <th>Discount</th>
-              <th>Size</th>
-              <th>Condition</th>
-              <th>Brand</th>
-              <th>Stock</th>
+              <!-- <th>Discount</th> -->
+              <!-- <th>Size</th>
+              <th>Condition</th> -->
+              <th>Location</th>
+              <!-- <th>Stock</th> -->
               <th>Photo</th>
               <th>Status</th>
               <th>Action</th>
@@ -38,13 +40,15 @@
               <th>S.N.</th>
               <th>Title</th>
               <th>Category</th>
-              <th>Is Featured</th>
+              <th>Area</th>
+              <th>Rooms</th>
+              <!-- <th>Is Featured</th> -->
               <th>Price</th>
-              <th>Discount</th>
-              <th>Size</th>
-              <th>Condition</th>
-              <th>Brand</th>
-              <th>Stock</th>
+              <!-- <th>Discount</th> -->
+              <!-- <th>Size</th>
+              <th>Condition</th> -->
+              <th>Location</th>
+              <!-- <th>Stock</th> -->
               <th>Photo</th>
               <th>Status</th>
               <th>Action</th>
@@ -66,19 +70,21 @@
                           {{$product->sub_cat_info->title ?? ''}}
                       </sub>
                     </td>
-                    <td>{{(($product->is_featured==1)? 'Yes': 'No')}}</td>
+                    <td>{{$product->area}}</td>
+                    <td>{{$product->rooms}}</td>
+                    <!-- <td>{{(($product->is_featured==1)? 'Yes': 'No')}}</td> -->
                     <td>Rs. {{$product->price}} /-</td>
-                    <td>  {{$product->discount}}% OFF</td>
+                    <!-- <td>  {{$product->discount}}% OFF</td>
                     <td>{{$product->size}}</td>
-                    <td>{{$product->condition}}</td>
-                    {{-- <td> {{ucfirst($product->brand->title)}}</td> --}}
-                    <td>
+                    <td>{{$product->condition}}</td> -->
+                    <td> {{ucfirst($product->brand->title)}}</td>
+                    <!-- <td>
                       @if($product->stock>0)
                       <span class="badge badge-primary">{{$product->stock}}</span>
                       @else
                       <span class="badge badge-danger">{{$product->stock}}</span>
                       @endif
-                    </td>
+                    </td> -->
                     <td>
                         @if($product->photo)
                             @php

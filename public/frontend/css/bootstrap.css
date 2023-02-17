@@ -320,7 +320,7 @@ th {
 
 label {
     display: inline-block;
-    margin-bottom: .5rem
+
 }
 
 button {
@@ -708,7 +708,7 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-   
+
 }
 
 .no-gutters {
@@ -5256,11 +5256,14 @@ button.close {
     -ms-flex-direction: column;
     flex-direction: column;
     pointer-events: auto;
-    background-color: #faf5f5;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: .3rem;
-    outline: 0
+    background: #FFFFFF;
+    opacity: 0.93;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.160784);
+    border-radius: 15px;
+    height: 400px ;
+
+
 }
 
 .modal-backdrop {
@@ -6334,7 +6337,7 @@ a.bg-dark:hover {
 .flex-column {
     -ms-flex-direction: column!important;
     flex-direction: column!important
-    
+
 }
 
 .flex-row-reverse {

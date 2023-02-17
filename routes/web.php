@@ -25,8 +25,8 @@ Route::get('user/logout','FrontendController@logout')->name('user.logout');
 Route::get('user/register','FrontendController@register')->name('register.form');
 Route::post('user/register','FrontendController@registerSubmit')->name('register.submit');
 // Reset password
-Route::get('/password-reset', 'FrontendController@showResetForm')->name('password.reset'); 
-// Socialite 
+Route::get('/password-reset', 'FrontendController@showResetForm')->name('password.reset');
+// Socialite
 Route::get('login/{provider}/', 'Auth\LoginController@redirect')->name('login.redirect');
 Route::get('login/{provider}/callback/', 'Auth\LoginController@Callback')->name('login.callback');
 
@@ -34,6 +34,7 @@ Route::get('/','FrontendController@home')->name('home');
 
 // Frontend Routes
 Route::get('/home', 'FrontendController@index');
+Route::post('/news', 'FrontendController@news');
 Route::get('/about-us','FrontendController@aboutUs')->name('about-us');
 Route::get('/contact','FrontendController@contact')->name('contact');
 Route::post('/contact/message','MessageController@store')->name('contact.store');
@@ -78,7 +79,7 @@ Route::post('/subscribe','FrontendController@subscribe')->name('subscribe');
 Route::resource('/review','ProductReviewController');
 Route::post('product/{slug}/review','ProductReviewController@store')->name('review.store');
 
-// Post Comment 
+// Post Comment
 Route::post('post/{slug}/comment','PostCommentController@store')->name('post-comment.store');
 Route::resource('/comment','PostCommentController');
 // Coupon
@@ -121,7 +122,6 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     // Message
     Route::resource('/message','MessageController');
     Route::get('/message/five','MessageController@messageFive')->name('messages.five');
-
     // Order
     Route::resource('/order','OrderController');
     // Shipping
@@ -131,6 +131,8 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     // Settings
     Route::get('settings','AdminController@settings')->name('settings');
     Route::post('setting/update','AdminController@settingsUpdate')->name('settings.update');
+    //Survey
+    Route::get('/survey','surveyController@index')->name('survey.index');
 
     // Notification
     Route::get('/notification/{id}','NotificationController@show')->name('admin.notification');
@@ -156,7 +158,7 @@ Route::group(['prefix'=>'/user','middleware'=>['user']],function(){
      // Profile
      Route::get('/profile','HomeController@profile')->name('user-profile');
      Route::post('/profile/{id}','HomeController@profileUpdate')->name('user-profile-update');
-Route::get('/myaccount', 'FrontendController@accountdetails')->name('user.myaccount');   
+Route::get('/myaccount', 'FrontendController@accountdetails')->name('user.myaccount');
 
     //  Order
     Route::get('/order',"HomeController@orderIndex")->name('user.order.index');
@@ -167,20 +169,24 @@ Route::get('/myaccount', 'FrontendController@accountdetails')->name('user.myacco
     Route::delete('/user-review/delete/{id}','HomeController@productReviewDelete')->name('user.productreview.delete');
     Route::get('/user-review/edit/{id}','HomeController@productReviewEdit')->name('user.productreview.edit');
     Route::patch('/user-review/update/{id}','HomeController@productReviewUpdate')->name('user.productreview.update');
-    
+
     // Post comment
     Route::get('user-post/comment','HomeController@userComment')->name('user.post-comment.index');
     Route::delete('user-post/comment/delete/{id}','HomeController@userCommentDelete')->name('user.post-comment.delete');
     Route::get('user-post/comment/edit/{id}','HomeController@userCommentEdit')->name('user.post-comment.edit');
     Route::patch('user-post/comment/udpate/{id}','HomeController@userCommentUpdate')->name('user.post-comment.update');
-    
+
     // Password Change
     Route::get('change-password', 'HomeController@changePassword')->name('user.change.password.form');
     Route::post('change-password', 'HomeController@changPasswordStore')->name('change.password');
 
+
+
 });
 
+//Survey data
 
-
+// Route::get('/surveystore', 'surveyController@create')->name('survay-store');
+Route::post('/surveystore', 'surveyController@store')->name('survay-store');
 
 route::get('category',[CategoryController::class,'index'])->name('backend.category.index');
