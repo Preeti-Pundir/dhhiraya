@@ -117,7 +117,7 @@
     </div>
     <div class="row mt-5 mb-5 align-items-center justify-content-center">
         @php
-        $category_lists=DB::table('categories')->where('status','active')->limit(3)->get();
+        $category_lists=DB::table('categories')->get();
         @endphp
         @if($category_lists)
         @foreach($category_lists as $cat)
