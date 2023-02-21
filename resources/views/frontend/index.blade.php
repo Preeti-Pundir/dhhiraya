@@ -99,9 +99,9 @@
                     </div>
                     <hr class="w-50">
 
-                    <div class="btns">
-                        <button class="btn-1">View in detail</button>
-                        <button class="btn-2">Wishlist</button>
+                    <div class="btns py-4">
+                        <a href="{{route('product-grids')}}" class="btn-1 ">View in detail</a>
+                        <a href="{{route('user.myaccount')}}" class="btn-2 ">Wishlist</a>
                     </div>
                 </div>
             </div>
