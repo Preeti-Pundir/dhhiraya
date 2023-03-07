@@ -62,7 +62,7 @@
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         @if (Route::has('password.request'))
-                                        <a class="lost-pass" href="{{ route('password.reset') }}">
+                                        <a class="lost-pass" href="{{ route('password.request') }}">
                                             Forgot password?
                                         </a>
                                         @endif

@@ -46,4 +46,9 @@ class Product extends Model
         return $this->hasOne(Brand::class,'id','brand_id');
     }
 
+    public function images()
+    {
+        return $this->hasMany('App\Image', 'product_id');
+    }
+
 }

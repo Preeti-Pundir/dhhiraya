@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Brand;
+use App\Image;
 
 use Illuminate\Support\Str;
 
@@ -45,7 +46,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request->all();
+
+
         $this->validate($request,[
             'title'=>'string|required',
             'summary'=>'string|required',
@@ -60,7 +62,6 @@ class ProductController extends Controller
             'status'=>'required|in:active,inactive',
             'pr_condition'=>'required|in:Ready to move in,Construction',
             'price'=>'required|numeric',
-
         ]);
 
         $data=$request->all();
@@ -85,11 +86,21 @@ class ProductController extends Controller
             'subject' => 'New Property  Has Been  Add .'
         ];
 
-        $job = (new \App\Jobs\SendQueueEmail($details))
-        ->delay(now()->addSeconds(2));
+        // $job = (new \App\Jobs\SendQueueEmail($details))
+        // ->delay(now()->addSeconds(2));
 
-        dispatch($job);
-        echo "Mail send successfully !!";
+        // dispatch($job);
+        // echo "Mail send successfully !!";
+
+        foreach ($request->file('images') as $imagefile) {
+
+            $image = new Image;
+            $path = $imagefile->store('/images/resource');
+            $image->url = $path;
+            $image->product_id =1;
+            $IM =  $image->save();
+        }
+
         if($status){
             request()->session()->flash('success','Product Successfully added');
         }
@@ -97,6 +108,8 @@ class ProductController extends Controller
             request()->session()->flash('error','Please try again!!');
         }
         return redirect()->route('product-grids');
+
+
 
     }
 
@@ -122,7 +135,9 @@ class ProductController extends Controller
         $brand=Brand::get();
         $product=Product::findOrFail($id);
         $category=Category::where('is_parent',1)->get();
-        $items=Product::where('id',$id)->get();
+        $items=Product::with('images')->where('id',$id)->get();
+        // dd($items);
+
         // return $items;
         return view('backend.product.edit')->with('product',$product)
                     ->with('brands',$brand)

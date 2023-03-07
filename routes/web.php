@@ -27,7 +27,7 @@ Route::get('user/logout','FrontendController@logout')->name('user.logout');
 Route::get('user/register','FrontendController@register')->name('register.form');
 Route::post('user/register','FrontendController@registerSubmit')->name('register.submit');
 // Reset password
-Route::get('/password-reset', 'FrontendController@showResetForm')->name('password.reset');
+// Route::get('/password', 'FrontendController@showResetForm')->name('password.reset');
 // Socialite
 Route::get('login/{provider}/', 'Auth\LoginController@redirect')->name('login.redirect');
 Route::get('login/{provider}/callback/', 'Auth\LoginController@Callback')->name('login.callback');
@@ -194,3 +194,7 @@ Route::get('/myaccount', 'FrontendController@accountdetails')->name('user.myacco
 Route::post('/surveystore', 'surveyController@store')->name('survay-store');
 
 route::get('category',[CategoryController::class,'index'])->name('backend.category.index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
