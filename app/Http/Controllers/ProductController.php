@@ -45,25 +45,27 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request->all();
-        $this->validate($request,[
-            'title'=>'string|required',
-            'summary'=>'string|required',
-            'description'=>'string|required',
-            'developer'=>'string|required',
-            'acquisition'=>'string|required',
-            'area'=>'string|required',
-            'rooms'=>'string|required',
-            'photo'=>'string|required',
-            'cat_id'=>'required|exists:categories,id',
-            'brand_id'=>'required|exists:brands,id',
-            'status'=>'required|in:active,inactive',
-            'pr_condition'=>'required|in:Ready to move in,Construction',
-            'price'=>'required|numeric',
 
-        ]);
+
+
+        $image = array();
+        if($files = $request->file('photos')){
+            foreach($files as $file){
+                    $name = $file->getClientOriginalName();
+                    $photos =  $file->storeAs('/public/uploads',$name);
+                    $image[] = $photos ;
+            }
+        }
+
+        $string=implode(",",$image);
+
+
+
+        $data['photos'] = $string;
+
 
         $data=$request->all();
+
         $slug=Str::slug($request->title);
         $count=Product::where('slug',$slug)->count();
         if($count>0){
@@ -78,8 +80,9 @@ class ProductController extends Controller
         else{
             $data['size']='';
         }
-        // return $size;
-        // return $data;
+
+
+         dd($data);
         $status=Product::create($data);
         $details = [
             'subject' => 'New Property  Has Been  Add .'
