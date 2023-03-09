@@ -24,7 +24,7 @@
               <th>Que-2</th>
               <th>Que-3</th>
               <th>Que-4</th>
-              <th>Que-5</th>
+              
 
 
             </tr>
@@ -37,7 +37,7 @@
               <th>Que-2</th>
               <th>Que-3</th>
               <th>Que-4</th>
-              <th>Que-5</th>
+             
 
 
               </tr>
@@ -51,7 +51,7 @@
                     <td>{{$survey->que_2}}</td>
                     <td>{{$survey->que_3}}</td>
                     <td>{{$survey->que_4}}</td>
-                    <td>{{$survey->que_5}}</td>
+                   
 
                     {{-- <td>
                         <a href="{{route('users.edit',$user->id)}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>

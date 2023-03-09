@@ -28,8 +28,7 @@ class surveyController extends Controller
             'que_1' => 'required',
             'que_2' => 'required',
             'que_3' => 'required',
-            'que_4' => 'required',
-            'que_5' => 'required',
+            'que_4' => 'required'
         ]);
 
 

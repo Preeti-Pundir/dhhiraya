@@ -35,11 +35,6 @@
                                     <p></p>
                                 </div>
                             </li>
-                            <li class="progressbar">
-                                <div>
-                                    <p></p>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                     <form method="post" action="{{ url('surveystore') }}">
@@ -227,62 +222,11 @@
                             </div>
                             <div>
                                 <button type="button" class="btn-ma prev-btn" id="b">Back</button>
-                                <button type="button" class="btn-ma next-btn" id="b">Next</button>
-                            </div>
-                        </div>
-
-                        <div class="step step-5 ">
-                            <div class="my-2">
-
-                                <h6>How did you hear about us? 5</h6>
-                                <div>
-                                    <p id="message"></p>
-                                </div>
-
-                            </div>
-                            <div class="d-block d-md-flex align-items-center justify-content-between my-5">
-                                <div class="">
-                                <input type="radio" name="que_5" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
-                                <label for="flexRadioDefault1">&nbsp;
-                                    Social Media
-                                </label>
-                                </div>
-
-                                <div class="">
-                                <input type="radio" name="que_5" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
-                                <label for="flexRadioDefault2">&nbsp;
-                                    Word of mouth
-                                </label>
-                                </div>
-
-                                <div class="">
-                                <input type="radio" name="que_5" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
-                                <label for="flexRadioDefault3">&nbsp;
-                                    Newspaper ads
-                                </label>
-                                </div>
-
-                                <div class="">
-                                <input type="radio" name="que_5" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
-                                <label for="flexRadioDefault4">&nbsp;
-                                    From a friend/family
-                                </label>
-                                </div>
-
-
-
-                            </div>
-
-                            <div>
-                                <p class="text-danger error-msg"></p>
-                            </div>
-
-                            <div>
-                                <button type="button" class="btn-ma prev-btn" id="b">Back</button>
                                 <button type="submit" class="btn-ma submit-btn "
                                     id="b">Submit</button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
