@@ -42,7 +42,7 @@
                         <div class="step step-1 active">
                             <div class="my-2">
 
-                                <h6>How long have you been looking for?? 1</h6>
+                                <h6>How long have you been looking for?</h6>
                                 <div>
                                     <p id="message"></p>
                                 </div>
@@ -88,7 +88,7 @@
                         <div class="step step-2 ">
                             <div class="my-2">
 
-                                <h6>What price range have you been considering? 2</h6>
+                                <h6>What price range have you been considering?</h6>
                                 <div>
                                     <p id="message"></p>
                                 </div>
@@ -135,7 +135,7 @@
                         <div class="step step-3 ">
                             <div class="my-2">
 
-                                <h6>What kind of properties are you looking for? 3</h6>
+                                <h6>What kind of properties are you looking for? </h6>
                                 <div>
                                     <p id="message"></p>
                                 </div>
@@ -182,7 +182,7 @@
                         <div class="step step-4 ">
                             <div class="my-2">
 
-                                <h6>What are you employed 4</h6>
+                                <h6>What are you employed ? </h6>
                                 <div>
                                     <p id="message"></p>
                                 </div>
