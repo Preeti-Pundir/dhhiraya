@@ -7,6 +7,8 @@ use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+ 
+use App\Http\Controllers\Auth\ForgotPasswordController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +30,24 @@ Route::get('user/register','FrontendController@register')->name('register.form')
 Route::post('user/register','FrontendController@registerSubmit')->name('register.submit');
 // Reset password
 Route::get('/password-reset', 'FrontendController@showResetForm')->name('password.reset');
+
+//forgetpassword controller
+
+Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
+
+
+
+
+
+
+
+
+
+
 // Socialite
 Route::get('login/{provider}/', 'Auth\LoginController@redirect')->name('login.redirect');
 Route::get('login/{provider}/callback/', 'Auth\LoginController@Callback')->name('login.callback');
