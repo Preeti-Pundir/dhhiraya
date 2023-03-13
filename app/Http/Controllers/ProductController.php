@@ -97,12 +97,14 @@ class ProductController extends Controller
         dispatch($job);
         echo "Mail send successfully !!";
 
-        foreach ($request->file('ss') as $imagefile) {
-             $image = new Image;
-            $path = $imagefile->store('/public/images/resource');
-            $image->url = $path;
-            $image->product_id = $status->id;
-            $IM =  $image->save();
+        if($request->hasfile('ss')){
+            foreach ($request->file('ss') as $imagefile) {
+                $image = new Image;
+               $path = $imagefile->store('/public/images/resource');
+               $image->url = $path;
+               $image->product_id = $status->id;
+               $IM =  $image->save();
+           }
         }
 
         if($status){
@@ -184,7 +186,7 @@ class ProductController extends Controller
 
         $data = Arr::except($data,['ss']);
 
-       
+
 
         if($request->hasfile('ss')){
             foreach ($request->file('ss') as $imagefile) {
