@@ -50,6 +50,13 @@
                     @enderror
                 </div>
 
+
+                <div>
+                    <label>Choose Images</label>
+                    <input type="file" name="ss[]" multiple>
+                </div>
+
+
                 <div class="form-group">
                     <label for="inputarea" class="col-form-label">Area <span class="text-danger">*</span></label>
                     <input id="inputarea" type="text" name="area" placeholder="Enter area"

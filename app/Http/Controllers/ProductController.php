@@ -181,7 +181,18 @@ class ProductController extends Controller
             $data['size']='';
         }
         // return $data;
-        $status=$product->fill($data)->save();
+        // $status=$product->fill($data)->save();
+
+        // dd($request->all());
+
+    //     foreach ($request->file('ss') as $imagefile) {
+    //         $image = new Image;
+    //        $path = $imagefile->store('/public/images/resource');
+    //        $image->url = $path;
+    //        $image->product_id = $status->id;
+    //        $IM =  $image->save();
+    //    }
+
         if($status){
             request()->session()->flash('success','Product Successfully updated');
         }
