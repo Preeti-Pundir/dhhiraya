@@ -73,13 +73,10 @@
             </div>
             <div class="col-md-8 my-3">
                 <div class="owl-carousel owl-theme">
-                    <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
-                    <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
-                    <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
-                    <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
-                    <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
-                    <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
-                    <div><img src="/frontend/img/Rectangle 3.png" alt="" width="100%" style="height: 450px "></div>
+
+                    @foreach($product_detail->images as $photo)
+        <img src="{{asset ('storage/'.$photo->url)}}" width="100%" style="height:500px;">
+        @endforeach
                 </div>
             </div>
         </div>

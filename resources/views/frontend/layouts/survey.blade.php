@@ -35,11 +35,6 @@
                                     <p></p>
                                 </div>
                             </li>
-                            <li class="progressbar">
-                                <div>
-                                    <p></p>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                     <form method="post" action="{{ url('surveystore') }}">
@@ -47,7 +42,7 @@
                         <div class="step step-1 active">
                             <div class="my-2">
 
-                                <h6>How did you hear about us? 1</h6>
+                                <h6>How long have you been looking for?</h6>
                                 <div>
                                     <p id="message"></p>
                                 </div>
@@ -55,30 +50,30 @@
                             </div>
                             <div class="d-block d-md-flex align-items-center justify-content-between my-5">
                                 <div class="">
-                                <input type="radio" name="que_1" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_1" value="Below one year" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault1">&nbsp;
-                                    Social Media
+                                    Below one year
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_1" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_1" value="1-2 years" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault2">&nbsp;
-                                    Word of mouth
+                                    1-2 years
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_1" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_1" value="2-5 years" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault3">&nbsp;
-                                    Newspaper ads
+                                    2-5 years
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_1" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_1" value="5 and above" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault4">&nbsp;
-                                    From a friend/family
+                                    5 and above
                                 </label>
                                 </div>
 
@@ -93,7 +88,7 @@
                         <div class="step step-2 ">
                             <div class="my-2">
 
-                                <h6>How did you hear about us? 2</h6>
+                                <h6>What price range have you been considering?</h6>
                                 <div>
                                     <p id="message"></p>
                                 </div>
@@ -101,30 +96,30 @@
                             </div>
                             <div class="d-block d-md-flex align-items-center justify-content-between my-5">
                                 <div class="">
-                                <input type="radio" name="que_2" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_2" value="80 lakhs - 1 cr" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault1">&nbsp;
-                                    Social Media
+                                    80 lakhs - 1 cr
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_2" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_2" value="1cr - 2.5cr" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault2">&nbsp;
-                                    Word of mouth
+                                    1cr - 2.5cr
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_2" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_2" value="2.5cr - 5.5cr" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault3">&nbsp;
-                                    Newspaper ads
+                                    2.5cr - 5.5cr
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_2" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_2" value="5.5cr and above" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault4">&nbsp;
-                                    From a friend/family
+                                    5.5cr and above
                                 </label>
                                 </div>
 
@@ -140,7 +135,7 @@
                         <div class="step step-3 ">
                             <div class="my-2">
 
-                                <h6>How did you hear about us? 3</h6>
+                                <h6>What kind of properties are you looking for? </h6>
                                 <div>
                                     <p id="message"></p>
                                 </div>
@@ -148,30 +143,30 @@
                             </div>
                             <div class="d-block d-md-flex align-items-center justify-content-between my-5">
                                 <div class="">
-                                <input type="radio" name="que_3" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_3" value="Commercial" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault1">&nbsp;
-                                    Social Media
+                                    Commercial
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_3" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_3" value="Apartments" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault2">&nbsp;
-                                    Word of mouth
+                                    Apartments
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_3" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_3" value="Individual house" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault3">&nbsp;
-                                    Newspaper ads
+                                    Individual house
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_3" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_3" value="Plots" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault4">&nbsp;
-                                    From a friend/family
+                                    Plots
                                 </label>
                                 </div>
 
@@ -187,7 +182,7 @@
                         <div class="step step-4 ">
                             <div class="my-2">
 
-                                <h6>How did you hear about us? 4</h6>
+                                <h6>What are you employed ? </h6>
                                 <div>
                                     <p id="message"></p>
                                 </div>
@@ -195,94 +190,43 @@
                             </div>
                             <div class="d-block d-md-flex align-items-center justify-content-between my-5">
                                 <div class="">
-                                <input type="radio" name="que_4" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_4" value="Entrepreneurs" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault1">&nbsp;
-                                    Social Media
+                                    Entrepreneurs
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_4" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_4" value="Employee" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault2">&nbsp;
-                                    Word of mouth
+                                    Employee
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_4" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_4" value="Govt job" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault3">&nbsp;
-                                    Newspaper ads
+                                    Govt job
                                 </label>
                                 </div>
 
                                 <div class="">
-                                <input type="radio" name="que_4" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
+                                <input type="radio" name="que_4" value="Others" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
                                 <label for="flexRadioDefault4">&nbsp;
-                                    From a friend/family
+                                    Others
                                 </label>
                                 </div>
 
 
 
                             </div>
-                            <div>
-                                <button type="button" class="btn-ma prev-btn" id="b">Back</button>
-                                <button type="button" class="btn-ma next-btn" id="b">Next</button>
-                            </div>
-                        </div>
-
-                        <div class="step step-5 ">
-                            <div class="my-2">
-
-                                <h6>How did you hear about us? 5</h6>
-                                <div>
-                                    <p id="message"></p>
-                                </div>
-
-                            </div>
-                            <div class="d-block d-md-flex align-items-center justify-content-between my-5">
-                                <div class="">
-                                <input type="radio" name="que_5" value="Social Media" id="flexRadioDefault1" style="height:15px !important;width:15px !important">
-                                <label for="flexRadioDefault1">&nbsp;
-                                    Social Media
-                                </label>
-                                </div>
-
-                                <div class="">
-                                <input type="radio" name="que_5" value="Word of mouth" id="flexRadioDefault2" style="height:15px !important;width:15px !important">
-                                <label for="flexRadioDefault2">&nbsp;
-                                    Word of mouth
-                                </label>
-                                </div>
-
-                                <div class="">
-                                <input type="radio" name="que_5" value="Newspaper ads" id="flexRadioDefault3" style="height:15px !important;width:15px !important">
-                                <label for="flexRadioDefault3">&nbsp;
-                                    Newspaper ads
-                                </label>
-                                </div>
-
-                                <div class="">
-                                <input type="radio" name="que_5" value="From a friend/family" id="flexRadioDefault4" style="height:15px !important;width:15px !important">
-                                <label for="flexRadioDefault4">&nbsp;
-                                    From a friend/family
-                                </label>
-                                </div>
-
-
-
-                            </div>
-
-                            <div>
-                                <p class="text-danger error-msg"></p>
-                            </div>
-
                             <div>
                                 <button type="button" class="btn-ma prev-btn" id="b">Back</button>
                                 <button type="submit" class="btn-ma submit-btn "
                                     id="b">Submit</button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>

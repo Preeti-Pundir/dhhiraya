@@ -59,7 +59,7 @@
 
                 <div>
                     <label>Choose Images</label>
-                    <input type="file" name="images[]" multiple>
+                    <input type="file" name="ss[]" multiple>
                 </div>
 
 
@@ -190,6 +190,23 @@
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
+
+
+                      {{-- Multiple image --}}
+
+
+                      {{-- <div class="form-group">
+
+                        <div class="input-group">
+                        <input  class="form-control" type="file" name="photos[]" multiple>
+                      </div> --}}
+
+                        {{-- @error('photo')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror --}}
+
+
+
 
                 <div class="form-group">
                     <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>

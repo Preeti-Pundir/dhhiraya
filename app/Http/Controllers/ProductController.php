@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Brand;
+use Arr;
 use App\Image;
 
 use Illuminate\Support\Str;
@@ -65,6 +66,9 @@ class ProductController extends Controller
         ]);
 
         $data=$request->all();
+
+        $data = Arr::except($data,['ss']);
+
         $slug=Str::slug($request->title);
         $count=Product::where('slug',$slug)->count();
         if($count>0){
@@ -81,23 +85,23 @@ class ProductController extends Controller
         }
         // return $size;
         // return $data;
+
         $status=Product::create($data);
         $details = [
             'subject' => 'New Property  Has Been  Add .'
         ];
 
-        // $job = (new \App\Jobs\SendQueueEmail($details))
-        // ->delay(now()->addSeconds(2));
+        $job = (new \App\Jobs\SendQueueEmail($details))
+        ->delay(now()->addSeconds(2));
 
-        // dispatch($job);
-        // echo "Mail send successfully !!";
+        dispatch($job);
+        echo "Mail send successfully !!";
 
-        foreach ($request->file('images') as $imagefile) {
-
-            $image = new Image;
-            $path = $imagefile->store('/images/resource');
+        foreach ($request->file('ss') as $imagefile) {
+             $image = new Image;
+            $path = $imagefile->store('/public/images/resource');
             $image->url = $path;
-            $image->product_id =1;
+            $image->product_id = $status->id;
             $IM =  $image->save();
         }
 
@@ -112,7 +116,6 @@ class ProductController extends Controller
 
 
     }
-
     /**
      * Display the specified resource.
      *
@@ -135,9 +138,7 @@ class ProductController extends Controller
         $brand=Brand::get();
         $product=Product::findOrFail($id);
         $category=Category::where('is_parent',1)->get();
-        $items=Product::with('images')->where('id',$id)->get();
-        // dd($items);
-
+        $items=Product::where('id',$id)->get();
         // return $items;
         return view('backend.product.edit')->with('product',$product)
                     ->with('brands',$brand)
