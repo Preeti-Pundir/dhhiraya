@@ -17,9 +17,9 @@
 
                 <p class="text-white ">Having troubles? <u>Get Help</u></p>
             </div>
-           
+
             <div class="col-md-2 extra-div"></div>
-           
+
             <div class="col-lg-5 col-md-12">
                 <div class="register-form">
                     <!-- <h2>Register</h2> -->
@@ -77,7 +77,7 @@
                                 <div class="form-group login-btn d-flex align-items-center justify-content-between">
                                     <button class="btn-lgn" type="submit">Register</button>
                                     <a href="{{route('login.form')}}">Oldies? Login here</a>
-                                   
+
                                 </div>
                             </div>
                         </div>
