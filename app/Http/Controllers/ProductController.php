@@ -180,18 +180,27 @@ class ProductController extends Controller
         else{
             $data['size']='';
         }
-        // return $data;
-        // $status=$product->fill($data)->save();
 
-        // dd($request->all());
 
-    //     foreach ($request->file('ss') as $imagefile) {
-    //         $image = new Image;
-    //        $path = $imagefile->store('/public/images/resource');
-    //        $image->url = $path;
-    //        $image->product_id = $status->id;
-    //        $IM =  $image->save();
-    //    }
+        $data = Arr::except($data,['ss']);
+
+       
+
+        if($request->hasfile('ss')){
+            foreach ($request->file('ss') as $imagefile) {
+                $image = new Image;
+               $path = $imagefile->store('/public/images/resource');
+               $image->url = $path;
+               $image->product_id = $status->id;
+               $IM =  $image->save();
+           }
+        }
+
+
+
+        $status=$product->fill($data)->save();
+
+
 
         if($status){
             request()->session()->flash('success','Product Successfully updated');

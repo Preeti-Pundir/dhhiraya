@@ -57,10 +57,7 @@
                 {{-- {{$categories}} --}}
 
 
-                <div>
-                    <label>Choose Images</label>
-                    <input type="file" name="ss[]" multiple>
-                </div>
+
 
 
 
@@ -191,6 +188,13 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                    <label  class="col-form-label">Add property Images <span class="text-danger">*</span></label>
+                    <input type="file" name="ss[]" multiple  value="{{ old('ss') }}" class="form-control">
+                    @error('ss')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+                </div>
 
                       {{-- Multiple image --}}
 

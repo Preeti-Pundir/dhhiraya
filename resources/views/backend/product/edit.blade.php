@@ -24,8 +24,6 @@
                     @enderror
                 </div>
 
-
-
                 <div class="form-group">
                     <label for="description" class="col-form-label">Other Details</label>
                     <textarea class="form-control" id="description" name="description">{{ $product->description }}</textarea>
@@ -51,11 +49,6 @@
                 </div>
 
 
-                <div>
-                    <label>Choose Images</label>
-                    <input type="file" name="ss[]" multiple>
-                </div>
-
 
                 <div class="form-group">
                     <label for="inputarea" class="col-form-label">Area <span class="text-danger">*</span></label>
@@ -79,8 +72,10 @@
                 <div class="form-group">
                     <label for="pr_condition" class="col-form-label">Condition <span class="text-danger">*</span></label>
                     <select name="pr_condition" class="form-control">
-                        <option value="Ready to move in" {{ $product->pr_condition == 'Ready to move in' ? 'selected' : '' }}>Ready to move in</option>
-                        <option value="Construction" {{ $product->pr_condition == 'Construction' ? 'selected' : '' }}>Construction</option>
+                        <option value="Ready to move in"
+                            {{ $product->pr_condition == 'Ready to move in' ? 'selected' : '' }}>Ready to move in</option>
+                        <option value="Construction" {{ $product->pr_condition == 'Construction' ? 'selected' : '' }}>
+                            Construction</option>
                     </select>
                     @error('pr_condition')
                         <span class="text-danger">{{ $message }}</span>
@@ -88,9 +83,9 @@
                 </div>
 
                 <!-- <div class="form-group">
-                      <label for="is_featured">Is Featured</label><br>
-                      <input type="checkbox" name='is_featured' id='is_featured' value='{{ $product->is_featured }}' {{ $product->is_featured ? 'checked' : '' }}> Yes
-                    </div> -->
+                          <label for="is_featured">Is Featured</label><br>
+                          <input type="checkbox" name='is_featured' id='is_featured' value='{{ $product->is_featured }}' {{ $product->is_featured ? 'checked' : '' }}> Yes
+                        </div> -->
                 {{-- {{$categories}} --}}
 
                 <div class="form-group">
@@ -112,12 +107,12 @@
                 @endphp
                 {{-- {{$product->child_cat_id}} --}}
                 <!-- <div class="form-group {{ $product->child_cat_id ? '' : 'd-none' }}" id="child_cat_div">
-                      <label for="child_cat_id">Sub Category</label>
-                      <select name="child_cat_id" id="child_cat_id" class="form-control">
-                          <option value="">--Select any sub category--</option>
+                          <label for="child_cat_id">Sub Category</label>
+                          <select name="child_cat_id" id="child_cat_id" class="form-control">
+                              <option value="">--Select any sub category--</option>
 
-                      </select>
-                    </div> -->
+                          </select>
+                        </div> -->
 
                 <div class="form-group">
                     <label for="brand_id">Location</label>
@@ -140,47 +135,47 @@
                 </div>
 
                 <!-- <div class="form-group">
-                      <label for="discount" class="col-form-label">Discount(%)</label>
-                      <input id="discount" type="number" name="discount" min="0" max="100" placeholder="Enter discount"  value="{{ $product->discount }}" class="form-control">
-                      @error('discount')
+                          <label for="discount" class="col-form-label">Discount(%)</label>
+                          <input id="discount" type="number" name="discount" min="0" max="100" placeholder="Enter discount"  value="{{ $product->discount }}" class="form-control">
+                          @error('discount')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-                    </div> -->
+                        </div> -->
                 <!-- <div class="form-group">
-                      <label for="size">Size</label>
-                      <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
-                          <option value="">--Select any size--</option>
-                          @foreach ($items as $item)
+                          <label for="size">Size</label>
+                          <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
+                              <option value="">--Select any size--</option>
+                              @foreach ($items as $item)
     @php
         $data = explode(',', $item->size);
         // dd($data);
     @endphp
-                          <option value="S"  @if (in_array('S', $data)) selected @endif>Small</option>
-                          <option value="M"  @if (in_array('M', $data)) selected @endif>Medium</option>
-                          <option value="L"  @if (in_array('L', $data)) selected @endif>Large</option>
-                          <option value="XL"  @if (in_array('XL', $data)) selected @endif>Extra Large</option>
+                              <option value="S"  @if (in_array('S', $data)) selected @endif>Small</option>
+                              <option value="M"  @if (in_array('M', $data)) selected @endif>Medium</option>
+                              <option value="L"  @if (in_array('L', $data)) selected @endif>Large</option>
+                              <option value="XL"  @if (in_array('XL', $data)) selected @endif>Extra Large</option>
     @endforeach
-                      </select>
-                    </div> -->
+                          </select>
+                        </div> -->
 
 
                 <!-- <div class="form-group">
-                      <label for="condition">Condition</label>
-                      <select name="condition" class="form-control">
-                          <option value="">--Select Condition--</option>
-                          <option value="default" {{ $product->condition == 'default' ? 'selected' : '' }}>Default</option>
-                          <option value="new" {{ $product->condition == 'new' ? 'selected' : '' }}>New</option>
-                          <option value="hot" {{ $product->condition == 'hot' ? 'selected' : '' }}>Hot</option>
-                      </select>
-                    </div> -->
+                          <label for="condition">Condition</label>
+                          <select name="condition" class="form-control">
+                              <option value="">--Select Condition--</option>
+                              <option value="default" {{ $product->condition == 'default' ? 'selected' : '' }}>Default</option>
+                              <option value="new" {{ $product->condition == 'new' ? 'selected' : '' }}>New</option>
+                              <option value="hot" {{ $product->condition == 'hot' ? 'selected' : '' }}>Hot</option>
+                          </select>
+                        </div> -->
 
                 <!-- <div class="form-group">
-                      <label for="stock">Quantity <span class="text-danger">*</span></label>
-                      <input id="quantity" type="number" name="stock" min="0" placeholder="Enter quantity"  value="{{ $product->stock }}" class="form-control">
-                      @error('stock')
+                          <label for="stock">Quantity <span class="text-danger">*</span></label>
+                          <input id="quantity" type="number" name="stock" min="0" placeholder="Enter quantity"  value="{{ $product->stock }}" class="form-control">
+                          @error('stock')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-                    </div> -->
+                        </div> -->
                 <div class="form-group">
                     <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
                     <div class="input-group">
@@ -195,6 +190,14 @@
                     </div>
                     <div id="holder" style="margin-top:15px;max-height:100px;"></div>
                     @error('photo')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label">Add property Images <span class="text-danger">*</span></label>
+                    <input type="file" name="ss[]" multiple value="{{ $product->ss }}" class="form-control">
+                    @error('ss')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
