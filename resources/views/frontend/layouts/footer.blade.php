@@ -2,7 +2,7 @@
 <footer class="footer">
     <!-- Footer Top -->
     <!-- <div class="footer-top section"> -->
-    <div class="container pt-5 pb-5">
+    <div class="container pb-5">
         <div class="row">
             <div class="col-lg-5 col-md-6 col-12">
                 <!-- Single Widget -->
@@ -29,7 +29,7 @@
                 </div>
                 <!-- End Single Widget -->
             </div>
-            <div class="col-lg-2 col-md-6 col-12">
+            <div class="col-lg-3 col-md-6 col-12">
                 <!-- Single Widget -->
                 <div class="single-footer links">
                     <h4>Services</h4>
@@ -60,7 +60,7 @@
                 </div>
                 <!-- End Single Widget -->
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-2 col-md-6 col-12">
                 <!-- Single Widget -->
                 <div class="single-footer social">
                     <h4>Address</h4>
@@ -102,7 +102,7 @@
                     <p>Dhiiraayahomes.com</p>
                 </div>
                 <div class="col-lg-4 col-md-12">
-                    <p>Powered by Avidus Interactive</p>
+                    <p>Powered by <a href="https://avidusinteractive.com" class="foot-link" > Avidus Interactive</a></p>
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <p>Copyright © 2023</p>

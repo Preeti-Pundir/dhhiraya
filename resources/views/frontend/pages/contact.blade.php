@@ -78,7 +78,7 @@
 
                                 <div class="col-12">
                                     <div class="form-group message">
-                                        <label>your message<span>*</span></label>
+                                        <label>Your message<span>*</span></label>
                                         <textarea name="msg" id="msg" cols="30" rows="9"
                                             placeholder="Enter Message"></textarea>
                                     </div>

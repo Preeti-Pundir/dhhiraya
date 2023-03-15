@@ -22,7 +22,7 @@
         <div class="row align-items-center">
             <div class="col-lg-5 my-3"><img src="/frontend/img/about-img5.png" alt="" width="100%"></div>
             <div class="col-lg-2 my-3 text-center">
-                <h1 class="aboutus-text">About US</h1>
+                <h3 class="aboutus-text">About US</h3>
             </div>
             <div class="col-lg-5 my-3 about-second-col" style="background-color:#F1F1F1;">
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore

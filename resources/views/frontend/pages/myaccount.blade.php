@@ -19,23 +19,23 @@
                     <a class="nav-link mb-0 mb-md-5 p-3 shadow active" id="saved-properties" data-toggle="pill"
                         href="#v-saved-properties" role="tab" aria-controls="v-saved-properties"
                         aria-selected="true">
-                        <span class="font-weight-bold small text-uppercase">saved properties</span></a>
+                        <span class="font-weight-bold text-uppercase">saved properties</span></a>
 
                     <!-- <a class="nav-link mb-0 mb-md-5 p-3 shadow" id="v-pills-visited-properties-tab" data-toggle="pill"
                         href="#v-pills-visited-properties" role="tab" aria-controls="v-pills-visited-properties"
                         aria-selected="false">
-                        <span class="font-weight-bold small text-uppercase">Visited properties</span></a> -->
+                        <span class="font-weight-bold text-uppercase">Visited properties</span></a> -->
 
                     <a class="nav-link mb-0 mb-md-5 p-3 shadow" id="v-pills-faqs-tab" data-toggle="pill" href="#v-pills-faqs"
                         role="tab" aria-controls="v-pills-faqs" aria-selected="false">
-                        <span class="font-weight-bold small text-uppercase">FAQs</span></a>
+                        <span class="font-weight-bold text-uppercase">FAQs</span></a>
 
                     <a class="nav-link mb-0 mb-md-5 p-3 shadow" id="v-pills-terms-tab" data-toggle="pill" href="#v-pills-terms"
                         role="tab" aria-controls="v-pills-terms" aria-selected="false">
-                        <span class="font-weight-bold small text-uppercase">Terms of service</span></a>
+                        <span class="font-weight-bold text-uppercase">Terms of service</span></a>
 
                     <a class="nav-link mb-0 mb-md-5 p-3 shadow " href="{{Route('contact')}}">
-                        <span class="font-weight-bold small text-uppercase">Contact us</span></a>
+                        <span class="font-weight-bold text-uppercase">Contact us</span></a>
                 </div>
             </div>
 

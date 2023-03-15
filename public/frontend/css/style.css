@@ -4710,8 +4710,9 @@ Version:1.0
     width: 100%;
     border: 1px solid #e6e2f5;
     padding: 0px 20px;
+    margin: 7px 0;
     color: #333;
-    border-radius: 0px;
+    border-radius: 15px;
     font-weight: 400;
 }
 .contact-us .form .form-group textarea {
@@ -4719,8 +4720,9 @@ Version:1.0
     width: 100%;
     border: 1px solid #e6e2f5;
     padding: 15px 20px;
+    margin: 7px 0;
     color: #333;
-    border-radius: 0px;
+    border-radius: 15px;
     resize: none;
     font-weight: 400;
 }
@@ -4955,6 +4957,11 @@ Version:1.0
     color: #000;
     text-decoration: underline;
 }
+
+.foot-link{
+    text-decoration: none !important;
+}
+
 /*=============================
 	End Footer CSS
 ===============================*/
@@ -4994,6 +5001,7 @@ Version:1.0
 .btn-lgn {
     border: none !important;
     padding: 18px 60px;
+    margin-bottom: 10px;
     border-radius: 12px;
     background-color: #b3b356;
     color: #ffffff;
@@ -5016,6 +5024,9 @@ Version:1.0
         margin: 50px 50px;
     }
 }
+
+
+
 
 /* Myaccount page */
 

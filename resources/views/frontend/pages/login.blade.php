@@ -34,7 +34,7 @@
 
                     </div>
                     <img src="/frontend/img/Separator.png" alt="">
-                 
+
                   <form class="form mt-4" action="{{ route('login.submit') }}" method="POST">
                         @csrf
 
@@ -84,7 +84,7 @@
                                     <a href="{{ route('forget.password.get') }}">Forget Password</a>
                                 </div>
                                 <div>
-                                    <a href="{{route('register.form')}}">New user? Signup</a>
+                                    <a href="{{route('register.form')}}">New user ? Signup</a>
 
                                 </div>
                             </div>
@@ -120,6 +120,9 @@
 <!--/ End Login -->
 
 @include('frontend.layouts.newsletter')
+
+
+
 
 
 @endsection
