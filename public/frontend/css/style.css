@@ -5015,6 +5015,15 @@ Version:1.0
     margin: 100px 100px;
 }
 
+.field-icon {
+    position: relative;
+    float: right !important;
+    border: none !important;
+    background: none !important;
+    top: -35px !important;
+    z-index: 2;
+  }
+
 @media screen and (max-width: 767px) {
     .shop .fcare h2 {
         margin: 40px 50px;

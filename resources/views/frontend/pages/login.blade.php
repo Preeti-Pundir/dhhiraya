@@ -55,10 +55,15 @@
 
                         <div class="col-12">
                             <div class="form-group">
+                                {{-- <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
 
-
-                                <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
                                 @if ($errors->has('password'))
+                                    <span class="text-danger">{{ $errors->first('password') }}</span>
+                                @endif --}}
+
+                                <input id="passInput" class="form-control" placeholder="Password" name="password" type="password" size="30" aria-required="true">
+                                    <img src="/frontend/img/eye.png" class="input-group-addon field-icon" role="button" title="veiw password" id="passBtn" alt="">
+                                    @if ($errors->has('password'))
                                     <span class="text-danger">{{ $errors->first('password') }}</span>
                                 @endif
 
@@ -122,6 +127,15 @@
 @include('frontend.layouts.newsletter')
 
 
+{{-- Password Hide/Show js --}}
+
+<script>
+const PassBtn = document.querySelector('#passBtn');
+PassBtn.addEventListener('click', () => {
+    const input = document.querySelector('#passInput');
+    input.getAttribute('type') === 'password' ? input.setAttribute('type', 'text') : input.setAttribute('type', 'password');
+});
+</script>
 
 
 
