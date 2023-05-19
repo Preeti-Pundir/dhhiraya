@@ -123,214 +123,40 @@
 
                                     <div id="collapseMain" class="collapse" aria-labelledby="headingOne">
 
+                                        <div id="accordion">
+                                            @foreach($brands as $index => $brand)
 
-                                        <div class="location-div mx-1 my-2">
-                                            <div class="container">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <a>New Chandigargh</a>
-                                            <a data-toggle="collapse" data-target="#locationOne"
-                                                aria-controls="locationOne"> <img src="/frontend/img/downarrow.png" alt="" width="15"> </a>
+                                                    <div class="my-2" id="heading{{$index}}">
+                                                        <h5 class="mb-0">
+                                                            <button class="bg-transparent" data-toggle="collapse" data-target="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
+                                                                {{$brand['title']}}
+                                                            </button>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapse{{$index}}" class="collapse {{ $index == 0 ? 'show' : '' }}" aria-labelledby="heading{{$index}}" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            @php
+                                                            $category_lists=DB::table('categories')->get();
+                                                            @endphp
+                                                             @if($category_lists)
+                                                             @foreach($category_lists as $cat)
+                                                             @if($cat->is_parent==1)
 
-                                            </div>
+                                                            <a class="mb-2" href="{{route('product-cat',$cat->slug)}}">{{$cat->title}}</a><br>
 
-                                            <div id="locationOne" class="collapse" aria-labelledby="headingOne">
-
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#fcategoryOne"
-                                                        aria-controls="fcategoryOne"> Residential Property </a>
-                                                    <div id="fcategoryOne" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Apartments</a>
+                                                            @endif
+                                                            @endforeach
+                                                            @endif
+                                                            
                                                         </div>
                                                     </div>
 
-                                                </div>
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#fcategoryTwo"
-                                                        aria-controls="fcategoryTwo"> Commercial Property </a>
-                                                    <div id="fcategoryTwo" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Furnished retail shops</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#fcategoryThree"
-                                                        aria-controls="fcategoryThree"> Lands </a>
-                                                    <div id="fcategoryThree" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Empty lands</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-
-
-                                            </div>
+                                            @endforeach
                                         </div>
-                                        <div class="location-div mx-1 my-2">
-                                            <div class="container">
-                                            <div class="d-flex justify-content-between align-items-center">
-
-                                                <a>Delhi NCR</a>
-                                            <a data-toggle="collapse" data-target="#locationTwo"
-                                                aria-controls="locationTwo"> <img src="/frontend/img/downarrow.png" alt="" width="15"></a>
-                                            </div>
-
-                                            <div id="locationTwo" class="collapse" aria-labelledby="headingOne">
-
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#scategoryOne"
-                                                        aria-controls="scategoryOne"> Residential Property</a>
-                                                    <div id="scategoryOne" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Apartments</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#scategoryTwo"
-                                                        aria-controls="scategoryTwo"> Commercial Property</a>
-                                                    <div id="scategoryTwo" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Furnished retail shops</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#scategoryThree"
-                                                        aria-controls="scategoryThree"> Lands</a>
-                                                    <div id="scategoryThree" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Empty lands</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
 
 
 
 
-                                            </div>
-                                        </div>
-                                        <div class="location-div mx-1 my-2">
-                                            <div class="container">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <a>Noida</a>
-                                            <a data-toggle="collapse" data-target="#locationThree"
-                                                aria-controls="locationThree"><img src="/frontend/img/downarrow.png" alt="" width="15"></a>
-                                            </div>
-
-                                            <div id="locationThree" class="collapse" aria-labelledby="headingOne">
-
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#tcategoryOne"
-                                                        aria-controls="tcategoryOne"> Residential Property</a>
-                                                    <div id="tcategoryOne" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Apartments</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#tcategoryTwo"
-                                                        aria-controls="tcategoryTwo"> Commercial Property</a>
-                                                    <div id="tcategoryTwo" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Furnished retail shops</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#tcategoryThree"
-                                                        aria-controls="tcategoryThree"> Lands</a>
-                                                    <div id="tcategoryThree" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Empty lands</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-
-
-                                            </div>
-                                        </div>
-                                        <div class="location-div mx-1 my-2">
-                                            <div class="container">
-                                            <div class="d-flex justify-content-between align-items-center">
-
-                                                <a>Gurgaon</a>
-                                            <a data-toggle="collapse" data-target="#locationFour"
-                                                aria-controls="locationFour"><img src="/frontend/img/downarrow.png" alt="" width="15"> </a>
-                                            </div>
-
-                                            <div id="locationFour" class="collapse" aria-labelledby="headingOne">
-
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#focategoryOne"
-                                                        aria-controls="focategoryOne"> Residential Property</a>
-                                                    <div id="focategoryOne" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Apartments</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#focategoryTwo"
-                                                        aria-controls="focategoryTwo"> Commercial Property</a>
-                                                    <div id="focategoryTwo" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Furnished retail shops</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="category-div">
-                                                    <a data-toggle="collapse" data-target="#focategoryThree"
-                                                        aria-controls="focategoryThree"> Lands</a>
-                                                    <div id="focategoryThree" class="collapse"
-                                                        aria-labelledby="headingOne">
-                                                        <div class="container my-2">
-                                                            <a href="{{ route('product-grids') }}">Empty lands</a>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-
-
-                                            </div>
-                                        </div>
 
                                         <!-- /For Mobile Screen -->
                                     </div>
