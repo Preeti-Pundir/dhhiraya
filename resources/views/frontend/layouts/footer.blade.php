@@ -33,16 +33,18 @@
                 <!-- Single Widget -->
                 <div class="single-footer links">
                     <h4>Services</h4>
+                    @php
+                    $category_lists=DB::table('categories')->get();
+                    @endphp
+                     @if($category_lists)
+                     @foreach($category_lists as $cat)
+                     @if($cat->is_parent==1)
                     <ul>
-
-                        <li><a href="{{route('product-lists')}}">Commercial Property</a></li>
-                        <li><a href="{{route('product-lists')}}">Residential Property</a></li>
-                        <!-- <li><a href="{{ route('contact') }}">Contact Us</a></li> -->
-                        <li><a href="{{route('product-lists')}}">Holiday homes</a></li>
-
-
-
+                        <li class="mb-2"><a href="{{route('product-cat',$cat->slug)}}">{{$cat->title}}</a></li>
                     </ul>
+                    @endif
+                    @endforeach
+                    @endif
                 </div>
                 <!-- End Single Widget -->
             </div>
