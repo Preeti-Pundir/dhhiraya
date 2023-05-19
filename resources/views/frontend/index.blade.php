@@ -62,6 +62,12 @@
 
 
 
+
+
+
+
+
+
 <section class="pt-5 pb-5">
     <div class="container pt-5 pb-5">
         <div class="text-center">
@@ -76,19 +82,21 @@
             <div class="row align-items-center">
                 <div class="col-md-6 my-3 ">
                     <div class="owl-carousel owl-theme citycarousel">
-                        {{-- @foreach($random->images as $photo)
-                        @if($photo->url)
-                        <img src="{{asset ('storage/'.preg_replace('/public/','', $photo->url))}}" width="100%" style="height:500px;">
-                        @else
-                        <img src="https://via.placeholder.com/600x370" alt="#">
-                        @endif
-                        @endforeach --}}
+                        @if(count($random->images) != 0 )
 
-                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
-                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
-                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
-                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
-                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
+                        @foreach($random->images as $photo)
+                        <img src="{{asset ('storage/'.preg_replace('/public/','', $photo->url))}}" width="100%" style="height:500px;">
+                        @endforeach
+                        @else
+                        {{-- {{dd($random->images)}} --}}
+                        <div class="item"><img src="{{ asset ('/frontend/img/place-holder.jpeg')}}" alt=""></div>
+                        <div class="item"><img src="{{ asset ('/frontend/img/place-holder.jpeg')}}" alt=""></div>
+                        <div class="item"><img src="{{ asset ('/frontend/img/place-holder.jpeg')}}" alt=""></div>
+
+
+                        @endif
+
+
                     </div>
 
 
@@ -120,7 +128,6 @@
         </div>
     </div>
 </section>
-
 
 <div class="container text-center">
     <div class="mt-4">

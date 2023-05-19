@@ -183,26 +183,19 @@ class ProductController extends Controller
             $data['size']='';
         }
 
-
         $data = Arr::except($data,['ss']);
-
-
-
         if($request->hasfile('ss')){
             foreach ($request->file('ss') as $imagefile) {
                 $image = new Image;
                $path = $imagefile->store('/public/images/resource');
                $image->url = $path;
-               $image->product_id = $status->id;
+               $image->product_id = $id;
                $IM =  $image->save();
            }
         }
 
 
-
         $status=$product->fill($data)->save();
-
-
 
         if($status){
             request()->session()->flash('success','Product Successfully updated');
