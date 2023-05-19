@@ -73,14 +73,13 @@
             </div>
             <div class="col-md-8 my-3">
                 <div class="owl-carousel owl-theme">
-
                     @foreach($product_detail->images as $photo)
                     @if($photo->url)
                     <img src="{{asset ('storage/'.preg_replace('/public/','', $photo->url))}}" width="100%" style="height:500px;">
                     @else
-                    <img src="https://www.garygreene.com/app/plugins/elementor/assets/images/placeholder.png" alt="#" width="100%" style="height:500px;">
+                    <img src="{{asset ('/frontend/img/placeholder.png')}}" alt="#" width="100%" style="height:500px;">
                     @endif
-        @endforeach
+                    @endforeach
                 </div>
             </div>
         </div>
