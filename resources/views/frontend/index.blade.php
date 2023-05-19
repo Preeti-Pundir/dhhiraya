@@ -72,29 +72,40 @@
     </div>
     <div class="container-fluid-new">
         <div class="container-fluid" style="background-color:#FFFFEE">
+            @foreach($product_lists as $random)
             <div class="row align-items-center">
                 <div class="col-md-6 my-3 ">
                     <div class="owl-carousel owl-theme citycarousel">
+                        @foreach($random->images as $photo)
+                        @if($photo->url)
+                        <img src="{{asset ('storage/'.preg_replace('/public/','', $photo->url))}}" width="100%" style="height:500px;">
+                        @else
+                        <img src="https://via.placeholder.com/600x370" alt="#">
+                        @endif
+                        @endforeach
+
+                        {{-- <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
                         <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
                         <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
                         <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
-                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
-                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div>
+                        <div class="item"><img src="{{ asset ('/frontend/img/Rectangle 23.png')}}" alt=""></div> --}}
                     </div>
 
 
                 </div>
                 <div class="col-md-6 my-3">
-                    <h4>Suntec City</h4>
+                    <h4>{{$random->title}}</h4>
                     <div class="d-flex align-items-center mt-4">
                         <img src="/frontend/img/Layer_x0020_1.png" alt="" class="pr-4">
-                        <p>Residential</p>
+
+                       <p> {{$random->cat_info['title']}}</p>
                     </div>
                     <hr class="w-50">
 
                     <div class="d-flex align-items-center">
                         <img src="/frontend/img/Layer_x0020_2.png" alt="" class="pr-4">
-                        <p>New Chandigarh</p>
+
+                       <p> {{$random->brand['title']}}</p>
 
                     </div>
                     <hr class="w-50">
@@ -105,6 +116,7 @@
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
 </section>

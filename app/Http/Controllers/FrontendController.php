@@ -31,9 +31,10 @@ class FrontendController extends Controller
         $posts=Post::where('status','active')->orderBy('id','DESC')->limit(3)->get();
         $banners = Banner::where('status','active')->limit(3)->orderBy('id','DESC')->get();
         // return $banner;
-        $products=Product::where('status','active')->orderBy('id','DESC')->limit(8)->get();
+        $products=Product::where('status','active')->orderBy('id','DESC')->limit(1)->get();
         $category=Category::where('status','active')->where('is_parent',1)->orderBy('title','ASC')->get();
         $brand=Brand::where('status','active')->orderBy('id','ASC')->withCount('products')->get();
+        // $random = Product::where('status', 'active')->inRandomOrder('products')->limit(1)->get();
 
 
         // return $category;
@@ -44,6 +45,7 @@ class FrontendController extends Controller
                 ->with('product_lists',$products)
                 ->with('brands',$brand)
                 ->with('category_lists',$category);
+
     }
 
     public function aboutUs(){
