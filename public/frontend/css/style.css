@@ -4985,7 +4985,14 @@ Version:1.0
 /* Myaccount page */
 
 .myaccount-tabs {
-    border-right: 1px solid #d1d1d1;
+
+    border: none ;
+    border-right: 1px solid #d1d1d1 !important;
+}
+
+.left-tab-megamenu{
+    height: 300px !important ;
+    overflow-y: auto !important;
 }
 
 .properties {

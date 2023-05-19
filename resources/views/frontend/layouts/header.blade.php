@@ -34,7 +34,7 @@
                                             <div class="row">
                                                 <div class="col-lg-2 col-md-3 col-sm-12 py-4 ">
 
-
+                                                        <div class="left-tab-megamenu">
                                                         <ul class="nav flex-row flex-md-column myaccount-tabs nav-pills nav-pills-custom nav-tabs " id="myTabs" role="tablist"  aria-orientation="vertical">
                                                             @foreach($brands as $index => $brand)
                                                                 <li class="nav-item">
@@ -42,7 +42,7 @@
                                                                 </li>
                                                             @endforeach
                                                         </ul>
-
+                                                    </div>
                                                 </div>
 
                                                 <div class="col-lg-9 col-md-9 col-sm-12 py-4">
@@ -147,7 +147,7 @@
                                                             @endif
                                                             @endforeach
                                                             @endif
-                                                            
+
                                                         </div>
                                                     </div>
 
