@@ -3701,9 +3701,9 @@ tbody.collapse.show {
 }
 
 .nav-tabs .nav-link {
-    border: 1px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem
+    border: none ;
+    border-top-left-radius: none;
+    border-top-right-radius: none
 }
 
 .nav-tabs .nav-link:focus,
@@ -3719,9 +3719,9 @@ tbody.collapse.show {
 
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-    color: #495057;
+    color: #B3B356;
     background-color: #fff;
-    border-color: #ddd #ddd #fff
+    border-color: none !important;
 }
 
 .nav-tabs .dropdown-menu {

@@ -33,319 +33,78 @@
                                         <div class="container my-5">
                                             <div class="row">
                                                 <div class="col-lg-2 col-md-3 col-sm-12 py-4 ">
-                                                    <!-- Tabs nav -->
-                                                    <div class="nav flex-row flex-md-column myaccount-tabs nav-pills nav-pills-custom  pb-5 pt-3"
-                                                        id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                                        <a class="nav-link py-3 text-right shadow active"
-                                                            id="v-pills-first-properties-tab" data-toggle="pill"
-                                                            href="#v-pills-first-properties" role="tab"
-                                                            aria-controls="v-pills-first-properties"
-                                                            aria-selected="true">
-                                                            <span class="font-weight-bold small text-uppercase">Delhi
-                                                                Ncr</span></a>
 
-                                                        <a class="nav-link py-3 text-right shadow"
-                                                            id="v-pills-second-properties-tab" data-toggle="pill"
-                                                            href="#v-pills-second-properties" role="tab"
-                                                            aria-controls="v-pills-second-properties"
-                                                            aria-selected="false">
-                                                            <span
-                                                                class="font-weight-bold small text-uppercase">Gurgaon</span></a>
 
-                                                        <a class="nav-link py-3 text-right shadow"
-                                                            id="v-pills-third-tab" data-toggle="pill"
-                                                            href="#v-pills-third" role="tab"
-                                                            aria-controls="v-pills-third" aria-selected="false">
-                                                            <span
-                                                                class="font-weight-bold small text-uppercase">Noida</span></a>
+                                                        <ul class="nav flex-row flex-md-column myaccount-tabs nav-pills nav-pills-custom nav-tabs " id="myTabs" role="tablist"  aria-orientation="vertical">
+                                                            @foreach($brands as $index => $brand)
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link {{ $index == 0 ? 'active' : '' }}" id="tab{{ $index }}" data-toggle="tab" href="#content{{ $index }}" role="tab" aria-controls="content{{ $index }}" aria-selected="{{ $index == 0 ? 'true' : 'false' }}">{{ $brand['title'] }}</a>
+                                                                </li>
+                                                            @endforeach
+                                                        </ul>
 
-                                                        <a class="nav-link py-3 text-right shadow"
-                                                            id="v-pills-fourth-tab" data-toggle="pill"
-                                                            href="#v-pills-fourth" role="tab"
-                                                            aria-controls="v-pills-fourth" aria-selected="false">
-                                                            <span
-                                                                class="font-weight-bold small text-uppercase">Chandigargh</span></a>
-                                                         {{-- @foreach ($brands as $brand)
-                                                                    <a class="nav-link py-3 text-right shadow active" id="v-pills-{{ $brand->slug }}-properties-tab" data-toggle="pill"
-                                                                    href="#v-pills-{{ $brand->slug }}-properties" role="tab" aria-controls="v-pills-{{ $brand->slug }}-properties"
-                                                                    aria-selected="true">
-                                                                    <span class="font-weight-bold small text-uppercase">{{ $brand->title }}</span></a>
-                                                            @endforeach --}}
-
-                                                    </div>
                                                 </div>
 
                                                 <div class="col-lg-9 col-md-9 col-sm-12 py-4">
-                                                    <!-- Tabs content -->
-                                                    {{-- @foreach ($brands as $brand)
-                                                        <div class="tab-pane fade shadow rounded bg-white  show "
-                                                            id="v-pills-{{ $brand->slug }}-properties" role="tabpanel"
-                                                            aria-labelledby="v-pills-{{ $brand->slug }}-properties-tab">
-                                                            <div class="container head-submenu">
-                                                                <div class="row">
-                                                                    <div class="col-lg-4">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6>Residential Property</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Apartments</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Individual house</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
-                                                                                    house</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Cottages</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Villa</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-4">
 
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6>Commercial Property</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Furnished retail shops</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Unfurnished retail shops</a></li>
+                                                    <div class="tab-content" id="myTabContent">
+                                                        @foreach($brands as $index => $brand)
+                                                            <div class="tab-pane fade {{ $index == 0 ? 'show active' : '' }}" id="content{{ $index }}" role="tabpanel" aria-labelledby="tab{{ $index }}">
+                                                                {{-- {{ $brand['content'] }} --}}
+                                                                <div class="container head-submenu">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <h6>Residential Property</h6>
+                                                                                </li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href="{{ route('product-grids') }}">
+                                                                                        Apartments</a></li>
+                                                                                <li class="my-2"><a href="{{ route('product-grids') }}">
+                                                                                        Individual house</a></li>
+                                                                                <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
+                                                                                        house</a></li>
+                                                                                <li class="my-2"><a href="{{ route('product-grids') }}">
+                                                                                        Cottages</a></li>
+                                                                                <li class="my-2"><a href="{{ route('product-grids') }}">
+                                                                                        Villa</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
 
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-4">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <h6>Commercial Property</h6>
+                                                                                </li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href="{{ route('product-grids') }}">
+                                                                                        Furnished retail shops</a></li>
+                                                                                <li class="my-2"><a href="{{ route('product-grids') }}">
+                                                                                        Unfurnished retail shops</a></li>
 
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6> Lands</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Empty lands</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
 
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    @endforeach --}}
-                                                    <div class="tab-content" id="v-pills-tabContent">
-                                                        <div class="tab-pane fade shadow rounded bg-white show active"
-                                                            id="v-pills-first-properties" role="tabpanel"
-                                                            aria-labelledby="v-pills-first-properties-tab">
-                                                            <div class="container head-submenu">
-                                                                <div class="row">
-                                                                    <div class="col-lg-4">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6>Residential Property</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Apartments</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Individual house</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
-                                                                                    house</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Cottages</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Villa</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-4">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <h6> Lands</h6>
+                                                                                </li>
+                                                                                <br>
+                                                                                <li class="my-2"><a href="{{ route('product-grids') }}">
+                                                                                        Empty lands</a></li>
 
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6>Commercial Property</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Furnished retail shops</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Unfurnished retail shops</a></li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-4">
-
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6> Lands</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Empty lands</a></li>
-
-                                                                        </ul>
+                                                                            </ul>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-
-                                                        <div class="tab-pane fade shadow rounded bg-white"
-                                                            id="v-pills-second-properties" role="tabpanel"
-                                                            aria-labelledby="v-pills-second-properties-tab">
-                                                            <div class="container head-submenu">
-                                                                <div class="row">
-                                                                    <div class="col-lg-4">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6>Residential Property</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Apartments</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Individual house</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
-                                                                                    house</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Cottages</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Villa</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-4">
-
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6>Commercial Property</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Furnished retail shops</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Unfurnished retail shops</a></li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-4">
-
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6> Lands</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Empty lands</a></li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="tab-pane fade shadow rounded bg-white"
-                                                            id="v-pills-third" role="tabpanel"
-                                                            aria-labelledby="v-pills-third-tab">
-                                                            <div class="container head-submenu">
-                                                                <div class="row">
-                                                                    <div class="col-lg-4">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6>Residential Property</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Apartments</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Individual house</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
-                                                                                    house</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Cottages</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Villa</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-4">
-
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6>Commercial Property</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Furnished retail shops</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Unfurnished retail shops</a></li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-4">
-
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6> Lands</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Empty lands</a></li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="tab-pane fade shadow rounded bg-white"
-                                                            id="v-pills-fourth" role="tabpanel"
-                                                            aria-labelledby="v-pills-fourth-tab">
-                                                            <div class="container head-submenu">
-                                                                <div class="row">
-                                                                    <div class="col-lg-4">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6>Residential Property</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Apartments</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Individual house</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}"> Pent
-                                                                                    house</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Cottages</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Villa</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-4">
-
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6>Commercial Property</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Furnished retail shops</a></li>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Unfurnished retail shops</a></li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-4">
-
-                                                                        <ul>
-                                                                            <li>
-                                                                                <h6> Lands</h6>
-                                                                            </li>
-                                                                            <br>
-                                                                            <li class="my-2"><a href="{{ route('product-grids') }}">
-                                                                                    Empty lands</a></li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
+                                                        @endforeach
                                                     </div>
+                                                    <!-- Tabs content -->
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -368,7 +127,7 @@
                                         <div class="location-div mx-1 my-2">
                                             <div class="container">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <a>Delhi NCR</a>
+                                                <a>New Chandigargh</a>
                                             <a data-toggle="collapse" data-target="#locationOne"
                                                 aria-controls="locationOne"> <img src="/frontend/img/downarrow.png" alt="" width="15"> </a>
 
@@ -420,7 +179,8 @@
                                         <div class="location-div mx-1 my-2">
                                             <div class="container">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <a>Gurgaon</a>
+
+                                                <a>Delhi NCR</a>
                                             <a data-toggle="collapse" data-target="#locationTwo"
                                                 aria-controls="locationTwo"> <img src="/frontend/img/downarrow.png" alt="" width="15"></a>
                                             </div>
@@ -522,7 +282,8 @@
                                         <div class="location-div mx-1 my-2">
                                             <div class="container">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <a>Chandigargh</a>
+
+                                                <a>Gurgaon</a>
                                             <a data-toggle="collapse" data-target="#locationFour"
                                                 aria-controls="locationFour"><img src="/frontend/img/downarrow.png" alt="" width="15"> </a>
                                             </div>
