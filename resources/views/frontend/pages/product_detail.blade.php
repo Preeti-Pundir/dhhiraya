@@ -76,6 +76,7 @@
                     @if(count($product_detail->images) != 0 )
                     @foreach($product_detail->images as $photo)
                     <img src="{{asset ('storage/'.preg_replace('/public/','', $photo->url))}}" width="100%" style="height:500px;">
+                    <img src="{{asset ('storage/'.preg_replace('/public/','', $photo->url))}}" width="100%" style="height:500px;">
                     @endforeach
                     @else
                     {{-- {{dd($random->images)}} --}}
