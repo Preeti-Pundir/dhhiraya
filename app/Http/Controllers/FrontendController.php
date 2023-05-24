@@ -67,6 +67,41 @@ class FrontendController extends Controller
         return view('frontend.pages.product_detail')->with('product_detail',$product_detail);
     }
 
+    public function download($slug)
+    {
+
+        try {
+            $product = Product::where('slug', $slug)->firstOrFail();
+            $filePath = $product->brochure;
+            $publicPath = public_path($filePath);
+
+            if (file_exists($publicPath)) {
+                return response()->download($publicPath);
+            } else {
+                abort(404, 'Brochure not found');
+            }
+        } catch (\Exception $e) {
+           echo "Brochure not found";
+        }
+
+    }
+
+    public function developerlink($slug)
+    {
+        $product = Product::where('slug', $slug)->firstOrFail();
+        $filePath = $product->developersite;
+        // dd($filePath);
+        $world = 'http';
+        if (Str::startsWith($filePath, $world)) {
+            return redirect()->to($filePath);
+        }
+
+        echo "Link is not available";
+
+
+    }
+
+
     public function productGrids(){
         $products=Product::query();
         $category =Category::select('id', 'title')->pluck('title', 'id')->toArray();
@@ -251,11 +286,13 @@ class FrontendController extends Controller
     public function productBrand(Request $request){
         $products=Brand::getProductByBrand($request->slug);
         $recent_products=Product::where('status','active')->orderBy('id','DESC')->limit(3)->get();
-        if(request()->is('e-shop.loc/product-grids')){
-            return view('frontend.pages.product-grids')->with('products',$products->products)->with('recent_products',$recent_products);
+        $category = Category::select('id', 'title')->pluck('title', 'id')->toArray();
+        $brands = Brand::select('id', 'title')->pluck('title', 'id')->toArray();
+        if(request()->is('/product-grids')){
+            return view('frontend.pages.product-grids')->with('products',$products->products)->with('recent_products',$recent_products)->with('categorys', $category)->with('brands', $brands);
         }
         else{
-            return view('frontend.pages.product-lists')->with('products',$products->products)->with('recent_products',$recent_products);
+            return view('frontend.pages.product-lists')->with('products',$products->products)->with('recent_products',$recent_products)->with('categorys', $category)->with('brands', $brands);
         }
 
     }

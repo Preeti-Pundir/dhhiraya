@@ -57,6 +57,7 @@ class ProductController extends Controller
             'acquisition'=>'string|required',
             'area'=>'string|required',
             'rooms'=>'string|required',
+            "brochure" => "mimes:pdf",
             'photo'=>'string|required',
             'cat_id'=>'required|exists:categories,id',
             'brand_id'=>'required|exists:brands,id',
@@ -83,19 +84,28 @@ class ProductController extends Controller
         else{
             $data['size']='';
         }
-        // return $size;
-        // return $data;
+
+        if($request->hasfile('brochure')){
+
+            $name = $request->file('brochure')->getClientOriginalName();
+            $path = $request->file('brochure')->storeAs('/public/brochure',$name);
+            $data['brochure'] = ('storage'.preg_replace('/public/','', $path));
+
+        }
+
+
 
         $status=Product::create($data);
         $details = [
             'subject' => 'New Property  Has Been  Add .'
         ];
 
-        $job = (new \App\Jobs\SendQueueEmail($details))
-        ->delay(now()->addSeconds(2));
+        // $job = (new \App\Jobs\SendQueueEmail($details))
+        // ->delay(now()->addSeconds(2));
 
-        dispatch($job);
-        echo "Mail send successfully !!";
+        // dispatch($job);
+        // echo "Mail send successfully !!";
+
 
         if($request->hasfile('ss')){
             foreach ($request->file('ss') as $imagefile) {
@@ -106,6 +116,7 @@ class ProductController extends Controller
                $IM =  $image->save();
            }
         }
+
 
         if($status){
             request()->session()->flash('success','Product Successfully added');
@@ -165,7 +176,9 @@ class ProductController extends Controller
             'acquisition'=>'string|required',
             'area'=>'string|required',
             'rooms'=>'string|required',
+            'developersite'=>'string|required',
             'photo'=>'string|required',
+            "brochure" => "mimes:pdf",
             'cat_id'=>'required|exists:categories,id',
             'brand_id'=>'required|exists:brands,id',
             'status'=>'required|in:active,inactive',
@@ -183,6 +196,16 @@ class ProductController extends Controller
             $data['size']='';
         }
 
+        if($request->hasfile('brochure')){
+
+            $name = $request->file('brochure')->getClientOriginalName();
+            $path = $request->file('brochure')->storeAs('/public/brochure',$name);
+            $data['brochure'] = ('storage'.preg_replace('/public/','', $path));
+
+        }
+
+
+
         $data = Arr::except($data,['ss']);
         if($request->hasfile('ss')){
             foreach ($request->file('ss') as $imagefile) {
@@ -195,7 +218,7 @@ class ProductController extends Controller
         }
 
 
-        $status=$product->fill($data)->save();
+        $status=$product->fill($data)->update();
 
         if($status){
             request()->session()->flash('success','Product Successfully updated');

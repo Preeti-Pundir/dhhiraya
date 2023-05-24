@@ -33,6 +33,23 @@
                 </div>
 
                 <div class="form-group">
+                    <label  class="col-form-label">Add Brochure (Only pdf)<span class="text-danger"></span></label>
+                    <input type="file" name="brochure"  value="{{ $product->brochure }}" class="form-control">
+                    @error('brochure')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="inputTitle" class="col-form-label">Add developer Site link <span class="text-danger"></span></label>
+                    <input id="inputTitle" type="text" name="developersite" placeholder="https://example.com"
+                        value="{{ $product->developersite }}" class="form-control">
+                    @error('developersite')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
                     <label for="developer" class="col-form-label">Developer</label>
                     <textarea class="form-control" id="developer" name="developer">{{ $product->developer }}</textarea>
                     @error('developer')

@@ -214,3 +214,9 @@ Route::get('/myaccount', 'FrontendController@accountdetails')->name('user.myacco
 Route::post('/surveystore', 'surveyController@store')->name('survay-store');
 
 route::get('category',[CategoryController::class,'index'])->name('backend.category.index');
+
+
+// Download Brochure
+Route::get('/products/{slug}/download', 'FrontendController@download')->name('product.download');
+// Developorsite link
+Route::get('/products/{slug}/developerlink', 'FrontendController@developerlink')->name('product.developerlink');

@@ -21,6 +21,8 @@ class CreateProductsTable extends Migration
             $table->longText('developer');
             $table->longText('description');
             $table->longText('acquisition');
+            $table->string('brochure')->nullable();
+            $table->string('developersite')->nullable();
             $table->text('photo');
             $table->integer('stock')->default(1);
             $table->string('size')->default('M')->nullable();

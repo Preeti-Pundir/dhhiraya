@@ -5008,6 +5008,14 @@ Version:1.0
     outline: none;
 }
 
+.btn-download {
+
+    padding: 12px;
+    margin: 5px;
+    border-radius: 0 !important;
+    outline: none;
+}
+
 .btn-whish {
     width: 50px;
     padding: 9px;
@@ -5017,11 +5025,17 @@ Version:1.0
     border: 1px solid #b3b356 !important;
 }
 
-.btn-ma#b {
+
+
+.whishlist-btn{
+    padding: 15px 10px !important;
+}
+
+.btn-ma#b, .btn-download#b {
     background-color: #b8b87b !important ;
 }
 
-.btn-ma#g {
+.btn-ma#g, .btn-download#g {
     background-color: transparent !important;
     border: 1px solid #b3b356 !important;
 }
@@ -5034,9 +5048,37 @@ Version:1.0
     text-overflow: ellipsis;
 }
 
+.btn-brochure{
+    top: 40%;
+    left: 90%;
+}
+
+@media screen and (max-width: 1180px) {
+    .btn-brochure{
+
+        left: 70%;
+    }
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .btn-brochure{
+
+        left: 40%;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .myaccount-tabs {
         border-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .btn-brochure{
+
+        left: 70%;
     }
 }
 

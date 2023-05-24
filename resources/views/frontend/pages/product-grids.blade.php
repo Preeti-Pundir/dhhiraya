@@ -96,19 +96,24 @@
                                             <a title="View the product"
                                                 href="{{route('product-detail',$product->slug)}}">View</a>
                                                @endguest
-                                                <!-- <a href="{{route('add-to-cart',$product->slug)}}">Visited Property</a> -->
+
+                                               @guest
+                                               <a class="position-relative btn-brochure"  title="Download the Brochure"
+                                                    href="{{route('login.form')}}"> Brochure</a>
+                                                    @elseif(Auth::user()->survey === 'pending')
+                                                    <a class="position-relative btn-brochure"  data-toggle="modal" data-target="#exampleModal">
+                                                         Brochure
+                                                     </a>
+                                                    @else
+                                                    <a class="position-relative btn-brochure"  href="{{ route('product.download', ['slug' => $product->slug]) }}"> Brochure</a>
+                                                   @endguest
+
+
                                         </div>
+
                                     </div>
                                 </div>
-                                <!-- <div class="product-content">
-                                    <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a>
-                                    </h3>
-                                    @php
-                                    $after_discount=($product->price-($product->price*$product->discount)/100);
-                                    @endphp
-                                    <span>Rs {{number_format($after_discount,2)}}</span>
 
-                                </div> -->
                             </div>
                         </div>
                         @endforeach
