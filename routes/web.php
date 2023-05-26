@@ -60,7 +60,7 @@ Route::post('/news', 'FrontendController@news');
 Route::get('/about-us','FrontendController@aboutUs')->name('about-us');
 Route::get('/contact','FrontendController@contact')->name('contact');
 Route::post('/send-email',[ContactController::class,'sendEmail'])->name('Sendemail');
-Route::get('product-detail/{slug}','FrontendController@productDetail')->name('product-detail');
+
 Route::post('/product/search','FrontendController@productSearch')->name('product.search');
 Route::get('/product-cat/{slug}','FrontendController@productCat')->name('product-cat');
 Route::get('/product-sub-cat/{slug}/{sub_slug}','FrontendController@productSubCat')->name('product-sub-cat');
@@ -177,7 +177,7 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
 
 
 // User section start
-Route::group(['prefix'=>'/user','middleware'=>['user']],function(){
+Route::group(['prefix'=>'/user','middleware'=>['auth','user']],function(){
     Route::get('/','HomeController@index')->name('user');
      // Profile
      Route::get('/profile','HomeController@profile')->name('user-profile');
@@ -203,6 +203,8 @@ Route::get('/myaccount', 'FrontendController@accountdetails')->name('user.myacco
     // Password Change
     Route::get('change-password', 'HomeController@changePassword')->name('user.change.password.form');
     Route::post('change-password', 'HomeController@changPasswordStore')->name('change.password');
+
+    Route::get('product-detail/{slug}','FrontendController@productDetail')->name('product-detail');
 
 
 
