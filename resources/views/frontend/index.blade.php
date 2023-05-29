@@ -72,8 +72,7 @@
     <div class="container pt-5 pb-5">
         <div class="text-center">
             <h2>Great choices from our listings</h2>
-            <p class="mt-3">Strategy startup research & development equity burn rate validation customer vesting period
-                infrastructure seed <br> round bandwidth ecosystem infographic market.</p>
+            <p class="mt-3">Research and development, equity distribution, burn rate management, customer validation, vesting periods, infrastructure needs, finance for the seed round, bandwidth use, ecosystem participation, market analysis, and the use of infographics.</p>
         </div>
     </div>
     <div class="container-fluid-new">

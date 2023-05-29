@@ -172,7 +172,7 @@
 
 .single-product .button-head-one {
     background: #000;
-    opacity: 0.5;
+    opacity: 0.75;
     display: inline-block;
     width: 100%;
     height:auto;
