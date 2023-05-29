@@ -46,7 +46,7 @@
             <div>
                 <div class="my-container">
 
-                    <h6 style="z-index: 9999" > <a href="{{route('product-brand',$city->slug)}}"> {{$city->title}}</a><br><br>{{$city->products_count==0?'Comming Soon' :$city->products_count.'  properties'  }}</h6>
+                    <h6 style="z-index: 9999" > <a href="{{route('product-brand',$city->slug)}}"> {{$city->title}}</a><br><br>{{$city->products_count==0?'Coming Soon' :$city->products_count.'  properties'  }}</h6>
                     <img class="newimage" src="{{$city->images}}" alt="">
                     <img class="imageone" src="{{asset('/frontend/img/brand.png')}}" alt="">
                 </div>

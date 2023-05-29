@@ -65,7 +65,7 @@
                                                 class="wishlist" data-id="{{$product->id}}"><img
                                                     src="/frontend/img/Vector.svg" alt=""></a>
                                         </div> -->
-                                        <div class="product-action-one-2">
+                                        <div class="product-action-one-2 px-2">
                                             <a
                                                 href="#"><h6>{{$product->title}}</h6></a>
                                                 <br>

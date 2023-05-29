@@ -71,10 +71,13 @@
         </div>
     </div>
 
-    <div class="container-fluid mt-5 mb-5">
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-3">Experience</h1>
         <div class="row align-items-center">
+
             <div class="col-md-4 my-3 text-center about-fifth-section">
-                <h1>Exprience</h1>
+                <img src="/frontend/img/about-img6.png" alt="" width="100%"
+                style="height:200px">
             </div>
             <div class="col-md-8 my-3">
 

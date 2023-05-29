@@ -68,7 +68,7 @@
                                                                 class="wishlist" data-id="{{$product->id}}"><img
                                                                     src="/frontend/img/Vector.svg" alt=""></a>
                                                         </div> -->
-                                                        <div class="product-action-one-2">
+                                                        <div class="product-action-one-2 px-2">
                                                             <a
                                                                 href="#"><h6>{{$product->title}}</h6></a>
                                                                 <br>
@@ -99,6 +99,17 @@
                                                             <a title="View the product"
                                                                 href="{{route('product-detail',$product->slug)}}">View</a>
                                                                @endguest
+
+                                                               @guest
+                                                               <a class="position-relative btn-brochure"  title="Download the Brochure"
+                                                                    href="{{route('login.form')}}"> Brochure</a>
+                                                                    @elseif(Auth::user()->survey === 'pending')
+                                                                    <a class="position-relative btn-brochure"  data-toggle="modal" data-target="#exampleModal">
+                                                                         Brochure
+                                                                     </a>
+                                                                    @else
+                                                                    <a class="position-relative btn-brochure"  href="{{ route('product.download', ['slug' => $product->slug]) }}"> Brochure</a>
+                                                                   @endguest
                                                                 <!-- <a href="{{route('add-to-cart',$product->slug)}}">Visited Property</a> -->
                                                         </div>
                                                     </div>

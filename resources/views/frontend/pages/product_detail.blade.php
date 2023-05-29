@@ -186,7 +186,7 @@
                                             class="wishlist" data-id="{{$data->id}}"><img
                                                 src="/frontend/img/Vector.svg" alt=""></a>
                                     </div> -->
-                                    <div class="product-action-one-2">
+                                    <div class="product-action-one-2 px-2">
                                         <a
                                             href="#"><h6>{{$data->title}}</h6></a>
                                             <br>
@@ -217,6 +217,8 @@
                                         <a title="View the product"
                                             href="{{route('product-detail',$data->slug)}}">View</a>
                                            @endguest
+
+
                                             <!-- <a href="{{route('add-to-cart',$data->slug)}}">Visited Property</a> -->
                                     </div>
                                 </div>
@@ -299,6 +301,99 @@
 .star-rating__input:checked~.star-rating__ico:before {
     content: "\F005";
 }
+
+/* ************* */
+
+.single-product .button-head-one {
+    background: #000;
+    opacity: 0.5;
+    display: inline-block;
+    width: 100%;
+    height:auto;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    z-index: 9;
+    line-height: 50px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.single-product:hover .button-head-one {
+    top: 0;
+
+}
+
+.single-product .product-img .product-action-one a {
+    background-color: transparent;
+    display: block;
+    font-size: 16px;
+    display: inline-block;
+    /* margin-right: 15px; */
+    /* text-align: right; */
+    /* height: 0 !important; */
+    position: relative;
+    top: 50;
+}
+
+.single-product .product-img .product-action-one {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: 99;
+    border-radius: 3px;
+}
+
+.single-product .product-img .product-action-one-2 {
+    position: absolute;
+    width:100% !important;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    text-align:center;
+    -webkit-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+}
+.single-product .product-img .product-action-one-2 a {
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    display: inline-block;
+}
+
+.single-product .product-img .product-action-one-2 a h5 {
+
+    font-size: 20px;
+
+}
+
+@media screen and (max-width:991px) {
+    .single-product .product-img .product-action-one-2 a {
+
+    font-size: 12px;
+
+}
+
+.single-product .product-img .product-action-one-2 a h5 {
+
+    font-size: 15px;
+
+}
+
+}
+
+
+/* **************** */
+
+
 </style>
 @endpush
 @push('scripts')

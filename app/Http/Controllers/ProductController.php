@@ -100,11 +100,11 @@ class ProductController extends Controller
             'subject' => 'New Property  Has Been  Add .'
         ];
 
-        // $job = (new \App\Jobs\SendQueueEmail($details))
-        // ->delay(now()->addSeconds(2));
+        $job = (new \App\Jobs\SendQueueEmail($details))
+        ->delay(now()->addSeconds(2));
 
-        // dispatch($job);
-        // echo "Mail send successfully !!";
+        dispatch($job);
+        echo "Mail send successfully !!";
 
 
         if($request->hasfile('ss')){
