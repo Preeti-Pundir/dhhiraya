@@ -37,7 +37,7 @@
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
                 <div class="d-flex flex-column pro-detail">
                     <img src="/frontend/img/Layer_x0020_1-4.svg" alt="" width="30px">
-                    <p class="mt-4">{{number_format($product_detail->price)}} CR</p>
+                    <p class="mt-4">{{($product_detail->price)}} CR</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 border-size-box">
