@@ -16,7 +16,7 @@
                         $settings = DB::table('settings')->get();
                     @endphp
                     <p class="text ">Funding freemium long tail hypotheses first mover advantage assets ownership niche
-                        market startup</p>
+                        market startup.</p>
 
                     <!-- <p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">
 @foreach ($settings as $data)
@@ -70,7 +70,7 @@
                     <div class="contact">
                         <ul>
                             <li>123 Lorem Ipsum Street</li>
-                            <li>Jakarta, Indonesia</li>
+                            <li>Jakarta, Indonesia.</li>
                             <!-- <li>
 @foreach ($settings as $data)
 {{ $data->address }}
@@ -107,7 +107,7 @@
                     <p>Powered by <a href="https://avidusinteractive.com" class="foot-link" > Avidus Interactive</a></p>
                 </div>
                 <div class="col-lg-4 col-md-12">
-                    <p>Copyright © 2023</p>
+                    <p>Copyright &copy; 2023</p>
                 </div>
             </div>
         </div>
