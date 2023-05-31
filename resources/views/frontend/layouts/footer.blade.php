@@ -101,7 +101,7 @@
         <div class="container pt-3 pb-3">
             <div class="row text-center">
                 <div class="col-lg-4 col-md-12">
-                    <p>Dhiiraayahomes.com</p>
+                    <p>dhiiraayarealty.com</p>
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <p>Powered by <a href="https://avidusinteractive.com" class="foot-link" > Avidus Interactive</a></p>
