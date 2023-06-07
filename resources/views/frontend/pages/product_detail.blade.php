@@ -118,10 +118,10 @@
                         aria-selected="false">
                         <span class="font-weight-bold small text-uppercase">Other details</span></a>
 
-                    <a class="nav-link shadow" id="v-pills-acquisition-tab" data-toggle="pill"
+                    {{-- <a class="nav-link shadow" id="v-pills-acquisition-tab" data-toggle="pill"
                         href="#v-pills-acquisition" role="tab" aria-controls="v-pills-acquisition"
                         aria-selected="false">
-                        <span class="font-weight-bold small text-uppercase">Acquisition</span></a>
+                        <span class="font-weight-bold small text-uppercase">Acquisition</span></a> --}}
 
 
                 </div>
@@ -142,10 +142,10 @@
                         <p class="">{!!($product_detail->description)!!}</p>
                     </div>
 
-                    <div class="tab-pane fade shadow rounded bg-white" id="v-pills-acquisition" role="tabpanel"
+                    {{-- <div class="tab-pane fade shadow rounded bg-white" id="v-pills-acquisition" role="tabpanel"
                         aria-labelledby="v-pills-acquisition-tab">
                         <p class="">{!!($product_detail->acquisition)!!}</p>
-                    </div>
+                    </div> --}}
 
 
 
