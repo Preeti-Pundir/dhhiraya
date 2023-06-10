@@ -3,6 +3,7 @@
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Auth\LoginController;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
@@ -40,17 +41,10 @@ Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPass
 
 
 
-
-
-
-
-
-
-
-
 // Socialite
-Route::get('login/{provider}/', 'Auth\LoginController@redirect')->name('login.redirect');
-Route::get('login/{provider}/callback/', 'Auth\LoginController@Callback')->name('login.callback');
+Route::get('login/{provider}/',[LoginController::class, 'redirect'])->name('login.redirect');
+Route::get('login/{provider}/callback/',[LoginController::class, 'Callback'])->name('login.callback');
+
 
 Route::get('/','FrontendController@home')->name('home');
 
