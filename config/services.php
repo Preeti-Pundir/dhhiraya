@@ -29,11 +29,11 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-    'github' => [
-        'client_id' => '24fbd0edd46019058da7', //Github API
-        'client_secret' => '4500e6ab7a9bb70608600fbdee37969276bb0685', //Github Secret
-        'redirect' => 'http://localhost:8000/login/github/callback',
-     ],
+    // 'github' => [
+    //     'client_id' => '24fbd0edd46019058da7', //Github API
+    //     'client_secret' => '4500e6ab7a9bb70608600fbdee37969276bb0685', //Github Secret
+    //     'redirect' => 'http://localhost:8000/login/github/callback',
+    //  ],
      'google' => [
         'client_id' => '231165282567-gnniqdoma77oqgao1nd6i7scke5c7d8o.apps.googleusercontent.com', //Google API
         'client_secret' => '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', //Google Secret

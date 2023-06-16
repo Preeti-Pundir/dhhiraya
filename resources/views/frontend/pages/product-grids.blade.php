@@ -85,7 +85,7 @@
                                                     src="/frontend/img/Vector.svg" alt=""></a>
                                         </div>
                                         <div class="product-action-2">
-                                           @guest
+                                            @if(Auth::check())
                                            <a title="View the product"
                                                 href="{{route('login.form')}}">View</a>
                                                 @elseif(Auth::user()->survey === 'pending')
@@ -95,7 +95,7 @@
                                                 @else
                                             <a title="View the product"
                                                 href="{{route('product-detail',$product->slug)}}">View</a>
-                                               @endguest
+                                               @endif
 
                                                @guest
                                                <a class="position-relative btn-brochure"  title="Download the Brochure"
