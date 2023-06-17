@@ -25,10 +25,10 @@
                     <!-- <h2>Register</h2> -->
                     <p class="my-3">Sign up to Dhiiraaya Homes</p>
                     <div class="d-flex">
-                        <a href="{{route('login.redirect','facebook')}}" class=""><img src="/frontend/img/Group 1.png"
-                                alt=""></a>&nbsp;&nbsp;&nbsp;
-                        <a href="{{route('login.redirect','google')}}" class=""><img src="/frontend/img/Group 2.png"
-                                alt=""></a>
+                        <a href="{{route('login.redirect','google')}}" class=""><img src="/frontend/img/Group 1.png"
+                            alt=""></a>&nbsp;&nbsp;&nbsp;
+                    <a href="{{route('login.redirect','facebook')}}" class=""><img src="/frontend/img/Group 2.png"
+                            alt=""></a>
 
                     </div>
                     <img class="mt-2" src="/frontend/img/Separator.png" alt="">
