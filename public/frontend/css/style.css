@@ -1764,6 +1764,7 @@ Version:1.0
 /* Sinlge Product */
 .single-product {
     margin-top: 50px;
+
 }
 .single-product .product-img {
     position: relative;
@@ -1776,6 +1777,7 @@ Version:1.0
 }
 .single-product .product-img a img {
     width: 100%;
+    object-fit: cover;
 }
 .single-product .product-img a img.hover-img {
     position: absolute;
