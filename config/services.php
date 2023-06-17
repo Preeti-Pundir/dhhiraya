@@ -46,8 +46,8 @@ return [
     //     'redirect' => 'http://localhost:8000/login/facebook/callback',
     //  ],
      'facebook' => [
-        'client_id' => '146965691719072', //Facebook API
-        'client_secret' => '893186aa67704d6f83533b6124db6757', //Facebook Secret
+        'client_id' => '799292818178402', //Facebook API
+        'client_secret' => 'ec21aec15f813ee019631c6be1bf86f5', //Facebook Secret
         'redirect' => 'https://dhiiraayarealty.com/login/facebook/callback',
      ],
 
