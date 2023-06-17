@@ -62,7 +62,7 @@
                                 @endif --}}
 
                                 <input id="passInput" class="form-control" placeholder="Password" name="password" type="password" size="30" aria-required="true">
-                                    <img src="/frontend/img/eye.png" class="input-group-addon field-icon" role="button" title="veiw password" id="passBtn" alt="">
+                                    <img src="/frontend/img/eye.png" class="input-group-addon field-icon curser-pointer" role="button" title="veiw password" id="passBtn" alt="">
                                     @if ($errors->has('password'))
                                     <span class="text-danger">{{ $errors->first('password') }}</span>
                                 @endif

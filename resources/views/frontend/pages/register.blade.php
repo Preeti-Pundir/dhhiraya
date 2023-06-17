@@ -50,6 +50,7 @@
                                 <div class="form-group">
                                     <input type="text" name="email" placeholder="Email address" required="required"
                                         value="{{old('email')}}">
+
                                     @error('email')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -57,8 +58,9 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <input type="password" name="password" placeholder="Password" required="required"
+                                    <input id="passInput" type="password" name="password" placeholder="Password" required="required"
                                         value="{{old('password')}}">
+                                        <img src="/frontend/img/eye.png" class="input-group-addon field-icon curser-pointer" role="button" title="veiw password" id="passBtn" alt="">
                                     @error('password')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -66,8 +68,9 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <input type="password" name="password_confirmation" placeholder="Confirm Password"
+                                    <input id="passInput2" type="password" name="password_confirmation" placeholder="Confirm Password"
                                         required="required" value="{{old('password_confirmation')}}">
+                                        <img src="/frontend/img/eye.png" class="input-group-addon field-icon curser-pointer" role="button" title="veiw password" id="passBtn2" alt="">
                                     @error('password_confirmation')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -76,7 +79,7 @@
                             <div class="col-12">
                                 <div class="form-group login-btn d-flex align-items-center justify-content-between">
                                     <button class="btn-lgn" type="submit">Register</button>
-                                    <a href="{{route('login.form')}}">Oldies? Login here</a>
+                                    <a href="{{route('login.form')}}">Old User? Login here</a>
 
                                 </div>
                             </div>
@@ -91,6 +94,25 @@
 <!--/ End Login -->
 
 @include('frontend.layouts.newsletter')
+
+{{-- Password Hide/Show js --}}
+
+<script>
+    const PassBtn = document.querySelector('#passBtn');
+    PassBtn.addEventListener('click', () => {
+        const input = document.querySelector('#passInput');
+        input.getAttribute('type') === 'password' ? input.setAttribute('type', 'text') : input.setAttribute('type', 'password');
+    });
+    </script>
+
+<script>
+    const PassBtn2 = document.querySelector('#passBtn2');
+    PassBtn2.addEventListener('click', () => {
+        const input = document.querySelector('#passInput2');
+        input.getAttribute('type') === 'password' ? input.setAttribute('type', 'text') : input.setAttribute('type', 'password');
+    });
+    </script>
+
 
 @endsection
 

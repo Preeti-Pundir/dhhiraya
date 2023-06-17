@@ -58,13 +58,13 @@
                     @enderror
                 </div>
 
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="acquisition" class="col-form-label">Acquisition</label>
                     <textarea class="form-control" id="acquisition" name="acquisition">{{ old('acquisition') }}</textarea>
                     @error('acquisition')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
-                </div>
+                </div> --}}
 
 
                 <!-- <div class="form-group">
