@@ -91,8 +91,8 @@
                     <select name="pr_condition" class="form-control">
                         <option value="Ready to move in"
                             {{ $product->pr_condition == 'Ready to move in' ? 'selected' : '' }}>Ready to move in</option>
-                        <option value="Construction" {{ $product->pr_condition == 'Construction' ? 'selected' : '' }}>
-                            Construction</option>
+                        <option value="Under Construction" {{ $product->pr_condition == 'Construction' ? 'selected' : '' }}>
+                            Under Construction</option>
                     </select>
                     @error('pr_condition')
                         <span class="text-danger">{{ $message }}</span>

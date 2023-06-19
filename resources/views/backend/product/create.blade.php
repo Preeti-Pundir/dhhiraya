@@ -101,7 +101,7 @@
                     <label for="pr_condition" class="col-form-label">Condition <span class="text-danger">*</span></label>
                     <select name="pr_condition" class="form-control">
                         <option value="Ready to move in">Ready to move in</option>
-                        <option value="Construction">Construction</option>
+                        <option value="Under Construction">Under Construction</option>
                     </select>
                     @error('pr_condition')
                         <span class="text-danger">{{ $message }}</span>

@@ -28,7 +28,7 @@ class CreateProductsTable extends Migration
             $table->string('size')->default('M')->nullable();
             $table->enum('condition',['default','new','hot'])->default('default');
             $table->enum('status',['active','inactive'])->default('inactive');
-            $table->enum('pr_condition',['Ready to move in','Construction'])->default('Construction');
+            $table->enum('pr_condition',['Ready to move in','Under Construction'])->default('Under Construction');
             $table->float('price');
             $table->float('discount')->nullabale();
             $table->boolean('is_featured')->deault(false);
