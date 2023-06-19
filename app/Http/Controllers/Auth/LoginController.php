@@ -55,7 +55,7 @@ class LoginController extends Controller
     public function Callback($provider)
     {
         $userSocial =   Socialite::driver($provider)->stateless()->user();
-        $users      =   User::where(['email' => $userSocial->getEmail()])->first();
+        $users      =   User::where('provider_id',$userSocial->id)->first();
 
         if($users){
             Auth::login($users);

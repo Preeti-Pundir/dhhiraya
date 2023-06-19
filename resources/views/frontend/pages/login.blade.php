@@ -31,6 +31,7 @@
                                 alt=""></a>&nbsp;&nbsp;&nbsp;
                         <a href="{{route('login.redirect','facebook')}}" class=""><img src="/frontend/img/Group 2.png"
                                 alt=""></a>
+                                
 
                     </div>
                     <img src="/frontend/img/Separator.png" alt="">
