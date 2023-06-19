@@ -36,7 +36,7 @@ return [
      ],
      'facebook' => [
         'client_id' => '799292818178402', //Facebook API
-        'client_secret' => 'ec21aec15f813ee019631c6be1bf86f5', //Facebook Secret
+        'client_secret' => 'e1760f5acc38e5b41d35bef0739bc593', //Facebook Secret
         'redirect' => 'https://dhiiraayarealty.com/login/facebook/callback',
      ],
 
