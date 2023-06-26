@@ -46,6 +46,8 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+// for Google
+
     public function redirect($provider)
     {
         // dd($provider);
@@ -72,4 +74,37 @@ class LoginController extends Controller
          return redirect()->route('home')->with('success','Registration is successfull from '.$provider);
         }
     }
+
+
+// For Facebook
+
+public function redirectToFacebook()
+{
+    // dd($provider);
+
+return Socialite::driver('facebook')->redirect();
+}
+
+public function CallbackFacebook()
+{
+    $userSocial =   Socialite::driver('facebook')->stateless()->user();
+    $users      =   User::where('provider_id',$userSocial->id)->first();
+
+    if($users){
+        Auth::login($users);
+        Session::put('user',$users['email']);
+        return redirect('/')->with('success','You are login from facebook');
+    }else{
+        $user = User::create([
+            'name'          => $userSocial->getName(),
+            'email'         => $userSocial->getEmail(),
+            'image'         => $userSocial->getAvatar(),
+            'provider_id'   => $userSocial->getId(),
+            'provider'      => 'facebook',
+        ]);
+     return redirect()->route('home')->with('success','Registration is successfull from facebook');
+    }
+}
+
+
 }

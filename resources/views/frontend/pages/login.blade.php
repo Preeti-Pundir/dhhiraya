@@ -29,9 +29,9 @@
                      <div class="d-flex">
                         <a href="{{route('login.redirect','google')}}" class=""><img src="/frontend/img/Group 1.png"
                                 alt=""></a>&nbsp;&nbsp;&nbsp;
-                        <a href="{{route('login.redirect','facebook')}}" class=""><img src="/frontend/img/Group 2.png"
+                        <a href="{{route('login.facebook')}}" class=""><img src="/frontend/img/Group 2.png"
                                 alt=""></a>
-                                
+
 
                     </div>
                     <img src="/frontend/img/Separator.png" alt="">
