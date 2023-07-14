@@ -53,8 +53,8 @@
                 <div class="single-footer links">
                     <h4>About Us</h4>
                     <ul>
-                        <li><a href="{{ route('about-us') }}">About</a></li>
-                        <li><a href="">Our Team</a></li>
+                        <li><a href="{{ route('about-us') }}">The Realtors</a></li>
+                        {{-- <li><a href="">Our Team</a></li> --}}
                         <!-- <li><a href="#">Money-back</a></li> -->
                         <li><a href="">Policy</a></li>
 

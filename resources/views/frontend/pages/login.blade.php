@@ -25,7 +25,7 @@
 
             <div class="col-lg-4 col-md-12 my-3">
                 <div class="login-form">
-                    <p>Login to Dhiiraaya Homes</p>
+                    <p>Login to Dhiiraaya Realty</p>
                      <div class="d-flex">
                         <a href="{{route('login.redirect','google')}}" class=""><img src="/frontend/img/Group 1.png"
                                 alt=""></a>&nbsp;&nbsp;&nbsp;

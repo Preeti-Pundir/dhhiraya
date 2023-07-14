@@ -23,7 +23,7 @@
             <div class="col-lg-5 col-md-12">
                 <div class="register-form">
                     <!-- <h2>Register</h2> -->
-                    <p class="my-3">Sign up to Dhiiraaya Homes</p>
+                    <p class="my-3">Sign up to Dhiiraaya Realty</p>
                     <div class="d-flex">
                         <a href="{{route('login.redirect','google')}}" class=""><img src="/frontend/img/Group 1.png"
                             alt=""></a>&nbsp;&nbsp;&nbsp;
