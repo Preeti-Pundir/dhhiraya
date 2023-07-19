@@ -446,9 +446,9 @@ Version:1.0
     margin-right: 38px;
     position: relative;
 }
-.header.shop .nav li:last-child {
+/* .header.shop .nav li:last-child {
     margin: 0 !important;
-}
+} */
 .header.shop .nav li .new {
     background: #f7941d;
     color: #fff;
@@ -942,9 +942,9 @@ Version:1.0
     position: relative;
     float: none;
 }
-.header.shop .nav li:last-child {
+/* .header.shop .nav li:last-child {
     margin-right: 0;
-}
+} */
 .header.shop .nav li .new {
     background: #f7941d;
     color: #fff;

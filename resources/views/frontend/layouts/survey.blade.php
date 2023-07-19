@@ -271,7 +271,7 @@
                     data: formData,
                     datatype: 'json',
                     success: function(data) {
-                        alert("Data saved");
+                        alert("Thank You for sharing your preferences. Our team will reach out to you.");
                         location.reload();
                     },
                     error: function(data){

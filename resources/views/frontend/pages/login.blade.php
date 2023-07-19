@@ -26,10 +26,10 @@
             <div class="col-lg-4 col-md-12 my-3">
                 <div class="login-form">
                     <p>Login to Dhiiraaya Realty</p>
-                     <div class="d-flex">
-                        <a href="{{route('login.redirect','google')}}" class=""><img src="/frontend/img/Group 1.png"
+                     <div class="d-flex mx-3">
+                        <a href="{{route('login.redirect','google')}}" class="border rounded" style="width:60px" ><img src="/frontend/img/Googlelogin.png"
                                 alt=""></a>&nbsp;&nbsp;&nbsp;
-                        <a href="{{route('login.facebook')}}" class=""><img src="/frontend/img/Group 2.png"
+                        <a href="{{route('login.facebook')}}" class="border rounded" style="width:60px" ><img src="/frontend/img/Facebooklogin.png"
                                 alt=""></a>
 
 
