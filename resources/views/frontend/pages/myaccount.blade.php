@@ -93,7 +93,7 @@
 
 
                                     <div class="text-center text-dark">
-                                        There are no any property available. <a href="{{route('product-grids')}}" style="color:blue;">Continue shopping</a>
+                                        There are no any property available. <a href="{{route('product-grids')}}" style="color:blue;">Continue building your Property Wishlist</a>
 
                                     </div>
 
