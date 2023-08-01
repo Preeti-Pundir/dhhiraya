@@ -24,8 +24,8 @@
 @endforeach
 
 </a></span></p> -->
-                    <p class="info mt-4"><a href="mailto:dewahosting@mail.com">dewahosting@mail.com</a></p>
-                    <p class="info "><a href="callto:+91 9856327415">9856327415</a></p>
+                    <p class="info mt-4"><a href="mailto:dewahosting@mail.com">info@dhiiraayarealty.com</a></p>
+                    <p class="info "><a href="callto:+91 9856327415">9779890316</a></p>
                 </div>
                 <!-- End Single Widget -->
             </div>
@@ -69,8 +69,8 @@
                     <!-- Single Widget -->
                     <div class="contact">
                         <ul>
-                            <li>123 Lorem Ipsum Street</li>
-                            <li>Jakarta, Indonesia.</li>
+                            <li>901-b. 9th Floor, Omaxe India Trade Tower New Chandigarh (Pb.)140901</li>
+                            {{-- <li>Jakarta, Indonesia.</li> --}}
                             <!-- <li>
 @foreach ($settings as $data)
 {{ $data->address }}

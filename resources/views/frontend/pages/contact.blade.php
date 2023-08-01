@@ -20,7 +20,7 @@
                             <div class="ml-4">
                                 <h4 class="title">Call </h4>
                                 <ul>
-                                    <li>084524145547</li>
+                                    <li> 9779890316</li>
                                 </ul>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
 
                                 <h4 class="title">Email</h4>
                                 <ul>
-                                    <li><a href="mailto:info@yourwebsite.com">loremipsum@gmail.com</a></li>
+                                    <li><a href="mailto:info@yourwebsite.com">info@dhiiraayarealty.com</a></li>
                                 </ul>
                             </div>
 

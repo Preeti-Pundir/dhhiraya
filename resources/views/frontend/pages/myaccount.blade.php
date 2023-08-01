@@ -81,8 +81,8 @@
                                 </div>
                                 <div class="col-lg-3 col-md-12 col-sm-12 my-1 ">
                                     <div class="d-flex d-md-block">
-                                    <a href="https://wa.me/8390712871/" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
-                                   <a href="tel:8390712871">  <button class="btn-ma" id="g" >Make a call</button> </a>
+                                    <a href="https://wa.me/9779890316/" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
+                                   <a href="tel:9779890316">  <button class="btn-ma" id="g" >Make a call</button> </a>
                                         </div>
                                 </div>
                             </div>
@@ -123,8 +123,8 @@
                                 </div>
                                 <div class="col-lg-3 col-md-12 col-sm-12 my-1 ">
                                     <div class="d-flex d-md-block">
-                                    <a href="https://wa.me/8390712871/" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
-                                   <a href="tel:8390712871">  <button class="btn-ma" id="g" >Make a call</button> </a>
+                                    <a href="https://wa.me/9779890316/" title="click to open whatsapp chat" target="_blank"> <button class="btn-ma" id="b" >Book a visit</button></a>
+                                   <a href="tel:9779890316">  <button class="btn-ma" id="g" >Make a call</button> </a>
                                         </div>
                                 </div>
                             </div>

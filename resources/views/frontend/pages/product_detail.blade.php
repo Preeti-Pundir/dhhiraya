@@ -67,15 +67,18 @@
 
                 <div class="mt-4 text-center">
                     <div class="d-flex align-items-center justify-content-around my-3">
-                   <a href="https://wa.me/8390712871/" title="click to open whatsapp chat" target="_blank"> <button class="btn-whish" ><img src="/frontend/img/wp.png" alt=""></button></a>
-                   <a href="tel:8390712871"><button class="btn-whish" ><img src="/frontend/img/phone.png" alt=""></button></a>
+                   <a href="https://wa.me/9779890316/" title="click to open whatsapp chat" target="_blank"> <button class="btn-whish" ><img src="/frontend/img/wp.png" alt=""></button></a>
+                   <a href="tel:9779890316"><button class="btn-whish" ><img src="/frontend/img/phone.png" alt=""></button></a>
                    <a href="{{route('add-to-wishlist',$product_detail->slug)}}"> <button class="btn-whish whishlist-btn" ><img src="/frontend/img/wish.svg" alt=""></button></a>
                 </div>
 
 
 
                    <a href="{{ route('product.download', ['slug' => $product_detail->slug]) }}"><button class="btn-download" id="g" >Download Brochure</button></a>
+
+                   @if (isset($product_detail) && isset($product_detail->developersite))
                    <a href="{{ route('product.developerlink', ['slug' => $product_detail->slug]) }}" target="_blank"><button class="btn-download" id="b" >Developer site</button></a>
+                    @endif
 
 
 

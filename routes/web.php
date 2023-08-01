@@ -113,6 +113,7 @@ Route::get('payment/success', 'PayPalController@success')->name('payment.success
 
 
 
+
 // Backend section start
 
 Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
