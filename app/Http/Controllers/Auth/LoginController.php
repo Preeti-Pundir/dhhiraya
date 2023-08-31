@@ -71,6 +71,8 @@ class LoginController extends Controller
                 'provider_id'   => $userSocial->getId(),
                 'provider'      => $provider,
             ]);
+
+         $users  =  User::where('provider_id',$userSocial->id)->first();
         if($users){
                 Auth::login($users);
                 Session::put('user',$users['email']);
@@ -78,7 +80,7 @@ class LoginController extends Controller
             }else{
 
                 return redirect()->route('home')->with('success','Registration is successfull from '.$provider);
-                
+
             }
         }
     }
