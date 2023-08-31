@@ -46,8 +46,8 @@ Route::get('login/{provider}/',[LoginController::class, 'redirect'])->name('logi
 Route::get('login/{provider}/callback/',[LoginController::class, 'Callback'])->name('login.callback');
 
 // Socialite for Facebook
-Route::get('login/facebook/',[LoginController::class, 'redirectToFacebook'])->name('login.facebook');
-Route::get('login/facebook/callback/',[LoginController::class, 'CallbackFacebook']);
+// Route::get('login/facebook/',[LoginController::class, 'redirectToFacebook'])->name('login.facebook');
+// Route::get('login/facebook/callback/',[LoginController::class, 'CallbackFacebook']);
 
 
 Route::get('/','FrontendController@home')->name('home');

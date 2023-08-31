@@ -71,7 +71,15 @@ class LoginController extends Controller
                 'provider_id'   => $userSocial->getId(),
                 'provider'      => $provider,
             ]);
-         return redirect()->route('home')->with('success','Registration is successfull from '.$provider);
+        if($users){
+                Auth::login($users);
+                Session::put('user',$users['email']);
+                return redirect('/')->with('success','Registered & Successfully login from '.$provider);
+            }else{
+
+                return redirect()->route('home')->with('success','Registration is successfull from '.$provider);
+                
+            }
         }
     }
 

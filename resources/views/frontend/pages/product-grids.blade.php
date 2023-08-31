@@ -50,6 +50,7 @@
                         @foreach($products as $product)
                         <div class="col-lg-4 col-md-4 col-sm-6 ">
                             <div class="single-product">
+
                                 <div class="product-img">
                                     <a href="{{route('product-detail',$product->slug)}}">
                                         @php
@@ -114,7 +115,9 @@
                                     </div>
                                 </div>
 
+
                             </div>
+                     
                         </div>
                         @endforeach
                         @else

@@ -15,7 +15,7 @@
                     Real Estate
                     Here</h2>
 
-                <p class="text-white ">Having troubles? <u>Get Help</u></p>
+                    <p class="text-white">Having troubles? <u><a href="mailto:info@dhiiraayarealty.com">Get Help</a></u></p>
             </div>
 
             <div class="col-md-2 extra-div"></div>
@@ -26,9 +26,10 @@
                     <p class="my-3">Sign up to Dhiiraaya Realty</p>
                     <div class="d-flex mx-3">
                         <a href="{{route('login.redirect','google')}}"class="border rounded" style="width:60px" ><img src="/frontend/img/Googlelogin.png"
-                            alt=""></a>&nbsp;&nbsp;&nbsp;
-                    <a href="{{route('login.redirect','facebook')}}" class="border rounded" style="width:60px" ><img src="/frontend/img/Facebooklogin.png"
                             alt=""></a>
+                            {{-- &nbsp;&nbsp;&nbsp;
+                    <a href="{{route('login.redirect','facebook')}}" class="border rounded" style="width:60px" ><img src="/frontend/img/Facebooklogin.png"
+                            alt=""></a> --}}
 
                     </div>
                     <img class="mt-2" src="/frontend/img/Separator.png" alt="">

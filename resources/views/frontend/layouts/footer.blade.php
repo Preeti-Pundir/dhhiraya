@@ -9,7 +9,7 @@
                 <div class="single-footer about">
                     <div class="logo">
                         <!-- <a href="index.html"><img src="{{ asset('backend/img/dhhirayalogo.png') }}" alt="#"></a> -->
-                        <a href="index.html"><img src="{{ asset('/frontend/img/dhiiraaya-logo.svg') }}"
+                        <a href="https://dhiiraayarealty.com/"><img src="{{ asset('/frontend/img/dhiiraaya-logo.svg') }}"
                                 style="width:150px" alt="#"></a>
                     </div>
                     @php
@@ -24,7 +24,7 @@
 @endforeach
 
 </a></span></p> -->
-                    <p class="info mt-4"><a href="mailto:dewahosting@mail.com">info@dhiiraayarealty.com</a></p>
+                    <p class="info mt-4"><a href="mailto:info@dhiiraayarealty.com">info@dhiiraayarealty.com</a></p>
                     <p class="info "><a href="callto:+91 9856327415">9779890316</a></p>
                 </div>
                 <!-- End Single Widget -->

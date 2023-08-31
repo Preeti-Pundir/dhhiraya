@@ -20,7 +20,7 @@
                             <div class="ml-4">
                                 <h4 class="title">Call </h4>
                                 <ul>
-                                    <li> 9779890316</li>
+                                    <li><a href="callto:+91 9856327415">9779890316</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
 
                                 <h4 class="title">Email</h4>
                                 <ul>
-                                    <li><a href="mailto:info@yourwebsite.com">info@dhiiraayarealty.com</a></li>
+                                    <li><a href="mailto:info@dhiiraayarealty.com">info@dhiiraayarealty.com</a></li>
                                 </ul>
                             </div>
 
@@ -40,7 +40,7 @@
                             <div class="ml-4">
                                 <h4 class="title">Chat</h4>
                                 <ul>
-                                    <li>084524145547</li>
+                                    <li><a href="https://wa.me/9779890316/" title="whatsapp chat" target="_blank">9779890316</a></li>
                                 </ul>
                             </div>
 
